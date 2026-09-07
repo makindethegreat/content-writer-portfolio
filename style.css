@@ -1,4 +1,95 @@
 /* ===================================================
+   Brand Tokens (Space Grotesk + DM Sans)
+   =================================================== */
+:root {
+  --color-background: #ffffff;
+  --color-primary: #111111;
+  --color-surface: #ffd84d;
+  --color-accent: #ff5b3e;
+  --color-border: #dedede;
+  --color-green: #1e4038;
+
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  
+  --content-width: 1200px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ===================================================
+   Header & Nav
+   =================================================== */
+.site-header {
+  padding: 24px 6%;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-nav {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav > a {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.site-nav > a span {
+  color: var(--color-green);
+}
+
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  align-items: center;
+}
+
+.site-nav ul a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.site-nav ul a:hover {
+  color: var(--color-accent);
+}
+
+.site-nav li:last-child a {
+  background: var(--color-green);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.site-nav li:last-child a:hover {
+  opacity: 0.9;
+}
+
+/* ===================================================
    Hero Section (Fixed 2-Column Grid)
    =================================================== */
 .hero {
@@ -96,7 +187,7 @@
   padding-bottom: 2px;
 }
 
-/* Portrait Image (Locked to Top Right) */
+/* Portrait Image */
 .hero-portrait {
   min-width: 0;
   width: 100%;
@@ -114,6 +205,53 @@
   object-fit: cover;
   object-position: center 15%;
   display: block;
+}
+
+/* ===================================================
+   Problem / Visibility Section
+   =================================================== */
+.problem-section {
+  background: var(--color-primary);
+  color: var(--color-background);
+  padding: 100px 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 60vh;
+}
+
+.problem-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  max-width: 900px;
+}
+
+.problem-section h2 span {
+  color: #666666;
+}
+
+.problem-section p {
+  align-self: flex-end;
+  font-family: var(--font-display);
+  color: var(--color-surface);
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 60px;
+}
+
+.problem-light {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  box-shadow: 0 0 16px var(--color-surface), 0 0 32px var(--color-surface);
+  display: inline-block;
 }
 
 /* ===================================================
@@ -148,12 +286,7 @@
   margin-top: clamp(3rem, 6vw, 5rem);
 }
 
-@media (max-width: 860px) {
-  .proof-section {
-    padding: clamp(4.5rem, 10vw, 6rem) 6% clamp(4rem, 8vw, 5rem);
-  }
-
-   /* ===================================================
+/* ===================================================
    Editorial Wordmarks / Publications Display
    =================================================== */
 .proof-travelled {
@@ -194,17 +327,7 @@
   user-select: none;
 }
 
-@media (max-width: 640px) {
-  .proof-wordmarks {
-    grid-template-columns: 1fr;
-    gap: 1.75rem;
-  }
-
-  .wordmark-name {
-    font-size: 1.75rem;
-  }
-
-   /* ===================================================
+/* ===================================================
    Editorial Metrics Grid
    =================================================== */
 .proof-metrics {
@@ -243,7 +366,45 @@
   line-height: 1.4;
 }
 
+/* ===================================================
+   Mobile Responsiveness
+   =================================================== */
+@media (max-width: 860px) {
+  .site-nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 40px;
+  }
+
+  .hero-portrait {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .problem-section p {
+    align-self: flex-start;
+  }
+
+  .proof-section {
+    padding: clamp(4.5rem, 10vw, 6rem) 6% clamp(4rem, 8vw, 5rem);
+  }
+}
+
 @media (max-width: 640px) {
+  .proof-wordmarks {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .wordmark-name {
+    font-size: 1.75rem;
+  }
+
   .proof-metrics {
     grid-template-columns: 1fr;
     row-gap: 2rem;
@@ -258,4 +419,3 @@
     font-size: clamp(2.6rem, 10vw, 3.5rem);
   }
 }
-
