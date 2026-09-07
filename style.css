@@ -89,34 +89,37 @@ body {
 }
 
 /* ===================================================
-   Hero Section (Clean 2-Column Desktop Grid)
+   Hero Section (Desktop Side-by-Side Flex Layout)
    =================================================== */
 .hero {
   max-width: var(--content-width);
   margin: 0 auto;
-  padding: 80px 6%;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 50px;
-  align-items: center;
+  padding: 60px 6% 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
   position: relative;
 }
 
-/* Background subtle arc */
+/* Subtle background accent arc */
 .hero::before {
   content: '';
   position: absolute;
-  top: 10%;
-  left: -150px;
-  width: 500px;
-  height: 500px;
+  top: 5%;
+  left: -120px;
+  width: 480px;
+  height: 480px;
   border: 1px solid var(--color-border);
   border-radius: 50%;
   z-index: -1;
+  pointer-events: none;
 }
 
 .hero-content {
-  width: 100%;
+  flex: 1 1 58%;
+  max-width: 640px;
 }
 
 .hero-eyebrow {
@@ -142,9 +145,9 @@ body {
 
 .hero-content h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 4.5vw, 4rem);
+  font-size: clamp(2.5rem, 4.2vw, 3.8rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.12;
   letter-spacing: -0.03em;
   color: var(--color-primary);
   margin-bottom: 24px;
@@ -157,7 +160,7 @@ body {
 .hero-content > p {
   font-size: 1.15rem;
   color: #555555;
-  max-width: 480px;
+  max-width: 500px;
   margin-bottom: 36px;
   line-height: 1.6;
 }
@@ -192,9 +195,10 @@ body {
 
 /* Portrait Image (Top Right) */
 .hero-portrait {
+  flex: 1 1 42%;
+  max-width: 440px;
   width: 100%;
-  max-width: 420px;
-  justify-self: end;
+  margin: 0;
   border-radius: 8.75rem 2.5rem 7.5rem 2.5rem;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
@@ -205,7 +209,7 @@ body {
   height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center 20%;
   display: block;
 }
 
@@ -260,21 +264,20 @@ body {
    Mobile Responsiveness
    =================================================== */
 @media (max-width: 860px) {
+  .site-nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+
   .hero {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 40px;
     padding-top: 40px;
   }
 
   .hero-portrait {
-    justify-self: center;
     max-width: 320px;
-    order: -1; /* Puts your photo right under the nav on phone screens, or remove to keep below headline */
-  }
-
-  .site-nav {
-    flex-direction: column;
-    gap: 16px;
+    margin: 0 auto;
   }
 
   .problem-section p {
