@@ -115,3 +115,41 @@
   object-position: center 15%;
   display: block;
 }
+
+/* ===================================================
+   Proof & Credibility Section Foundation
+   =================================================== */
+.proof-section {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  padding: clamp(6rem, 12vw, 10rem) 6% clamp(5rem, 10vw, 8rem);
+  border-top: 1px solid var(--color-border);
+  position: relative;
+}
+
+.proof-container {
+  max-width: var(--content-width, 1200px);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.proof-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: var(--color-primary);
+  margin: 0;
+  max-width: 22ch;
+}
+
+.proof-body {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+@media (max-width: 860px) {
+  .proof-section {
+    padding: clamp(4.5rem, 10vw, 6rem) 6% clamp(4rem, 8vw, 5rem);
+  }
+}
