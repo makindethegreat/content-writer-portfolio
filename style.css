@@ -152,4 +152,55 @@
   .proof-section {
     padding: clamp(4.5rem, 10vw, 6rem) 6% clamp(4rem, 8vw, 5rem);
   }
+
+   /* ===================================================
+   Editorial Wordmarks / Publications Display
+   =================================================== */
+.proof-travelled {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: clamp(2rem, 4vw, 3rem) 0 clamp(2.5rem, 5vw, 3.5rem);
 }
+
+.proof-travelled__label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #555555;
+  margin: 0 0 clamp(2rem, 3.5vw, 2.75rem);
+}
+
+.proof-wordmarks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 4rem);
+}
+
+.wordmark-item {
+  display: flex;
+  align-items: center;
+}
+
+.wordmark-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--color-primary);
+  user-select: none;
+}
+
+@media (max-width: 640px) {
+  .proof-wordmarks {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .wordmark-name {
+    font-size: 1.75rem;
+  }
+
