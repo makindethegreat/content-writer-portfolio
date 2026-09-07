@@ -440,7 +440,21 @@ p, li, a { font-family: var(--font-body); }
   .hero { padding-block: 3rem 4rem; }
   .hero-content h1 { font-size: clamp(3rem, 15vw, 4.5rem); }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 1rem; }
-  .hero-portrait { min-height: 24rem; }
+  .hero-portrait { min-height: auto; width: 100%; }
   .problem-section { min-height: 36rem; padding-block: 4rem; }
   .problem-section h2 { font-size: clamp(3.1rem, 15vw, 4.75rem); letter-spacing: -0.06em; }
+}
+.hero-portrait {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-portrait img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
 }
