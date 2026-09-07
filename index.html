@@ -1,23 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>Hi, I'm Makinde</h1>
-    <p>Content Writer & Strategist</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makinde | Content &amp; Business Growth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#top" aria-label="Makinde home">Makinde/<span>Growth</span></a>
+        <ul>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="mailto:your-email@example.com">Book a Call <span aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <section class="work">
-    <h2>Featured Work</h2>
-    <div class="card">
-      <h3>Project Title</h3>
-      <p>A brief summary of what I wrote or built.</p>
-    </div>
-  </section>
-</body>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-content">
+          <p class="hero-eyebrow">B2B Content Marketer</p>
+          <h1 id="hero-heading">
+            I'm obsessed<br />
+            with turning<br />
+            content into<br />
+            <span>business growth.</span>
+          </h1>
+          <p>
+            I create content that meets the right audience with the right message and
+            gives them a reason to act.
+          </p>
+          <div class="hero-actions">
+            <a class="hero-actions__work" href="#portfolio">View My Work <span aria-hidden="true">→</span></a>
+            <a class="hero-actions__growth" href="mailto:your-email@example.com">Get in Touch</a>
+          </div>
+        </div>
+
+        <figure class="hero-portrait">
+          <img
+            src="assets/_E7A1251.jpg"
+            alt="Portrait of Makinde"
+          />
+        </figure>
+
+      </section>
+
+      <section class="problem-section" aria-labelledby="problem-statement">
+        <h2 id="problem-statement">
+          Everyone is shipping. This is your product without visibility. <span>Void.</span>
+        </h2>
+        <p><span class="problem-light" aria-hidden="true"></span>I change that.</p>
+      </section>
+
+    </main>
+  </body>
 </html>
