@@ -445,16 +445,21 @@ p, li, a { font-family: var(--font-body); }
   .problem-section h2 { font-size: clamp(3.1rem, 15vw, 4.75rem); letter-spacing: -0.06em; }
 }
 .hero-portrait {
+  grid-area: portrait;
+  align-self: center;
+  justify-self: end;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  max-width: 27rem;
+  border-radius: 8.75rem 2.5rem 7.5rem 2.5rem;
+  overflow: hidden;
 }
+
 .hero-portrait img {
   width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 16px;
+  height: 100%;
+  max-width: none;
   object-fit: cover;
+  object-position: center 15%;
   display: block;
 }
