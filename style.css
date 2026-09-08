@@ -544,3 +544,15 @@ body {
     font-size: clamp(2.8rem, 10vw, 3.8rem);
   }
 }
+
+.problem-light {
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  box-shadow: 0 0 16px var(--color-surface), 0 0 32px var(--color-surface);
+  display: inline-block;
+  transform-origin: center center;
+  will-change: transform, box-shadow;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
+}
