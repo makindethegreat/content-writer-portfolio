@@ -35,35 +35,33 @@ function initCountUp() {
   metricElements.forEach((el) => observer.observe(el));
 }
 
-// 2. Ambient Beacon Flare on Scroll (Controlled & Contained)
+// 2. Beacon Expanding Glow on Scroll
 function initLightScrollExpansion() {
   const problemSection = document.querySelector(".problem-section");
   const light = document.querySelector(".problem-light");
 
   if (!problemSection || !light) return;
 
-  function updateLight() {
+  function handleScroll() {
     const rect = problemSection.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
+    // Trigger continuously while inside the viewport
     if (rect.top <= windowHeight && rect.bottom >= 0) {
-      // Progress from 0 (section enters) to 1 (section exits top)
-      const progress = Math.min(
-        Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0),
-        1
-      );
+      const scrollProgress = (windowHeight - rect.top) / (windowHeight + rect.height);
+      const progress = Math.min(Math.max(scrollProgress, 0), 1);
 
-      // Scales ambient halo cleanly from 1x to 4.5x without displacing text
-      const scale = (1 + progress * 3.5).toFixed(2);
-      const opacity = (0.35 + progress * 0.55).toFixed(2);
+      // Light scales smoothly up to 6.5x with layered expansion
+      const scale = 1 + progress * 5.5;
+      const glowSpread = 16 + progress * 40;
 
-      light.style.setProperty("--light-scale", scale);
-      light.style.setProperty("--light-opacity", opacity);
+      light.style.transform = `scale(${scale.toFixed(2)})`;
+      light.style.boxShadow = `0 0 ${glowSpread.toFixed(0)}px var(--color-surface), 0 0 ${(glowSpread * 2.5).toFixed(0)}px var(--color-surface)`;
     }
   }
 
-  window.addEventListener("scroll", updateLight, { passive: true });
-  updateLight();
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
 }
 
 document.addEventListener("DOMContentLoaded", () => {
