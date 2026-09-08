@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=8" />
+    <link rel="stylesheet" href="style.css?v=9" />
   </head>
   <body>
     <header class="site-header">
@@ -25,7 +25,7 @@
     </header>
 
     <main id="top">
-      <!-- Hero Section -->
+      <!-- 1. Light Hero Section -->
       <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-content">
           <p class="hero-eyebrow">B2B Content Marketer</p>
@@ -53,15 +53,17 @@
         </figure>
       </section>
 
-      <!-- Problem / Visibility Section with Expanding Light -->
+      <!-- 2. Dark Problem / Visibility Section -->
       <section class="problem-section" aria-labelledby="problem-statement">
-        <h2 id="problem-statement">
-          Everyone is shipping. This is your product without visibility. <span>Void.</span>
-        </h2>
-        <p><span class="problem-light" aria-hidden="true"></span>I change that.</p>
+        <div class="problem-container">
+          <h2 id="problem-statement">
+            Everyone is shipping. This is your product without visibility. <span>Void.</span>
+          </h2>
+          <p><span class="problem-light" aria-hidden="true"></span>I change that.</p>
+        </div>
       </section>
 
-      <!-- Proof & Credibility Section -->
+      <!-- 3. Proof & Credibility Section -->
       <section id="proof" class="proof-section" aria-labelledby="proof-heading">
         <div class="proof-container">
           <h2 id="proof-heading" class="proof-heading">
@@ -85,7 +87,7 @@
                   <span class="marquee-item">Teeka4</span>
                   <span class="marquee-dot">•</span>
 
-                  <!-- Duplicate Track for Seamless Loop -->
+                  <!-- Duplicated Track -->
                   <span class="marquee-item" aria-hidden="true">HackerNoon</span>
                   <span class="marquee-dot" aria-hidden="true">•</span>
                   <span class="marquee-item" aria-hidden="true">Substack</span>
@@ -126,7 +128,7 @@
         </div>
       </section>
 
-      <!-- Selected Writing Showcase (2 High-Fidelity Cards) -->
+      <!-- 4. Selected Writing Showcase (3 Real Cards) -->
       <section id="portfolio" class="articles-section" aria-labelledby="articles-heading">
         <div class="articles-container">
           <div class="articles-header">
@@ -135,7 +137,7 @@
           </div>
 
           <div class="articles-grid">
-            <!-- Article Card 1 -->
+            <!-- Card 1 -->
             <article class="sample-card">
               <div class="sample-card__header">
                 <span class="sample-tag">STRATEGY</span>
@@ -147,7 +149,7 @@
               </h3>
 
               <p class="sample-card__excerpt">
-                Content marketing is often seen as the default growth strategy for SaaS startups—but it shouldn't be a blind choice. While it offers long-term benefits like brand awareness, trust, and authority, it's not always the best fit. To know if it’s right for your startup, use the 6-factor framework: buyer persona, business model, goals, resources, product complexity, and competition. Your alignment with these factors—not industry trends—should determine whether content marketing is your core strategy or just one of many options.
+                Content marketing is often seen as the default growth strategy for SaaS startups—but it shouldn't be a blind choice. While it offers long-term benefits like brand awareness, trust, and authority, it's not always the best fit. To know if it’s right for your startup, use the 6-factor framework: buyer persona, business model, goals, resources, product complexity, and competition.
               </p>
 
               <div class="sample-card__footer">
@@ -162,7 +164,7 @@
               </div>
             </article>
 
-            <!-- Article Card 2 -->
+            <!-- Card 2 -->
             <article class="sample-card">
               <div class="sample-card__header">
                 <span class="sample-tag">ANALYSIS</span>
@@ -170,7 +172,7 @@
               </div>
 
               <h3 class="sample-card__title">
-                Everything You Need to Know About Google’s AI Mode and How to Adjust Your Content Strategy
+                Everything You Need to Know About Google’s AI Mode &amp; Strategy
               </h3>
 
               <p class="sample-card__excerpt">
@@ -188,11 +190,38 @@
                 </a>
               </div>
             </article>
+
+            <!-- Card 3 -->
+            <article class="sample-card">
+              <div class="sample-card__header">
+                <span class="sample-tag">GUIDE</span>
+                <span class="sample-source">HASHNODE</span>
+              </div>
+
+              <h3 class="sample-card__title">
+                Top Automation Tools to Scale Content Output for B2B SaaS in 2026
+              </h3>
+
+              <p class="sample-card__excerpt">
+                A practical tooling stack designed to accelerate research, drafting, and distribution without sacrificing editorial tone or brand voice as operations expand.
+              </p>
+
+              <div class="sample-card__footer">
+                <a
+                  href="https://beamicons.hashnode.dev/top-automation-tools-to-scale-content-output-for-b2b-saas-in-2026"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="sample-link"
+                >
+                  Read the article <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
     </main>
 
-    <script src="script.js?v=8"></script>
+    <script src="script.js?v=9"></script>
   </body>
 </html>
