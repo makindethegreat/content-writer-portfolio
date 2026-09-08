@@ -90,10 +90,10 @@ body {
 }
 
 /* ===================================================
-   Hero Section (Fixed 2-Column Grid)
+   Hero Section (Desktop 2-Column Grid)
    =================================================== */
 .hero {
-  max-width: 1200px;
+  max-width: var(--content-width);
   margin: 0 auto;
   padding: 40px 6% 60px;
   display: grid;
@@ -177,6 +177,11 @@ body {
   padding: 12px 24px;
   border-radius: 999px;
   text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.hero-actions__work:hover {
+  transform: translateY(-2px);
 }
 
 .hero-actions__growth {
@@ -208,7 +213,7 @@ body {
 }
 
 /* ===================================================
-   Problem / Visibility Section
+   Problem / Visibility Section & Expanding Light
    =================================================== */
 .problem-section {
   background: var(--color-primary);
@@ -218,6 +223,8 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: 60vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .problem-section h2 {
@@ -241,17 +248,20 @@ body {
   font-weight: 700;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   margin-top: 60px;
 }
 
 .problem-light {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background-color: var(--color-surface);
   border-radius: 50%;
   box-shadow: 0 0 16px var(--color-surface), 0 0 32px var(--color-surface);
   display: inline-block;
+  transform-origin: center center;
+  will-change: transform, box-shadow;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
 }
 
 /* ===================================================
@@ -266,7 +276,7 @@ body {
 }
 
 .proof-container {
-  max-width: var(--content-width, 1200px);
+  max-width: var(--content-width);
   margin: 0 auto;
   width: 100%;
 }
@@ -385,7 +395,7 @@ body {
 }
 
 /* ===================================================
-   Selected Writing Cards (2-Column Grid)
+   Selected Writing Section (2-Column Grid)
    =================================================== */
 .articles-section {
   background-color: #fafafa;
@@ -394,7 +404,7 @@ body {
 }
 
 .articles-container {
-  max-width: var(--content-width, 1200px);
+  max-width: var(--content-width);
   margin: 0 auto;
 }
 
@@ -529,6 +539,14 @@ body {
     margin: 0 auto;
   }
 
+  .problem-section p {
+    align-self: flex-start;
+  }
+
+  .proof-section {
+    padding: clamp(4.5rem, 10vw, 6rem) 6% clamp(4rem, 8vw, 5rem);
+  }
+
   .articles-grid {
     grid-template-columns: 1fr;
   }
@@ -543,16 +561,4 @@ body {
   .metric-number {
     font-size: clamp(2.8rem, 10vw, 3.8rem);
   }
-}
-
-.problem-light {
-  width: 14px;
-  height: 14px;
-  background-color: var(--color-surface);
-  border-radius: 50%;
-  box-shadow: 0 0 16px var(--color-surface), 0 0 32px var(--color-surface);
-  display: inline-block;
-  transform-origin: center center;
-  will-change: transform, box-shadow;
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
 }
