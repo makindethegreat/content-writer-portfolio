@@ -780,3 +780,179 @@ body {
     gap: 1.25rem;
   }
 }
+/* ===================================================
+   Final Dark Showcase & Orbital CTA
+   =================================================== */
+.closing-section {
+  background-color: #0d0f11;
+  color: #ffffff;
+  padding: clamp(6rem, 12vw, 9rem) 6% clamp(2rem, 4vw, 3rem);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #1a1d20;
+}
+
+.closing-container {
+  max-width: var(--content-width, 1200px);
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Background Orbit Rings */
+.closing-orbital {
+  position: absolute;
+  top: 50%;
+  right: -120px;
+  transform: translateY(-55%);
+  width: 580px;
+  height: 580px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.orbital-ring {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.orbital-ring--outer {
+  width: 560px;
+  height: 560px;
+}
+
+.orbital-ring--inner {
+  width: 400px;
+  height: 400px;
+  border-color: rgba(142, 236, 185, 0.2);
+}
+
+.orbital-node {
+  position: absolute;
+  top: 48%;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: #8eecb9;
+  border-radius: 50%;
+  box-shadow: 0 0 16px #8eecb9, 0 0 32px rgba(142, 236, 185, 0.6);
+}
+
+/* Badge & Headings */
+.closing-content {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+}
+
+.closing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.badge-dot {
+  width: 9px;
+  height: 9px;
+  background-color: #8eecb9;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #8eecb9;
+}
+
+.badge-text {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #a0aec0;
+}
+
+.closing-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.2vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+  margin-bottom: 2.75rem;
+}
+
+.highlight-text {
+  color: #8eecb9;
+}
+
+/* Mint Pill Button */
+.closing-btn {
+  background-color: #8eecb9;
+  color: #0d0f11;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.closing-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(142, 236, 185, 0.3);
+}
+
+/* Footer Bottom Bar */
+.closing-footer-bar {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(6rem, 12vw, 9rem);
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.closing-nav {
+  display: flex;
+  gap: 2.25rem;
+  align-items: center;
+}
+
+.closing-nav a {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.closing-nav a:hover {
+  color: #8eecb9;
+}
+
+@media (max-width: 860px) {
+  .closing-orbital {
+    display: none;
+  }
+
+  .closing-footer-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
