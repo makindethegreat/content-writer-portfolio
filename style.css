@@ -211,27 +211,27 @@ body {
 }
 
 /* ===================================================
-   Problem / Visibility Section & Contained Light
+   Problem / Visibility Section & Interactive Light
    =================================================== */
 .problem-section {
   background: var(--color-primary);
   color: var(--color-background);
-  padding: clamp(5rem, 10vw, 8rem) 6%;
+  padding: 100px 6%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 55vh;
+  min-height: 60vh;
   position: relative;
   overflow: hidden;
 }
 
 .problem-section h2 {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
   font-weight: 700;
   letter-spacing: -0.04em;
-  line-height: 1.12;
-  max-width: 850px;
+  line-height: 1.1;
+  max-width: 900px;
 }
 
 .problem-section h2 span {
@@ -242,41 +242,24 @@ body {
   align-self: flex-end;
   font-family: var(--font-display);
   color: var(--color-surface);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 14px;
-  margin-top: clamp(3rem, 6vw, 5rem);
-  position: relative;
-  z-index: 2;
+  gap: 16px;
+  margin-top: 60px;
 }
 
 .problem-light {
-  width: 12px;
-  height: 12px;
+  width: 14px;
+  height: 14px;
   background-color: var(--color-surface);
   border-radius: 50%;
+  box-shadow: 0 0 16px var(--color-surface), 0 0 32px var(--color-surface);
   display: inline-block;
-  flex-shrink: 0;
-  position: relative;
-  box-shadow: 0 0 12px var(--color-surface);
-}
-
-.problem-light::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  background: radial-gradient(circle, rgba(255, 216, 77, 0.45) 0%, rgba(255, 216, 77, 0) 70%);
-  border-radius: 50%;
-  transform: translate(-50%, -50%) scale(var(--light-scale, 1));
-  opacity: var(--light-opacity, 0.4);
-  pointer-events: none;
-  z-index: -1;
-  will-change: transform, opacity;
+  transform-origin: center center;
+  will-change: transform, box-shadow;
+  transition: none;
 }
 
 /* ===================================================
