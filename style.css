@@ -1,220 +1,546 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Makinde | Content &amp; Business Growth</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css?v=6" />
-  </head>
-  <body>
-    <header class="site-header">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#top" aria-label="Makinde home">Makinde/<span>Growth</span></a>
-        <ul>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#case-studies">Case Studies</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="mailto:your-email@example.com">Book a Call <span aria-hidden="true">→</span></a></li>
-        </ul>
-      </nav>
-    </header>
+/* ===================================================
+   Brand Tokens (Space Grotesk + DM Sans)
+   =================================================== */
+:root {
+  --color-background: #ffffff;
+  --color-primary: #111111;
+  --color-surface: #ffd84d;
+  --color-accent: #ff5b3e;
+  --color-border: #ededed;
+  --color-green: #1e4038;
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-heading">
-        <div class="hero-content">
-          <p class="hero-eyebrow">B2B Content Marketer</p>
-          <h1 id="hero-heading">
-            I'm obsessed<br />
-            with turning<br />
-            content into<br />
-            <span>business growth.</span>
-          </h1>
-          <p>
-            I create content that meets the right audience with the right message and
-            gives them a reason to act.
-          </p>
-          <div class="hero-actions">
-            <a class="hero-actions__work" href="#portfolio">View My Work <span aria-hidden="true">→</span></a>
-            <a class="hero-actions__growth" href="mailto:your-email@example.com">Get in Touch</a>
-          </div>
-        </div>
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  
+  --content-width: 1200px;
+}
 
-        <figure class="hero-portrait">
-          <img
-            src="Makinde.jpg"
-            alt="Portrait of Makinde"
-          />
-        </figure>
-      </section>
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-      <section class="problem-section" aria-labelledby="problem-statement">
-        <h2 id="problem-statement">
-          Everyone is shipping. This is your product without visibility. <span>Void.</span>
-        </h2>
-        <p><span class="problem-light" aria-hidden="true"></span>I change that.</p>
-      </section>
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
 
-      <!-- Proof & Credibility Foundation Section -->
-      <section id="proof" class="proof-section" aria-labelledby="proof-heading">
-        <div class="proof-container">
-          <h2 id="proof-heading" class="proof-heading">
-            Work, words, and results.
-          </h2>
+/* ===================================================
+   Header & Nav
+   =================================================== */
+.site-header {
+  padding: 24px 6%;
+  border-bottom: 1px solid var(--color-border);
+}
 
-          <div class="proof-body">
-            <!-- Publications / Organizations -->
-            <div class="proof-travelled">
-              <p class="proof-travelled__label">A FEW PLACES MY WORK HAS TRAVELLED.</p>
-              
-              <div class="proof-wordmarks" role="list" aria-label="Organizations">
-                <div class="wordmark-item" role="listitem">
-                  <span class="wordmark-name">HackerNoon</span>
-                </div>
-                <div class="wordmark-item" role="listitem">
-                  <span class="wordmark-name">NITHUB</span>
-                </div>
-              </div>
-            </div>
+.site-nav {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-            <!-- Metrics Grid -->
-            <div class="proof-metrics" role="list" aria-label="Key Results">
-              <div class="metric-item" role="listitem">
-                <span class="metric-number">2</span>
-                <span class="metric-label">FEATURE ARTICLES</span>
-              </div>
+.site-nav > a {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-primary);
+}
 
-              <div class="metric-item" role="listitem">
-                <span class="metric-number">500+</span>
-                <span class="metric-label">READERS</span>
-              </div>
+.site-nav > a span {
+  color: var(--color-green);
+}
 
-              <div class="metric-item" role="listitem">
-                <span class="metric-number">1</span>
-                <span class="metric-label">AI OVERVIEW FEATURE</span>
-              </div>
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  align-items: center;
+}
 
-              <div class="metric-item" role="listitem">
-                <span class="metric-number">70+</span>
-                <span class="metric-label">AVG. EVENT ATTENDEES</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+.site-nav ul a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
 
-      <!-- Selected Writing Section -->
-      <section id="portfolio" class="articles-section" aria-labelledby="articles-heading">
-        <div class="articles-container">
-          <div class="articles-header">
-            <p class="articles-eyebrow">SELECTED WRITING</p>
-            <h2 id="articles-heading" class="articles-title">Words that build authority.</h2>
-          </div>
+.site-nav ul a:hover {
+  color: var(--color-accent);
+}
 
-          <div class="articles-grid">
-            <!-- Card 1 -->
-            <article class="sample-card">
-              <div class="sample-card__header">
-                <span class="sample-tag">LONGFORM</span>
-                <span class="sample-source">HACKERNOON</span>
-              </div>
+.site-nav li:last-child a {
+  background: var(--color-green);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
 
-              <div class="sample-card__highlight">
-                <span class="highlight-num">23k</span>
-                <span class="highlight-sub">READS · CONTRIBS</span>
-              </div>
+.site-nav li:last-child a:hover {
+  opacity: 0.9;
+}
 
-              <h3 class="sample-card__title">
-                Do You Really Need Content Marketing to Grow Your B2B SaaS?
-              </h3>
+/* ===================================================
+   Hero Section (Fixed 2-Column Grid)
+   =================================================== */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 6% 60px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 40px;
+  align-items: start;
+  position: relative;
+}
 
-              <p class="sample-card__excerpt">
-                A strategic teardown on organic distribution vs. paid acquisition for early-stage B2B founders trying to scale past zero.
-              </p>
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
 
-              <div class="sample-card__footer">
-                <a
-                  href="https://hackernoon.com/do-you-really-need-content-marketing-to-grow-your-b2b-saas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="sample-link"
-                >
-                  Read the article <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </article>
+.hero-content {
+  min-width: 0;
+}
 
-            <!-- Card 2 -->
-            <article class="sample-card">
-              <div class="sample-card__header">
-                <span class="sample-tag">STRATEGY</span>
-                <span class="sample-source">HACKERNOON</span>
-              </div>
+.hero-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
 
-              <div class="sample-card__highlight">
-                <span class="highlight-num">AI Mode</span>
-                <span class="highlight-sub">SEARCH &amp; LLM DISCOVERY</span>
-              </div>
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: var(--color-green);
+}
 
-              <h3 class="sample-card__title">
-                Everything You Need to Know About Google’s AI Mode &amp; Content Strategy
-              </h3>
+.hero-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 3.8vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+  word-break: normal;
+}
 
-              <p class="sample-card__excerpt">
-                How LLM search features reshape content attribution and how content marketers can maintain top-of-funnel conversion.
-              </p>
+.hero-content h1 span {
+  color: var(--color-green);
+}
 
-              <div class="sample-card__footer">
-                <a
-                  href="https://hackernoon.com/everything-you-need-to-know-about-googles-ai-mode-and-how-to-adjust-your-content-strategy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="sample-link"
-                >
-                  Read the article <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </article>
+.hero-content > p {
+  font-size: 1.1rem;
+  color: #555555;
+  max-width: 480px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
 
-            <!-- Card 3 -->
-            <article class="sample-card">
-              <div class="sample-card__header">
-                <span class="sample-tag">GUIDE</span>
-                <span class="sample-source">HASHNODE</span>
-              </div>
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-              <div class="sample-card__highlight">
-                <span class="highlight-num">Scale</span>
-                <span class="highlight-sub">WORKFLOW AUTOMATION</span>
-              </div>
+.hero-actions__work {
+  background: var(--color-green);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+}
 
-              <h3 class="sample-card__title">
-                Top Automation Tools to Scale Content Output for B2B SaaS in 2026
-              </h3>
+.hero-actions__growth {
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 2px;
+}
 
-              <p class="sample-card__excerpt">
-                A practical tooling stack designed to accelerate research, drafting, and distribution without sacrificing brand voice.
-              </p>
+/* Portrait Image */
+.hero-portrait {
+  min-width: 0;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 0 0 auto;
+  border-radius: 8.75rem 2.5rem 7.5rem 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
 
-              <div class="sample-card__footer">
-                <a
-                  href="https://beamicons.hashnode.dev/top-automation-tools-to-scale-content-output-for-b2b-saas-in-2026"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="sample-link"
-                >
-                  Read the article <span aria-hidden="true">↗</span>
-                </a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
-</html>
+.hero-portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+/* ===================================================
+   Problem / Visibility Section
+   =================================================== */
+.problem-section {
+  background: var(--color-primary);
+  color: var(--color-background);
+  padding: 100px 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 60vh;
+}
+
+.problem-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  max-width: 900px;
+}
+
+.problem-section h2 span {
+  color: #666666;
+}
+
+.problem-section p {
+  align-self: flex-end;
+  font-family: var(--font-display);
+  color: var(--color-surface);
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 60px;
+}
+
+.problem-light {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  box-shadow: 0 0 16px var(--color-surface), 0 0 32px var(--color-surface);
+  display: inline-block;
+}
+
+/* ===================================================
+   Proof & Credibility Section Foundation
+   =================================================== */
+.proof-section {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  padding: clamp(6rem, 12vw, 10rem) 6% clamp(5rem, 10vw, 8rem);
+  border-top: 1px solid var(--color-border);
+  position: relative;
+}
+
+.proof-container {
+  max-width: var(--content-width, 1200px);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.proof-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: var(--color-primary);
+  margin: 0;
+  max-width: 22ch;
+}
+
+.proof-body {
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+/* ===================================================
+   Infinite Logo/Publication Marquee
+   =================================================== */
+.proof-ticker-block {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2.25rem 0 2.5rem;
+}
+
+.proof-travelled__label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 3rem;
+  white-space: nowrap;
+  animation: marquee-scroll 24s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+}
+
+.marquee-dot {
+  color: var(--color-surface);
+  font-size: 1.2rem;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===================================================
+   Interactive Metrics Grid
+   =================================================== */
+.proof-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(2rem, 6vw, 4rem);
+  row-gap: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: clamp(1.5rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.metric-number {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 5.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  display: inline-block;
+  min-height: 1.1em;
+}
+
+.metric-label {
+  font-family: var(--font-body);
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* ===================================================
+   Selected Writing Cards (2-Column Grid)
+   =================================================== */
+.articles-section {
+  background-color: #fafafa;
+  padding: 6rem 6% 7.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.articles-container {
+  max-width: var(--content-width, 1200px);
+  margin: 0 auto;
+}
+
+.articles-header {
+  margin-bottom: 3.5rem;
+}
+
+.articles-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: 0.5rem;
+}
+
+.articles-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: stretch;
+}
+
+.sample-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2.25rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sample-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.sample-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sample-tag,
+.sample-source {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sample-tag {
+  color: #64748b;
+}
+
+.sample-source {
+  color: var(--color-green);
+}
+
+.sample-card__title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+}
+
+.sample-card__excerpt {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 2.25rem;
+  flex-grow: 1;
+}
+
+.sample-card__footer {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.25rem;
+}
+
+.sample-link {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.sample-link:hover {
+  color: var(--color-accent);
+}
+
+/* ===================================================
+   Mobile Responsiveness
+   =================================================== */
+@media (max-width: 960px) {
+  .site-nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 40px;
+  }
+
+  .hero-portrait {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .proof-metrics {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+
+  .metric-number {
+    font-size: clamp(2.8rem, 10vw, 3.8rem);
+  }
+}
