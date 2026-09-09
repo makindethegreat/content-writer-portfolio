@@ -3,29 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Makinde | Content &amp; Business Growth</title>
+    <title>Beams | B2B Content Marketing &amp; Business Growth</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=9" />
+    <link rel="stylesheet" href="style.css?v=11" />
   </head>
   <body>
+    <!-- Navigation with Brand Logo -->
     <header class="site-header">
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#top" aria-label="Makinde home">Makinde/<span>Growth</span></a>
+        <a href="#top" class="brand-logo-link" aria-label="Beams home">
+          <img src="logo.png" alt="Beams logo" class="brand-logo" />
+        </a>
         <ul>
+          <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#proof">Proof</a></li>
-          <li><a href="mailto:your-email@example.com">Book a Call <span aria-hidden="true">→</span></a></li>
+          <li>
+            <a href="mailto:makindegbenga00@gmail.com" class="nav-cta">Book a Call <span aria-hidden="true">→</span></a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main id="top">
-      <!-- 1. Light Hero Section -->
+      <!-- 1. Hero Section -->
       <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-content">
           <p class="hero-eyebrow">B2B Content Marketer</p>
@@ -41,7 +46,7 @@
           </p>
           <div class="hero-actions">
             <a class="hero-actions__work" href="#portfolio">View My Work <span aria-hidden="true">→</span></a>
-            <a class="hero-actions__growth" href="mailto:your-email@example.com">Get in Touch</a>
+            <a class="hero-actions__growth" href="mailto:makindegbenga00@gmail.com">Get in Touch</a>
           </div>
         </div>
 
@@ -53,7 +58,7 @@
         </figure>
       </section>
 
-      <!-- 2. Dark Problem / Visibility Section -->
+      <!-- 2. Dark Visibility Statement Section -->
       <section class="problem-section" aria-labelledby="problem-statement">
         <div class="problem-container">
           <h2 id="problem-statement">
@@ -63,15 +68,15 @@
         </div>
       </section>
 
-      <!-- 3. Proof & Credibility Section -->
-      <section id="proof" class="proof-section" aria-labelledby="proof-heading">
+      <!-- 3. Proof & Credibility Foundation (About Section) -->
+      <section id="about" class="proof-section" aria-labelledby="proof-heading">
         <div class="proof-container">
           <h2 id="proof-heading" class="proof-heading">
             Work, words, and results.
           </h2>
 
           <div class="proof-body">
-            <!-- Continuous Publication Marquee -->
+            <!-- Publication / Platform Continuous Marquee -->
             <div class="proof-ticker-block">
               <p class="proof-travelled__label">A FEW PLACES MY WORK HAS TRAVELLED.</p>
               <div class="marquee-wrapper" aria-label="Platforms and publications carousel">
@@ -87,7 +92,7 @@
                   <span class="marquee-item">Teeka4</span>
                   <span class="marquee-dot">•</span>
 
-                  <!-- Duplicated Track -->
+                  <!-- Duplicate Track -->
                   <span class="marquee-item" aria-hidden="true">HackerNoon</span>
                   <span class="marquee-dot" aria-hidden="true">•</span>
                   <span class="marquee-item" aria-hidden="true">Substack</span>
@@ -102,7 +107,7 @@
               </div>
             </div>
 
-            <!-- Animated Proof Metrics Grid -->
+            <!-- Key Results Metrics Grid -->
             <div class="proof-metrics" role="list" aria-label="Key Results">
               <div class="metric-item" role="listitem">
                 <span class="metric-number" data-target="2" data-suffix="">2</span>
@@ -128,7 +133,7 @@
         </div>
       </section>
 
-      <!-- 4. Selected Writing Showcase (3 Real Cards) -->
+      <!-- 4. Selected Writing Showcase (3 Cards) -->
       <section id="portfolio" class="articles-section" aria-labelledby="articles-heading">
         <div class="articles-container">
           <div class="articles-header">
@@ -220,13 +225,8 @@
           </div>
         </div>
       </section>
-    </main>
 
-    <script src="script.js?v=9"></script>
-  </body>
-</html>
-
-<!-- Final Full-Bleed Dark CTA Section -->
+      <!-- 5. Final Full-Bleed Dark CTA Section -->
       <footer id="contact" class="closing-section" aria-labelledby="closing-heading">
         <div class="closing-container">
           <!-- Orbital Graphic Accent -->
@@ -244,14 +244,12 @@
             </div>
 
             <h2 id="closing-heading" class="closing-heading">
-              The growth your business needs lies.<br />
-              between great content<br />
-              <span class="highlight-text">marketing, and me.</span>
+              The growth your business needs lies between <span class="highlight-text">great content, marketing, and me.</span>
             </h2>
 
             <div class="closing-cta">
               <a
-                href="mailto:your-email@example.com?subject=Let's%20build%20momentum"
+                href="mailto:makindegbenga00@gmail.com?subject=Let's%20build%20momentum"
                 class="closing-btn"
               >
                 Let's build momentum <span aria-hidden="true">→</span>
@@ -262,15 +260,23 @@
           <div class="closing-footer-bar">
             <p class="copyright">© 2026 Beams. All rights reserved.</p>
             <nav class="closing-nav" aria-label="Footer navigation">
+              <a href="#about">About</a>
               <a href="#portfolio">Portfolio</a>
-              <a href="#proof">About</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+              <a
+                href="https://www.linkedin.com/in/oluwagbemiga-makinde-b34629263/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="closing-link-linkedin"
+              >
+                LinkedIn <span aria-hidden="true">↗</span>
+              </a>
+              <a href="#top" class="back-to-top">Back to top ↑</a>
             </nav>
           </div>
         </div>
       </footer>
     </main>
-            </nav>
-          </div>
-        </footer>
-      </section>
+
+    <script src="script.js?v=11"></script>
+  </body>
+</html>
