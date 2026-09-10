@@ -7,18 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=14" />
+    <link rel="stylesheet" href="style.css?v=15" />
   </head>
-  <body class="about-page">
-    <!-- Header Navigation -->
-    <header class="site-header">
+  <body class="about-page-body">
+    <!-- Navigation Bar -->
+    <header class="site-header site-header--dark">
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html#top" class="brand-logo-link" aria-label="Beams home">
-  <img src="logo.png" alt="Beams logo" class="brand-logo" />
-</a>
           <img src="logo.png" alt="Beams logo" class="brand-logo" />
         </a>
         <ul>
@@ -32,83 +30,119 @@
     </header>
 
     <main id="top">
-      <!-- Editorial Intro -->
-      <section class="about-hero">
-        <div class="about-container">
-          <p class="about-eyebrow">ABOUT ME</p>
-          <h1 class="about-title">
-            Words that shape categories,<br />
-            systems that <span class="highlight-inline">drive pipeline.</span>
-          </h1>
+      <!-- 1. Dark About Hero (Reference 1) -->
+      <section class="about-dark-hero" aria-labelledby="about-hero-title">
+        <div class="about-hero-contour" aria-hidden="true"></div>
+        <div class="about-hero-container">
+          <div class="about-hero-content">
+            <span class="about-badge">ABOUT</span>
 
-          <div class="about-grid">
-            <div class="about-narrative">
-              <p class="narrative-lead">
-                I help B2B SaaS and high-growth tech brands break out of the background noise by turning abstract engineering into commercial narrative leverage.
-              </p>
+            <p class="about-name-pronounce">
+              Hi, I’m <strong>Makinde</strong> <span class="phonetic">/mɑːˈkɪn.deɪ/</span> <span class="emoji-bubble">💬</span>
+            </p>
+
+            <h1 id="about-hero-title" class="about-hero-headline">
+              I drive measurable growth for early to mid-stage tech and SaaS startups.
+            </h1>
+
+            <p class="about-hero-sub">
+              I’m guessing you already knew that from my homepage.
+            </p>
+
+            <p class="about-hero-body">
+              What you probably don't know is that I treat words as commercial architecture, not decorative copy. Most B2B marketing fails because it explains what software does rather than why someone should part with their budget to use it. I bridge that gap. <span class="emoji-bubble">💬</span>
+            </p>
+
+            <div class="about-hero-actions">
+              <a href="mailto:makindegbenga00@gmail.com?subject=Work%20With%20Me" class="about-btn-pill">
+                Work with me
+              </a>
+              <a href="index.html#portfolio" class="about-link-work">
+                See the work <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          <figure class="about-hero-portrait">
+            <img src="Makinde.jpg" alt="Makinde" />
+          </figure>
+        </div>
+      </section>
+
+      <!-- 2. Light Editorial Journey Section (Reference 2) -->
+      <section class="journey-section" aria-labelledby="journey-heading">
+        <div class="journey-container">
+          <div class="journey-header">
+            <p class="journey-eyebrow">HOW I GOT HERE</p>
+            <h2 id="journey-heading" class="journey-title">
+              My journey <span class="journey-highlight">so far.</span>
+            </h2>
+          </div>
+
+          <div class="journey-grid">
+            <!-- Left Column: Story -->
+            <div class="journey-story">
+              <span class="journey-col-label">THE LONG WAY ROUND</span>
+
               <p>
-                Too much B2B content reads like it was written for search bots rather than decision-makers holding enterprise budgets. I treat words as structural architecture: clarifying positioning gaps, breaking down complex technical workflows, and making sure your product feels inevitable to the people who need it most.
+                The “obsession with language” bit isn't marketing fluff. Long before I started consulting for SaaS startups, I spent years studying communication structures, rhetorical theory, and the psychology behind why certain messages provoke immediate action while others get ignored.
               </p>
+
               <p>
-                My approach combines communication strategy, rigorous market research, and multi-channel distribution across modern search engines, tech syndication platforms, and founder-led channels.
+                In an ecosystem currently saturated with lazy, synthetic AI-generated summaries, the bar for true authority has never been higher. Startups are in a ruthless race for survival, and software without distinct narrative distribution is functionally invisible.
+              </p>
+
+              <p>
+                With multiple years under the belt across fast-moving spaces, I’ve learned that content means very little if it isn’t moving pipeline. My mission is simple: positioning software to survive, build category authority, and generate repeatable compounding growth.
               </p>
             </div>
 
-            <div class="about-sidebar">
-              <div class="sidebar-block">
-                <span class="sidebar-label">PRIMARY DISCIPLINE</span>
-                <p>B2B SaaS Content Strategy, Editorial Direction, Brand Positioning</p>
+            <!-- Right Column: Specific Track Record -->
+            <div class="journey-track-record">
+              <span class="journey-col-label">SINCE THEN, AMONG OTHERS, I'VE</span>
+
+              <div class="record-item">
+                <div class="record-metric">2</div>
+                <div class="record-text">
+                  Authored feature-length strategic teardowns dissecting B2B SaaS GTM motions and organic distribution economics.
+                </div>
               </div>
-              <div class="sidebar-block">
-                <span class="sidebar-label">DISTRIBUTION CHANNELS</span>
-                <p>HackerNoon, Hashnode, Substack, AI &amp; LLM Discovery Engines</p>
+
+              <div class="record-item">
+                <div class="record-metric">500+</div>
+                <div class="record-text">
+                  Readers reached through targeted publications across HackerNoon, Hashnode, and technical ecosystems.
+                </div>
               </div>
-              <div class="sidebar-block">
-                <span class="sidebar-label">OPERATING MISSION</span>
-                <p>Helping software escape the void and build authentic customer momentum.</p>
+
+              <div class="record-item">
+                <div class="record-metric">Page 1</div>
+                <div class="record-text">
+                  Positioned articles to capture prime real estate on Google search generative engines and AI Overviews.
+                </div>
+              </div>
+
+              <div class="record-item">
+                <div class="record-metric">70+</div>
+                <div class="record-text">
+                  Average attendees mobilized across community webinars and high-intent technical presentations.
+                </div>
+              </div>
+
+              <div class="record-item">
+                <div class="record-metric">AEO &amp; GEO</div>
+                <div class="record-text">
+                  Built multi-channel cascades specifically engineered for modern LLM citation engines and conversational search discovery.
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Guiding Principles -->
-      <section class="principles-section">
-        <div class="about-container">
-          <h2 class="principles-heading">How I work.</h2>
-
-          <div class="principles-grid">
-            <div class="principle-card">
-              <span class="principle-number">01</span>
-              <h3>Clarity over jargon</h3>
-              <p>
-                If a potential buyer has to decipher what your dashboard does, they won't convert. Crisp, direct language beats clever wordplay every single time.
-              </p>
-            </div>
-
-            <div class="principle-card">
-              <span class="principle-number">02</span>
-              <h3>Conviction over consensus</h3>
-              <p>
-                Rewriting what already ranks on Google produces invisible brands. True category leadership requires distinct opinions, real proof, and original angles.
-              </p>
-            </div>
-
-            <div class="principle-card">
-              <span class="principle-number">03</span>
-              <h3>Commercial distribution</h3>
-              <p>
-                Great assets don't generate revenue sitting in a repository. Content must be engineered for how people and AI engines discover solutions today.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Signature Dark Yellow-Glow Footer -->
+      <!-- 3. Final Orbital Dark Footer -->
       <footer id="contact" class="closing-section" aria-labelledby="closing-heading">
         <div class="closing-container">
-          <!-- Orbital Graphic Accent -->
           <div class="closing-orbital" aria-hidden="true">
             <div class="orbital-ring orbital-ring--outer"></div>
             <div class="orbital-ring orbital-ring--inner">
@@ -157,16 +191,3 @@
     </main>
   </body>
 </html>
-<nav class="closing-nav" aria-label="Footer navigation">
-  <a href="about.html">About</a>
-  <a href="index.html#portfolio">Portfolio</a>
-  <a
-    href="https://www.linkedin.com/in/oluwagbemiga-makinde-b34629263/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="closing-link-linkedin"
-  >
-    LinkedIn <span aria-hidden="true">↗</span>
-  </a>
-  <a href="#top" class="back-to-top">Back to top ↑</a>
-</nav>
