@@ -932,3 +932,325 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===================================================
+   About Page: Dark Hero (Brand Tokens & Yellow Glow)
+   =================================================== */
+.site-header--dark {
+  background-color: var(--color-primary);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.site-header--dark .site-nav ul a {
+  color: #e2e8f0;
+}
+
+.site-header--dark .site-nav ul a:hover {
+  color: var(--color-surface);
+}
+
+.about-dark-hero {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: clamp(4rem, 8vw, 6.5rem) 6% clamp(5rem, 9vw, 8rem);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle Concentric Rings Texture with Yellow Glow Ambience */
+.about-hero-contour {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 1100px;
+  height: 1100px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.035);
+  box-shadow: 
+    0 0 0 100px rgba(255, 255, 255, 0.015),
+    0 0 0 200px rgba(255, 216, 77, 0.02),
+    0 0 0 320px rgba(255, 255, 255, 0.012),
+    0 0 0 460px rgba(255, 216, 77, 0.015);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-hero-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: clamp(2.5rem, 6vw, 4.5rem);
+  align-items: center;
+}
+
+.about-badge {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-surface);
+  margin-bottom: 1.5rem;
+}
+
+.about-name-pronounce {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.about-name-pronounce strong {
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.about-name-pronounce .phonetic {
+  color: #94a3b8;
+  font-family: var(--font-body);
+  font-style: normal;
+  letter-spacing: 0.02em;
+}
+
+.emoji-bubble {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.about-hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+.about-hero-sub {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.about-hero-body {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 58ch;
+  margin-bottom: 2.5rem;
+}
+
+.about-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-btn-pill {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 13px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-btn-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 216, 77, 0.35);
+}
+
+.about-link-work {
+  font-family: var(--font-body);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.about-link-work:hover {
+  color: var(--color-surface);
+}
+
+.about-hero-portrait {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 8.75rem 2.5rem 7.5rem 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about-hero-portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 4.7;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+/* ===================================================
+   About Page: Light Editorial Journey (Brand Themed)
+   =================================================== */
+.journey-section {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  padding: clamp(5rem, 10vw, 8rem) 6%;
+}
+
+.journey-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.journey-header {
+  margin-bottom: clamp(3.5rem, 6vw, 5rem);
+}
+
+.journey-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: 0.5rem;
+}
+
+.journey-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 4.2vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+}
+
+.journey-highlight {
+  position: relative;
+  display: inline-block;
+  padding: 0 8px;
+  z-index: 1;
+}
+
+.journey-highlight::before {
+  content: '';
+  position: absolute;
+  top: 55%;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  background-color: var(--color-surface);
+  border-radius: 999px;
+  z-index: -1;
+  transform: translateY(-50%);
+  opacity: 0.85;
+}
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: clamp(3rem, 7vw, 6rem);
+  align-items: start;
+}
+
+.journey-col-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: 1.75rem;
+}
+
+.journey-story p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #334155;
+  margin-bottom: 1.5rem;
+}
+
+/* Track Record Table Rows */
+.journey-track-record {
+  display: flex;
+  flex-direction: column;
+}
+
+.record-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.record-item:first-of-type {
+  border-top: 1px solid var(--color-border);
+}
+
+.record-metric {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.8vw, 2.3rem);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.record-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* ===================================================
+   Responsive Layout for About Page
+   =================================================== */
+@media (max-width: 900px) {
+  .about-hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero-portrait {
+    max-width: 320px;
+    margin: 2rem auto 0;
+  }
+
+  .journey-grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .record-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
