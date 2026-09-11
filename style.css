@@ -1867,3 +1867,22 @@ body {
     transform: none !important;
   }
 }
+
+/* Typewriter Cursor & Highlight Styling */
+.hero-highlight {
+  color: #d4a017;
+  display: inline-block;
+}
+
+.type-cursor {
+  display: inline-block;
+  color: var(--color-surface);
+  font-weight: 400;
+  margin-left: 2px;
+  animation: blink-cursor 0.9s infinite;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
