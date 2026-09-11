@@ -64,6 +64,50 @@ function initLightScrollExpansion() {
   handleScroll();
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const dynamicWord = document.getElementById('dynamic-word');
+  if (!dynamicWord) return;
+
+  const words = ['business', 'measurable', 'adaptive'];
+  let wordIndex = 0;
+  let charIndex = words[0].length;
+  let isDeleting = true; // starts by erasing 'business' after initial pause
+
+  const typingSpeed = 110;
+  const erasingSpeed = 65;
+  const pauseBetweenWords = 2200;
+
+  function typeEffect() {
+    const currentWord = words[wordIndex];
+
+    if (isDeleting) {
+      charIndex--;
+      dynamicWord.textContent = currentWord.substring(0, charIndex);
+    } else {
+      charIndex++;
+      dynamicWord.textContent = currentWord.substring(0, charIndex);
+    }
+
+    let delay = isDeleting ? erasingSpeed : typingSpeed;
+
+    // Word finished typing
+    if (!isDeleting && charIndex === currentWord.length) {
+      delay = pauseBetweenWords;
+      isDeleting = true;
+    } 
+    // Word completely erased
+    else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      wordIndex = (wordIndex + 1) % words.length;
+      delay = 400; // brief hesitation before typing the next word
+    }
+
+    setTimeout(typeEffect, delay);
+  }
+
+  // Start with a brief pause so visitor reads "business growth." first
+  setTimeout(typeEffect, pauseBetweenWords);
+});
 document.addEventListener("DOMContentLoaded", () => {
   initCountUp();
   initLightScrollExpansion();
