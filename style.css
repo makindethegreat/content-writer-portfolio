@@ -1284,3 +1284,582 @@ body {
     padding: 2.25rem 1.5rem;
   }
 }
+
+/* ===================================================
+   The Unstructured Part (Controlled Editorial Mosaic)
+   =================================================== */
+.unstructured-section {
+  padding: clamp(5rem, 10vw, 8rem) 6%;
+  background-color: #faf9f6;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.unstructured-header {
+  max-width: 820px;
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.unstructured-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 4.6vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.unstructured-subhead {
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+/* 12-Column Controlled Editorial Mosaic */
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+/* Base Card Styles */
+.mosaic-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: clamp(1.75rem, 3.5vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mosaic-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.03);
+}
+
+.mosaic-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.mosaic-tag {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-green);
+}
+
+.mosaic-tag--light {
+  color: var(--color-surface);
+}
+
+.mosaic-stat {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.mosaic-icon {
+  font-size: 1.25rem;
+  color: #94a3b8;
+}
+
+.mosaic-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  color: var(--color-primary);
+  margin-bottom: 0.85rem;
+}
+
+.mosaic-subheadline {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-green);
+  margin-bottom: 0.75rem;
+}
+
+.mosaic-body {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #475569;
+}
+
+.mosaic-aside {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 1rem;
+}
+
+.mosaic-link {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 2px;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.mosaic-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* ---------------------------------------------------
+   Mosaic Row Layouts & Asymmetric Column Spans
+   --------------------------------------------------- */
+
+/* Card 1: Debate (Spans 7 cols) */
+.card-debate {
+  grid-column: span 7;
+  cursor: pointer;
+  outline: none;
+}
+
+.debate-reveal {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.debate-reveal__text {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-primary);
+  background-color: #f8fafc;
+  border-left: 3px solid var(--color-green);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.card-affordance-hint {
+  font-size: 0.72rem;
+  font-family: var(--font-body);
+  color: #94a3b8;
+  margin-top: 1.25rem;
+  display: block;
+}
+
+.card-debate:hover .debate-reveal,
+.card-debate:focus .debate-reveal,
+.card-debate:active .debate-reveal {
+  max-height: 140px;
+  opacity: 1;
+  margin-top: 1.25rem;
+}
+
+/* Card 2: Reading (Spans 5 cols) */
+.card-reading {
+  grid-column: span 5;
+}
+
+.inline-expand-trigger {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0;
+  margin-top: 1.5rem;
+  border-bottom: 2px solid var(--color-surface);
+  padding-bottom: 2px;
+  align-self: flex-start;
+  transition: color 0.2s ease;
+}
+
+.inline-expand-trigger:hover {
+  color: var(--color-green);
+}
+
+.shelf-expandable {
+  margin-top: 1rem;
+  background: #fdfaf0;
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--color-surface);
+}
+
+.shelf-expandable__text {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #334155;
+  font-style: italic;
+}
+
+/* Card 3: Socrates (Spans 4 cols) */
+.card-socrates {
+  grid-column: span 4;
+}
+
+.mosaic-dot {
+  color: var(--color-surface);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.mosaic-card__action {
+  margin-top: 1.5rem;
+}
+
+/* Card 4: Pageantry (Spans 8 cols) */
+.card-pageantry {
+  grid-column: span 8;
+  background: linear-gradient(135deg, #ffffff 65%, #fcfbf7 100%);
+}
+
+.mosaic-ref {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.pageantry-sequence {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-green);
+}
+
+.seq-arrow {
+  color: var(--color-surface);
+}
+
+/* Card 5: Music (Spans 12 cols - Full-width anchor) */
+.card-music {
+  grid-column: span 12;
+  background-color: #ffffff;
+}
+
+.genre-pill-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.genre-pill {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.genre-pill--joke {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border-color: rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.genre-pill--joke:hover,
+.genre-pill--joke:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255, 216, 77, 0.35);
+}
+
+.saas-punchline {
+  display: none;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-green);
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  max-width: 480px;
+}
+
+.genre-pill--joke:hover + .saas-punchline,
+.genre-pill--joke:focus + .saas-punchline,
+.saas-punchline.is-visible {
+  display: block;
+}
+
+.music-closing-note {
+  max-width: 58ch;
+}
+
+/* Card 6: Weather (Spans 5 cols) */
+.card-weather {
+  grid-column: span 5;
+  overflow: hidden;
+  position: relative;
+}
+
+.weather-mist-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 100% 0%, rgba(226, 232, 240, 0.6) 0%, transparent 70%);
+  opacity: 0.4;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.card-weather:hover .weather-mist-layer {
+  opacity: 0.8;
+}
+
+/* Card 7: Art Reviewer (Spans 7 cols) */
+.card-art {
+  grid-column: span 7;
+}
+
+.art-generator-area {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mosaic-pill-btn {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mosaic-pill-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 216, 77, 0.35);
+}
+
+.art-critique-display {
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-green);
+  line-height: 1.5;
+  min-height: 3em;
+  transition: opacity 0.15s ease;
+}
+
+/* Card 8: The Absurd Flex (Spans 12 cols - Dark Statement Card) */
+.card-absurd {
+  grid-column: span 12;
+  background-color: #111111;
+  color: #ffffff;
+  border-color: #222222;
+}
+
+.mosaic-badge-alert {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: rgba(255, 216, 77, 0.15);
+  color: var(--color-surface);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.mosaic-headline-absurd {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  max-width: 32ch;
+}
+
+.absurd-tally {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tally-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.tally-val {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-surface);
+}
+
+.mosaic-body-light {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  max-width: 65ch;
+  margin-bottom: 1rem;
+}
+
+.absurd-disclaimer {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+/* Card 9: Random Fact Generator (Spans 8 cols) */
+.card-random-fact {
+  grid-column: span 8;
+  background: #ffffff;
+}
+
+.fact-output-stage {
+  margin: 1rem 0 1.5rem;
+  min-height: 4em;
+  display: flex;
+  align-items: center;
+}
+
+.fact-display-text {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-primary);
+  transition: opacity 0.15s ease;
+}
+
+/* Card 10: Teeka4 Campaign (Spans 4 cols) */
+.card-teeka4 {
+  grid-column: span 4;
+  background-color: #faf9f6;
+  border: 1px dashed var(--color-border);
+}
+
+.mosaic-status-pill {
+  font-size: 0.65rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  background-color: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* ---------------------------------------------------
+   Responsive Behavior (Collage feel preserved)
+   --------------------------------------------------- */
+@media (max-width: 1024px) {
+  .card-debate { grid-column: span 12; }
+  .card-reading { grid-column: span 6; }
+  .card-socrates { grid-column: span 6; }
+  .card-pageantry { grid-column: span 12; }
+  .card-weather { grid-column: span 6; }
+  .card-art { grid-column: span 6; }
+  .card-random-fact { grid-column: span 12; }
+  .card-teeka4 { grid-column: span 12; }
+
+  .absurd-tally {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mosaic-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .card-debate,
+  .card-reading,
+  .card-socrates,
+  .card-pageantry,
+  .card-music,
+  .card-weather,
+  .card-art,
+  .card-absurd,
+  .card-random-fact,
+  .card-teeka4 {
+    grid-column: span 1;
+  }
+
+  .absurd-tally {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .unstructured-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mosaic-card,
+  .mosaic-pill-btn,
+  .genre-pill--joke,
+  .debate-reveal,
+  .art-critique-display,
+  .fact-display-text {
+    transition: none !important;
+    transform: none !important;
+  }
+}
