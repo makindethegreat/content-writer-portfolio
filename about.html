@@ -12,6 +12,91 @@
     />
     <link rel="stylesheet" href="style.css?v=28" />
   </head>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // 1. Reading Shelf Expand
+        const shelfBtn = document.getElementById('shelf-btn');
+        const shelfContent = document.getElementById('shelf-content');
+        if (shelfBtn && shelfContent) {
+          shelfBtn.addEventListener('click', () => {
+            const isHidden = shelfContent.hasAttribute('hidden');
+            if (isHidden) {
+              shelfContent.removeAttribute('hidden');
+              shelfBtn.setAttribute('aria-expanded', 'true');
+              shelfBtn.innerHTML = 'Close shelf <span aria-hidden="true">↑</span>';
+            } else {
+              shelfContent.setAttribute('hidden', '');
+              shelfBtn.setAttribute('aria-expanded', 'false');
+              shelfBtn.innerHTML = "What's on the shelf? <span aria-hidden='true'>→</span>";
+            }
+          });
+        }
+
+        // 2. Art Reviewer Randomizer
+        const artBtn = document.getElementById('art-critique-btn');
+        const artOutput = document.getElementById('art-critique-output');
+        const artCritiques = [
+          '"The tension between the colours is doing something deeply personal."',
+          '"You can really feel the artist\'s commitment to... whatever this is."',
+          '"I wouldn\'t have done it this way, but that\'s probably why I\'m not in the gallery."',
+          '"There\'s clearly something happening here."',
+          '"This piece asks difficult questions. Mostly from me."',
+          '"Bold. Uncompromising. Completely incomprehensible to the untrained eye."'
+        ];
+        if (artBtn && artOutput) {
+          artBtn.addEventListener('click', () => {
+            artOutput.style.opacity = '0';
+            setTimeout(() => {
+              const randomIndex = Math.floor(Math.random() * artCritiques.length);
+              artOutput.textContent = artCritiques[randomIndex];
+              artOutput.style.opacity = '1';
+            }, 150);
+          });
+        }
+
+        // 3. Random Fact Generator
+        const factBtn = document.getElementById('random-fact-btn');
+        const factOutput = document.getElementById('fact-output');
+        const facts = [
+          '"I can spend three hours researching something I only needed to know for fifteen minutes."',
+          '"My definition of \'just one more tab\' is legally questionable."',
+          '"I think good writing should make people stop scrolling for reasons other than poor internet connection."',
+          '"I have strong opinions about things I discovered approximately six minutes ago."',
+          '"I will judge a song within the first twelve seconds and then pretend my opinion is objective."',
+          '"I am convinced somewhere between a good essay and a good campaign is the meaning of life."',
+          '"I treat positioning exercises like archaeological excavations."'
+        ];
+        if (factBtn && factOutput) {
+          let currentFactIdx = 0;
+          factBtn.addEventListener('click', () => {
+            factOutput.style.opacity = '0';
+            setTimeout(() => {
+              let nextIdx;
+              do {
+                nextIdx = Math.floor(Math.random() * facts.length);
+              } while (nextIdx === currentFactIdx && facts.length > 1);
+              currentFactIdx = nextIdx;
+              factOutput.textContent = facts[currentFactIdx];
+              factOutput.style.opacity = '1';
+            }, 150);
+          });
+        }
+
+        // 4. B2B SaaS Audio Joke Tap Toggle for Mobile
+        const saasBtn = document.getElementById('saas-music-btn');
+        const saasTip = document.getElementById('saas-joke-tip');
+        if (saasBtn && saasTip) {
+          saasBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            saasTip.classList.toggle('is-visible');
+          });
+          document.addEventListener('click', () => {
+            saasTip.classList.remove('is-visible');
+          });
+        }
+      });
+    </script>
   <body class="about-page">
     <!-- Header Navigation -->
     <header class="site-header">
