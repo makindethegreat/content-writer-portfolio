@@ -226,7 +226,7 @@ body {
 }
 
 /* ===================================================
-   Homepage: Dark Problem Section
+   Homepage: Problem Section
    =================================================== */
 .problem-section {
   background-color: #111111 !important;
@@ -533,7 +533,7 @@ body {
 }
 
 /* ===================================================
-   Shared Dark Footer & Orbital Yellow Accent
+   Shared Dark Footer & Orbital Accent
    =================================================== */
 .closing-section {
   background-color: #0d0f11;
@@ -706,7 +706,7 @@ body {
 }
 
 /* ===================================================
-   ABOUT PAGE SPECIFIC STYLING
+   ABOUT PAGE: STYLES
    =================================================== */
 .about-page {
   background-color: #faf9f6;
@@ -767,7 +767,7 @@ body {
   opacity: 0.85;
 }
 
-/* 1. About Hero Section */
+/* Section 1: Hero */
 .about-hero-section {
   padding: clamp(4rem, 8vw, 6.5rem) 6% clamp(3.5rem, 7vw, 5.5rem);
   border-bottom: 1px solid var(--color-border);
@@ -922,7 +922,7 @@ body {
   box-shadow: 0 8px 16px rgba(30, 64, 56, 0.2);
 }
 
-/* 2. Origin Story Section */
+/* Section 2: Origin Story */
 .about-origin-section {
   padding: clamp(5rem, 9vw, 8rem) 6%;
   background-color: #ffffff;
@@ -976,7 +976,7 @@ body {
   margin-bottom: 0 !important;
 }
 
-/* 3. Belief Manifesto */
+/* Section 3: Belief Manifesto */
 .belief-manifesto-section {
   padding: clamp(5rem, 9vw, 8rem) 6%;
   background-color: #faf9f6;
@@ -1035,7 +1035,7 @@ body {
   font-size: 1.05rem !important;
 }
 
-/* 4. Travelled Work Tiles */
+/* Section 4: Travelled Work */
 .about-travel-section {
   padding: clamp(5rem, 9vw, 8rem) 6%;
   background-color: #ffffff;
@@ -1100,7 +1100,7 @@ body {
   color: #4a5568;
 }
 
-/* 5. Rabbit Hole Section */
+/* Section 5: Rabbit Hole Cards */
 .rabbit-hole-section {
   padding: clamp(5rem, 9vw, 8rem) 6%;
   background-color: #faf9f6;
@@ -1153,7 +1153,7 @@ body {
   color: #64748b;
 }
 
-/* 6. Human Layer & Interest Tags */
+/* Section 6: Human Layer */
 .human-layer-section {
   padding: clamp(5rem, 9vw, 7.5rem) 6%;
   background-color: #ffffff;
