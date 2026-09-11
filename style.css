@@ -2424,35 +2424,6 @@ body {
 }
 
 /* ===================================================
-   SECTION THREE: MINIMAL EDITORIAL CTA
-   =================================================== */
-.simple-cta-section {
-  padding: clamp(6rem, 11vw, 9rem) 6%;
-  background-color: #ffffff;
-}
-
-.simple-cta-box {
-  max-width: 800px;
-}
-
-.simple-cta-headline {
-  font-family: var(--font-display);
-  font-size: clamp(2.3rem, 4.6vw, 3.8rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.035em;
-  color: var(--color-primary);
-  margin-bottom: 1.25rem;
-}
-
-.simple-cta-subtext {
-  font-family: var(--font-body);
-  font-size: 1.2rem;
-  color: #4a5568;
-  margin-bottom: 2.25rem;
-}
-
-/* ===================================================
    Responsive Breakpoints for How We Can Work
    =================================================== */
 @media (max-width: 1080px) {
