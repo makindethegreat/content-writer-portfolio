@@ -2455,3 +2455,21 @@ body {
     transition: transform 0.01ms !important;
   }
 }
+
+a.nav-cta {
+  background: var(--color-surface) !important;
+  color: #111111 !important;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 216, 77, 0.4);
+}
