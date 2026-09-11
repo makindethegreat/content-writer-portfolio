@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap"
       rel="stylesheet"
     />
-<link rel="stylesheet" href="style.css?v=1500" />
+    <link rel="stylesheet" href="style.css?v=2000" />
   </head>
   <body class="about-page">
     <!-- Navigation Bar -->
@@ -42,7 +42,7 @@
               Somewhere between the problem <span class="italic-serif">and the result.</span>
             </h1>
             <p class="hww-lead-copy">
-That could be before the content exists, while it's being made, or after it's published and you're wondering why nobody is seeing it.
+              That could be before the content exists, while it's being made, or after it's published and you're wondering why nobody is seeing it.
             </p>
             <p class="hww-hint-text">
               Tap or click to explore the process behind each one.
@@ -472,73 +472,6 @@ That could be before the content exists, while it's being made, or after it's pu
             </div>
           </div>
 
-         </div>
-        </div>
-      </footer>
-    </main>
-
-    <script>
-      (function() {
-        const scenes = document.querySelectorAll('.flip-card-scene');
-
-        scenes.forEach((scene) => {
-          const inner = scene.querySelector('.flip-card-inner');
-          const frontFace = scene.querySelector('.flip-card-front');
-          const returnTriggers = scene.querySelectorAll('.flip-return-btn, .flip-return-pill');
-
-          // Click anywhere on the front card face to flip to the back
-          if (frontFace) {
-            frontFace.addEventListener('click', () => {
-              inner.classList.add('is-flipped');
-            });
-          }
-
-          // Click "Flip back" buttons to return to the front
-          returnTriggers.forEach((btn) => {
-            btn.addEventListener('click', (e) => {
-              e.stopPropagation();
-              inner.classList.remove('is-flipped');
-            });
-          });
-        });
-      })();
-    </script>
-  </body>
-</html>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const scenes = document.querySelectorAll('.flip-card-scene');
-
-        scenes.forEach((scene) => {
-          const inner = scene.querySelector('.flip-card-inner');
-          const frontTrigger = scene.querySelector('.flip-action-btn');
-          const returnTriggers = scene.querySelectorAll('.flip-return-btn, .flip-return-pill');
-
-          const flipToBack = (e) => {
-            if (e) e.stopPropagation();
-            inner.classList.add('is-flipped');
-            if (frontTrigger) frontTrigger.setAttribute('aria-expanded', 'true');
-          };
-
-          const flipToFront = (e) => {
-            if (e) e.stopPropagation();
-            inner.classList.remove('is-flipped');
-            if (frontTrigger) frontTrigger.setAttribute('aria-expanded', 'false');
-          };
-
-          if (frontTrigger) {
-            frontTrigger.addEventListener('click', flipToBack);
-          }
-
-          returnTriggers.forEach((btn) => {
-            btn.addEventListener('click', flipToFront);
-          });
-        });
-      });
-    </script>
-  </body>
-</html>
           <div class="closing-content">
             <div class="closing-badge">
               <span class="badge-dot"></span>
@@ -582,7 +515,34 @@ That could be before the content exists, while it's being made, or after it's pu
           </div>
         </div>
       </footer>
-      });
+    </main>
+
+    <!-- 3D Flip Card Interactive Controller -->
+    <script>
+      (function () {
+        const scenes = document.querySelectorAll('.flip-card-scene');
+
+        scenes.forEach((scene) => {
+          const inner = scene.querySelector('.flip-card-inner');
+          const frontFace = scene.querySelector('.flip-card-front');
+          const returnTriggers = scene.querySelectorAll('.flip-return-btn, .flip-return-pill');
+
+          // Clicking anywhere on the front face flips to the process back
+          if (frontFace) {
+            frontFace.addEventListener('click', () => {
+              inner.classList.add('is-flipped');
+            });
+          }
+
+          // Clicking "Flip back" returns to the front
+          returnTriggers.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              inner.classList.remove('is-flipped');
+            });
+          });
+        });
+      })();
     </script>
   </body>
 </html>
