@@ -472,6 +472,42 @@ That could be before the content exists, while it's being made, or after it's pu
             </div>
           </div>
 
+          </footer>
+    </main>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const scenes = document.querySelectorAll('.flip-card-scene');
+
+        scenes.forEach((scene) => {
+          const inner = scene.querySelector('.flip-card-inner');
+          const frontTrigger = scene.querySelector('.flip-action-btn');
+          const returnTriggers = scene.querySelectorAll('.flip-return-btn, .flip-return-pill');
+
+          const flipToBack = (e) => {
+            if (e) e.stopPropagation();
+            inner.classList.add('is-flipped');
+            if (frontTrigger) frontTrigger.setAttribute('aria-expanded', 'true');
+          };
+
+          const flipToFront = (e) => {
+            if (e) e.stopPropagation();
+            inner.classList.remove('is-flipped');
+            if (frontTrigger) frontTrigger.setAttribute('aria-expanded', 'false');
+          };
+
+          if (frontTrigger) {
+            frontTrigger.addEventListener('click', flipToBack);
+          }
+
+          returnTriggers.forEach((btn) => {
+            btn.addEventListener('click', flipToFront);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
           <div class="closing-content">
             <div class="closing-badge">
               <span class="badge-dot"></span>
