@@ -10,93 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=28" />
+    <link rel="stylesheet" href="style.css?v=99" />
   </head>
-
-  <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // 1. Reading Shelf Expand
-        const shelfBtn = document.getElementById('shelf-btn');
-        const shelfContent = document.getElementById('shelf-content');
-        if (shelfBtn && shelfContent) {
-          shelfBtn.addEventListener('click', () => {
-            const isHidden = shelfContent.hasAttribute('hidden');
-            if (isHidden) {
-              shelfContent.removeAttribute('hidden');
-              shelfBtn.setAttribute('aria-expanded', 'true');
-              shelfBtn.innerHTML = 'Close shelf <span aria-hidden="true">↑</span>';
-            } else {
-              shelfContent.setAttribute('hidden', '');
-              shelfBtn.setAttribute('aria-expanded', 'false');
-              shelfBtn.innerHTML = "What's on the shelf? <span aria-hidden='true'>→</span>";
-            }
-          });
-        }
-
-        // 2. Art Reviewer Randomizer
-        const artBtn = document.getElementById('art-critique-btn');
-        const artOutput = document.getElementById('art-critique-output');
-        const artCritiques = [
-          '"The tension between the colours is doing something deeply personal."',
-          '"You can really feel the artist\'s commitment to... whatever this is."',
-          '"I wouldn\'t have done it this way, but that\'s probably why I\'m not in the gallery."',
-          '"There\'s clearly something happening here."',
-          '"This piece asks difficult questions. Mostly from me."',
-          '"Bold. Uncompromising. Completely incomprehensible to the untrained eye."'
-        ];
-        if (artBtn && artOutput) {
-          artBtn.addEventListener('click', () => {
-            artOutput.style.opacity = '0';
-            setTimeout(() => {
-              const randomIndex = Math.floor(Math.random() * artCritiques.length);
-              artOutput.textContent = artCritiques[randomIndex];
-              artOutput.style.opacity = '1';
-            }, 150);
-          });
-        }
-
-        // 3. Random Fact Generator
-        const factBtn = document.getElementById('random-fact-btn');
-        const factOutput = document.getElementById('fact-output');
-        const facts = [
-          '"I can spend three hours researching something I only needed to know for fifteen minutes."',
-          '"My definition of \'just one more tab\' is legally questionable."',
-          '"I think good writing should make people stop scrolling for reasons other than poor internet connection."',
-          '"I have strong opinions about things I discovered approximately six minutes ago."',
-          '"I will judge a song within the first twelve seconds and then pretend my opinion is objective."',
-          '"I am convinced somewhere between a good essay and a good campaign is the meaning of life."',
-          '"I treat positioning exercises like archaeological excavations."'
-        ];
-        if (factBtn && factOutput) {
-          let currentFactIdx = 0;
-          factBtn.addEventListener('click', () => {
-            factOutput.style.opacity = '0';
-            setTimeout(() => {
-              let nextIdx;
-              do {
-                nextIdx = Math.floor(Math.random() * facts.length);
-              } while (nextIdx === currentFactIdx && facts.length > 1);
-              currentFactIdx = nextIdx;
-              factOutput.textContent = facts[currentFactIdx];
-              factOutput.style.opacity = '1';
-            }, 150);
-          });
-        }
-
-        // 4. B2B SaaS Audio Joke Tap Toggle for Mobile
-        const saasBtn = document.getElementById('saas-music-btn');
-        const saasTip = document.getElementById('saas-joke-tip');
-        if (saasBtn && saasTip) {
-          saasBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            saasTip.classList.toggle('is-visible');
-          });
-          document.addEventListener('click', () => {
-            saasTip.classList.remove('is-visible');
-          });
-        }
-      });
-    </script>
   <body class="about-page">
     <!-- Header Navigation -->
     <header class="site-header">
@@ -277,8 +192,75 @@
         </div>
       </section>
 
+      <!-- Section 5: Rabbit Hole Cards -->
+      <section class="rabbit-hole-section">
+        <div class="about-container">
+          <div class="section-intro">
+            <span class="whimsical-eyebrow">CURRENTLY DOWN THE RABBIT HOLE</span>
+            <h2 class="section-heading-editorial">Things I'm obsessed with learning.</h2>
+          </div>
+
+          <div class="rabbit-grid">
+            <div class="rabbit-card">
+              <div class="card-step">01</div>
+              <h3 class="card-title">CONTENT STRATEGY</h3>
+              <p class="card-body">
+                How content connects to positioning, customer problems, distribution, and actual business outcomes.
+              </p>
+            </div>
+
+            <div class="rabbit-card">
+              <div class="card-step">02</div>
+              <h3 class="card-title">GROWTH</h3>
+              <p class="card-body">
+                Experimentation, funnels, referral systems, and the mechanics behind how companies actually grow.
+              </p>
+            </div>
+
+            <div class="rabbit-card">
+              <div class="card-step">03</div>
+              <h3 class="card-title">SEARCH &amp; AI DISCOVERY</h3>
+              <p class="card-body">
+                Technical SEO, AEO, and how brands remain discoverable as search becomes increasingly conversational.
+              </p>
+            </div>
+
+            <div class="rabbit-card">
+              <div class="card-step">04</div>
+              <h3 class="card-title">GO-TO-MARKET</h3>
+              <p class="card-body">
+                Positioning, product marketing, distribution, and figuring out how good products find their people.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Human Layer & Pill Cloud -->
+      <section class="human-layer-section">
+        <div class="about-container">
+          <div class="human-card">
+            <span class="whimsical-eyebrow">ALSO, I AM A PERSON</span>
+            <h2 class="section-heading-editorial">When I'm not thinking about marketing things.</h2>
+            <p class="human-text">
+              I'm probably reading something, writing something, going down an internet rabbit hole, analysing why a campaign worked, or collecting another question I don't yet have an answer to.
+            </p>
+
+            <div class="interest-pill-cloud">
+              <span class="interest-pill">Stories</span>
+              <span class="interest-pill">Ideas</span>
+              <span class="interest-pill">Journalism</span>
+              <span class="interest-pill">Technology</span>
+              <span class="interest-pill">Growth</span>
+              <span class="interest-pill">Curiosity</span>
+              <span class="interest-pill interest-pill--quirky">Probably too many tabs open ⚡</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ===================================================
-           5. THE UNSTRUCTURED PART (Controlled Editorial Mosaic)
+           Section 7: THE UNSTRUCTURED PART (Controlled Editorial Mosaic)
            =================================================== -->
       <section class="unstructured-section" aria-labelledby="unstructured-heading">
         <div class="rooms-container">
@@ -498,7 +480,6 @@
               <p class="mosaic-body">
                 Worked on an influencer campaign built around creators, conversations, and making skincare feel less like an advertisement.
               </p>
-              <!-- Hidden metric slots ready for verified analytics without breaking the UI -->
               <div class="teeka4-metrics-holder" hidden aria-hidden="true">
                 <span data-metric="creators">[X] Creators</span>
                 <span data-metric="impressions">[XXXK] Impressions</span>
@@ -510,74 +491,7 @@
         </div>
       </section>
 
-      <!-- Section 5: Rabbit Hole Cards -->
-      <section class="rabbit-hole-section">
-        <div class="about-container">
-          <div class="section-intro">
-            <span class="whimsical-eyebrow">CURRENTLY DOWN THE RABBIT HOLE</span>
-            <h2 class="section-heading-editorial">Things I'm obsessed with learning.</h2>
-          </div>
-
-          <div class="rabbit-grid">
-            <div class="rabbit-card">
-              <div class="card-step">01</div>
-              <h3 class="card-title">CONTENT STRATEGY</h3>
-              <p class="card-body">
-                How content connects to positioning, customer problems, distribution, and actual business outcomes.
-              </p>
-            </div>
-
-            <div class="rabbit-card">
-              <div class="card-step">02</div>
-              <h3 class="card-title">GROWTH</h3>
-              <p class="card-body">
-                Experimentation, funnels, referral systems, and the mechanics behind how companies actually grow.
-              </p>
-            </div>
-
-            <div class="rabbit-card">
-              <div class="card-step">03</div>
-              <h3 class="card-title">SEARCH &amp; AI DISCOVERY</h3>
-              <p class="card-body">
-                Technical SEO, AEO, and how brands remain discoverable as search becomes increasingly conversational.
-              </p>
-            </div>
-
-            <div class="rabbit-card">
-              <div class="card-step">04</div>
-              <h3 class="card-title">GO-TO-MARKET</h3>
-              <p class="card-body">
-                Positioning, product marketing, distribution, and figuring out how good products find their people.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 6: Human Layer & Pill Cloud -->
-      <section class="human-layer-section">
-        <div class="about-container">
-          <div class="human-card">
-            <span class="whimsical-eyebrow">ALSO, I AM A PERSON</span>
-            <h2 class="section-heading-editorial">When I'm not thinking about marketing things.</h2>
-            <p class="human-text">
-              I'm probably reading something, writing something, going down an internet rabbit hole, analysing why a campaign worked, or collecting another question I don't yet have an answer to.
-            </p>
-
-            <div class="interest-pill-cloud">
-              <span class="interest-pill">Stories</span>
-              <span class="interest-pill">Ideas</span>
-              <span class="interest-pill">Journalism</span>
-              <span class="interest-pill">Technology</span>
-              <span class="interest-pill">Growth</span>
-              <span class="interest-pill">Curiosity</span>
-              <span class="interest-pill interest-pill--quirky">Probably too many tabs open ⚡</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Section 7: Final Dark CTA Footer with Yellow Glow Orbit -->
+      <!-- Section 8: Final Dark CTA Footer with Yellow Glow Orbit -->
       <footer id="contact" class="closing-section" aria-labelledby="closing-heading">
         <div class="closing-container">
           <div class="closing-orbital" aria-hidden="true">
@@ -631,5 +545,91 @@
         </div>
       </footer>
     </main>
+
+    <!-- Client-Side Script for Interactive Cards -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // 1. Reading Shelf Expand
+        const shelfBtn = document.getElementById('shelf-btn');
+        const shelfContent = document.getElementById('shelf-content');
+        if (shelfBtn && shelfContent) {
+          shelfBtn.addEventListener('click', () => {
+            const isHidden = shelfContent.hasAttribute('hidden');
+            if (isHidden) {
+              shelfContent.removeAttribute('hidden');
+              shelfBtn.setAttribute('aria-expanded', 'true');
+              shelfBtn.innerHTML = 'Close shelf <span aria-hidden="true">↑</span>';
+            } else {
+              shelfContent.setAttribute('hidden', '');
+              shelfBtn.setAttribute('aria-expanded', 'false');
+              shelfBtn.innerHTML = "What's on the shelf? <span aria-hidden='true'>→</span>";
+            }
+          });
+        }
+
+        // 2. Art Reviewer Randomizer
+        const artBtn = document.getElementById('art-critique-btn');
+        const artOutput = document.getElementById('art-critique-output');
+        const artCritiques = [
+          '"The tension between the colours is doing something deeply personal."',
+          '"You can really feel the artist\'s commitment to... whatever this is."',
+          '"I wouldn\'t have done it this way, but that\'s probably why I\'m not in the gallery."',
+          '"There\'s clearly something happening here."',
+          '"This piece asks difficult questions. Mostly from me."',
+          '"Bold. Uncompromising. Completely incomprehensible to the untrained eye."'
+        ];
+        if (artBtn && artOutput) {
+          artBtn.addEventListener('click', () => {
+            artOutput.style.opacity = '0';
+            setTimeout(() => {
+              const randomIndex = Math.floor(Math.random() * artCritiques.length);
+              artOutput.textContent = artCritiques[randomIndex];
+              artOutput.style.opacity = '1';
+            }, 150);
+          });
+        }
+
+        // 3. Random Fact Generator
+        const factBtn = document.getElementById('random-fact-btn');
+        const factOutput = document.getElementById('fact-output');
+        const facts = [
+          '"I can spend three hours researching something I only needed to know for fifteen minutes."',
+          '"My definition of \'just one more tab\' is legally questionable."',
+          '"I think good writing should make people stop scrolling for reasons other than poor internet connection."',
+          '"I have strong opinions about things I discovered approximately six minutes ago."',
+          '"I will judge a song within the first twelve seconds and then pretend my opinion is objective."',
+          '"I am convinced somewhere between a good essay and a good campaign is the meaning of life."',
+          '"I treat positioning exercises like archaeological excavations."'
+        ];
+        if (factBtn && factOutput) {
+          let currentFactIdx = 0;
+          factBtn.addEventListener('click', () => {
+            factOutput.style.opacity = '0';
+            setTimeout(() => {
+              let nextIdx;
+              do {
+                nextIdx = Math.floor(Math.random() * facts.length);
+              } while (nextIdx === currentFactIdx && facts.length > 1);
+              currentFactIdx = nextIdx;
+              factOutput.textContent = facts[currentFactIdx];
+              factOutput.style.opacity = '1';
+            }, 150);
+          });
+        }
+
+        // 4. B2B SaaS Audio Joke Tap Toggle for Mobile
+        const saasBtn = document.getElementById('saas-music-btn');
+        const saasTip = document.getElementById('saas-joke-tip');
+        if (saasBtn && saasTip) {
+          saasBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            saasTip.classList.toggle('is-visible');
+          });
+          document.addEventListener('click', () => {
+            saasTip.classList.remove('is-visible');
+          });
+        }
+      });
+    </script>
   </body>
 </html>
