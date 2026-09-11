@@ -10,14 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=120" />
+    <link rel="stylesheet" href="style.css?v=250" />
   </head>
   <body>
     <!-- Navigation with Brand Logo -->
     <header class="site-header">
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#top" class="brand-logo-link" aria-label="Beams home">
-        <nav class="site-nav" aria-label="Primary navigation">
         <a href="#top" class="brand-logo-link" aria-label="Beams home">
           <img src="logo.png" alt="Beams logo" class="brand-logo" />
         </a>
@@ -30,8 +28,14 @@
           </li>
         </ul>
       </nav>
+    </header>
+
+    <main id="top">
+      <!-- 1. Hero Section -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-content">
           <p class="hero-eyebrow">B2B Content Marketer</p>
-         <h1 id="hero-heading">
+          <h1 id="hero-heading">
             I'm obsessed<br />
             with turning<br />
             content into<br />
@@ -135,7 +139,7 @@
         <div class="articles-container">
           <div class="articles-header">
             <p class="articles-eyebrow">SELECTED WRITING</p>
-            <h2 id="articles-heading" class="articles-title"></h2>
+            <h2 id="articles-heading" class="articles-title">Words that build authority.</h2>
           </div>
 
           <div class="articles-grid">
@@ -166,7 +170,7 @@
               </div>
             </article>
 
-            <!-- Card 2 (Fixed closing tags) -->
+            <!-- Card 2 -->
             <article class="sample-card">
               <div class="sample-card__header">
                 <span class="sample-tag">ANALYSIS</span>
@@ -258,6 +262,7 @@
             <p class="copyright">© 2026 Beams. All rights reserved.</p>
             <nav class="closing-nav" aria-label="Footer navigation">
               <a href="about.html">About</a>
+              <a href="work-with-me.html">How We Can Work</a>
               <a href="#portfolio">Portfolio</a>
               <a
                 href="https://www.linkedin.com/in/oluwagbemiga-makinde-b34629263/"
@@ -274,7 +279,8 @@
       </footer>
     </main>
 
-  <script>
+    <!-- Word Rotation Script -->
+    <script>
       (function () {
         const dynamicWord = document.getElementById('dynamic-word');
         if (!dynamicWord) return;
