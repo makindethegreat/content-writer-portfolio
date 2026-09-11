@@ -1,619 +1,2316 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Makinde</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css?v=888" />
-  </head>
-  <body class="about-page">
-    <!-- Header Navigation -->
-    <header class="site-header">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html#top" class="brand-logo-link" aria-label="Beams home">
-          <img src="logo.png" alt="Beams logo" class="brand-logo" />
-        </a>
-        <ul>
-          <li><a href="about.html" class="active-nav">About</a></li>
-          <li><a href="work-with-me.html">How We Can Work</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li>
-            <a href="mailto:makindegbenga00@gmail.com" class="nav-cta">Book a Call <span aria-hidden="true">→</span></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+/* ===================================================
+   Brand Tokens
+   =================================================== */
+:root {
+  --color-background: #ffffff;
+  --color-dark: #111111;
+  --color-primary: #111111;
+  --color-surface: #ffd84d;
+  --color-accent: #ff5b3e;
+  --color-border: #ededed;
+  --color-green: #1e4038;
+  --color-mint: #8eecb9;
 
-    <main id="top">
-      <!-- Section 1: Hero -->
-      <section class="about-hero-section">
-        <div class="about-container about-hero-layout">
-          <div class="about-hero-text">
-            <span class="whimsical-eyebrow">ABOUT ME</span>
-            
-            <p class="about-greeting">
-              Hi, I'm <strong>Makinde</strong> <span class="hand-wave">👋🏾</span>
-            </p>
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
 
-            <h1 class="about-hero-heading">
-              I help good tech products become <span class="highlight-pen">harder to ignore.</span>
-            </h1>
+  --content-width: 1200px;
+}
 
-            <p class="about-supporting-lead">
-              Mostly with content. Increasingly with strategy, distribution, and a healthy obsession with figuring out how they must grow.
-            </p>
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-            <p class="about-body-narrative">
-              I work around B2B SaaS and technology, helping turn complicated ideas into clear stories that attract the right people and move businesses forward. 💡
-            </p>
+html {
+  scroll-behavior: smooth;
+}
 
-            <div class="about-hero-btn-row">
-              <a href="mailto:makindegbenga00@gmail.com?subject=Work%20With%20Me" class="btn-yellow-glow">
-                Work with me
-              </a>
-              <a href="index.html#portfolio" class="link-understated">
-                See the work <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
 
-          <div class="about-hero-visual">
-            <div class="portrait-stage">
-              <div class="decorative-blob" aria-hidden="true"></div>
-              <figure class="about-portrait-card">
-                <img src="Makinde.jpg" alt="Portrait of Makinde" />
-              </figure>
-              <div class="whimsical-stamp" aria-hidden="true">
-                <span>IDEAS • TASTE • GROWTH</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+/* ===================================================
+   Header & Navigation
+   =================================================== */
+.site-header {
+  padding: 18px 6%;
+  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
 
-      <!-- Section 2: Origin Story -->
-      <section class="about-origin-section">
-        <div class="about-container">
-          <div class="section-intro">
-            <span class="whimsical-eyebrow">HOW THIS WHOLE THING STARTED</span>
-            <h2 class="section-heading-editorial">
-              Apparently, I've always <span class="italic-serif">been like this.</span>
-            </h2>
-          </div>
+.site-nav {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-          <div class="editorial-duo-grid">
-            <div class="duo-left">
-              <span class="story-chapter-tag">BEFORE I DISCOVERED B2B SAAS</span>
-              <p class="story-dropcap-lead">
-                At 14, I had a strange little superpower: I could make things sound interesting.
-              </p>
-              <p>
-                Sometimes, that meant writing essays about why we shouldn't kill fireflies. Other times, it meant trying to convince people that cassava-flavoured ice cream could be the next big thing.
-              </p>
-              <p>
-                Looking back, I probably wasn't trying to become a marketer. I just liked ideas, stories, and figuring out how to make other people care about them.
-              </p>
-            </div>
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
 
-            <div class="duo-right">
-              <p>
-                That instinct followed me into journalism and communication, where I became increasingly interested in how information travels, how people make decisions, and why some messages stick while others disappear into the internet.
-              </p>
-              <p>
-                Eventually, I found my way into marketing. And then into the wonderfully strange world of B2B SaaS—where people build incredibly complicated products and then have the difficult job of explaining them to other humans.
-              </p>
-              <div class="story-pullquote">
-                <p>
-                  That's the part I enjoy: taking something complicated, finding the interesting bit, connecting it to something people already care about, and building systems that help the right people discover it.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+.brand-logo {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
 
-      <!-- Section 3: Belief Manifesto -->
-      <section class="belief-manifesto-section">
-        <div class="about-container">
-          <div class="manifesto-card">
-            <span class="whimsical-eyebrow eyebrow-light">SINCE THEN, I'VE EVOLVED. I BELIEVE</span>
-            <h2 class="manifesto-statement">
-              Good content should <span class="highlight-lemon">do something.</span>
-            </h2>
-            <div class="manifesto-body">
-              <p class="manifesto-big-text">
-               Make a confusing idea clearer. Help a buyer make a decision. Create demand. Build trust. Start a useful conversation. Or occasionally make someone stop scrolling and think:
-              </p>
-              <blockquote class="manifesto-quote">
-                “Huh. That's actually interesting.”
-              </blockquote>
-              <p class="manifesto-close">
-                That's the kind of work I strive to produce
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+.site-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  align-items: center;
+}
 
-      <!-- Section 4: Proof / Track Record -->
-      <section class="about-travel-section">
-        <div class="about-container">
-          <div class="section-intro">
-            <span class="whimsical-eyebrow">SO FAR, SO GOOD</span>
-            <h2 class="section-heading-editorial">It has shown like this.</h2>
-          </div>
+.site-nav ul a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
 
-          <div class="travel-tiles-grid">
-            <div class="travel-tile">
-              <span class="tile-number">3+</span>
-              <p class="tile-description">
-                Highly technical pieces ghostwritten and translated into content that actual humans can understand and enjoy reading.
-              </p>
-            </div>
+.site-nav ul a:hover,
+.site-nav ul a.active-nav {
+  color: var(--color-primary);
+  font-weight: 700;
+}
 
-            <div class="travel-tile">
-              <span class="tile-number highlight-brand-num">2×</span>
-              <p class="tile-description">
-                Featured on HackerNoon, which remains a nice reminder that good work occasionally finds interesting places to live.
-              </p>
-            </div>
+.site-nav li:last-child a.nav-cta,
+a.nav-cta {
+  background: var(--color-surface) !important;
+  color: #111111 !important;
+  padding: 10px 22px !important;
+  border-radius: 999px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
 
-            <div class="travel-tile">
-              <span class="tile-number">AI</span>
-              <p class="tile-description">
-                Had my work surface in Google's AI-generated search experience for a piece exploring when SaaS startups should actually invest in content marketing.
-              </p>
-            </div>
+.site-nav li:last-child a.nav-cta:hover,
+a.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 216, 77, 0.4);
+}
 
-            <div class="travel-tile">
-              <span class="tile-tag-label">JOURNALISM + COMMUNICATION</span>
-              <p class="tile-description">
-                My academic background has made me particularly interested in research, interviewing subject-matter experts, understanding audiences, and asking better questions before writing.
-              </p>
-            </div>
+/* ===================================================
+   Homepage: Hero Section
+   =================================================== */
+.hero {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 40px 6% 60px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: 40px;
+  align-items: start;
+  position: relative;
+}
 
-            <div class="travel-tile travel-tile--accent">
-              <span class="tile-number">∞</span>
-              <p class="tile-description">
-                Unending questions living in my head about content, positioning, distribution, growth, and why some companies seem impossible to ignore.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
 
-      <!-- Section 5: Rabbit Hole Cards -->
-      <section class="rabbit-hole-section">
-        <div class="about-container">
-          <div class="section-intro">
-            <span class="whimsical-eyebrow">DOWN THE RABBIT HOLE</span>
-            <h2 class="section-heading-editorial">Growth, so I'm currently learning.</h2>
-          </div>
+.hero-content {
+  min-width: 0;
+}
 
-          <div class="rabbit-grid">
-            <div class="rabbit-card">
-              <div class="card-step">01</div>
-              <h3 class="card-title">CONTENT STRATEGY</h3>
-              <p class="card-body">
-                How content connects to positioning, customer problems, distribution, and actual business outcomes.
-              </p>
-            </div>
+.hero-eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
 
-            <div class="rabbit-card">
-              <div class="card-step">02</div>
-              <h3 class="card-title">GROWTH</h3>
-              <p class="card-body">
-                Experimentation, funnels, referral systems, and the mechanics behind how companies actually grow.
-              </p>
-            </div>
+.hero-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: var(--color-surface);
+}
 
-            <div class="rabbit-card">
-              <div class="card-step">03</div>
-              <h3 class="card-title">SEARCH &amp; AI DISCOVERY</h3>
-              <p class="card-body">
-                Technical SEO, AEO, and how brands remain discoverable as search becomes increasingly conversational.
-              </p>
-            </div>
+.hero-content h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 3.8vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+  margin-bottom: 20px;
+}
 
-            <div class="rabbit-card">
-              <div class="card-step">04</div>
-              <h3 class="card-title">GO-TO-MARKET</h3>
-              <p class="card-body">
-                Positioning, product marketing, distribution, and figuring out how good products find their people.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+.hero-highlight {
+  color: #d4a017;
+  display: inline-block;
+}
 
-      <!-- Section 6: Human Layer & Pill Cloud -->
-      <section class="human-layer-section">
-        <div class="about-container">
-          <div class="human-card">
-            <h2 class="section-heading-editorial">When I'm not thinking about content marketing.</h2>
-            <p class="human-text">
-              I'm probably reading something, writing something, digging through the internet, analyzing why a campaign worked, or collecting another question I don't have an answer to yet.
-            </p>
+.type-cursor {
+  display: inline-block;
+  color: var(--color-surface);
+  font-weight: 400;
+  margin-left: 2px;
+  animation: blink-cursor 0.9s infinite;
+}
 
-            <div class="interest-pill-cloud">
-              <span class="interest-pill">Stories</span>
-              <span class="interest-pill">Ideas</span>
-              <span class="interest-pill">Marketing</span>
-              <span class="interest-pill">Technology</span>
-              <span class="interest-pill">Growth</span>
-              <span class="interest-pill">Your Product</span>
-              <span class="interest-pill interest-pill--quirky">Probably too many tabs open ⚡</span>
-            </div>
-          </div>
-        </div>
-      </section>
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
-      <!-- Section 7: THE UNSTRUCTURED PART (Controlled Editorial Mosaic) -->
-      <section class="unstructured-section" aria-labelledby="unstructured-heading">
-        <div class="rooms-container">
-          <div class="unstructured-header">
-            <span class="whimsical-eyebrow">NOT DONE</span>
-            <h2 id="unstructured-heading" class="unstructured-title">
-              A few things about me that don't fit <span class="italic-serif">neatly into a portfolio.</span>
-            </h2>
-            <p class="unstructured-subhead">
-              Achievements, obsessions, side quests, questionable expertise, and seemingly unnecessary information.
-            </p>
-          </div>
+.hero-content > p {
+  font-size: 1.1rem;
+  color: #555555;
+  max-width: 480px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
 
-          <div class="mosaic-grid">
-            <!-- Card 1: Debate -->
-            <article class="mosaic-card card-debate" tabindex="0">
-              <div class="mosaic-card__top">
-                <span class="mosaic-stat">×2</span>
-                <span class="mosaic-tag"></span>
-              </div>
-              <h3 class="mosaic-headline">Interfaculty Debate Winner.</h3>
-              <p class="mosaic-body">
-                Won two interfaculty debate competitions. Learned how to think clearly, argue properly, and occasionally defend positions I didn't even agree with.
-              </p>
-              <div class="debate-reveal" aria-live="polite">
-                <p class="debate-reveal__text">
-                  <strong>Debate taught me something useful:</strong><br />
-                  Good communication is good psychology. Give people reasons to believe you, and poof, you win.  
-                </p>
-              </div>
-              <span class="card-affordance-hint">Hover or tap to reveal lesson</span>
-            </article>
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-            <!-- Card 2: Reading -->
-            <article class="mosaic-card card-reading">
-              <div class="mosaic-card__top">
-                <span class="mosaic-stat highlight-brand-num">40+</span>
-                <span class="mosaic-tag"></span>
-              </div>
-              <h3 class="mosaic-headline">Books and essays last year.</h3>
-              <p class="mosaic-body">
-                Fiction, non-fiction, essays, philosophy, history, and anything capable of making me feel like the modern-day Socrates. 
-              </p>
-              <button type="button" class="inline-expand-trigger" id="shelf-btn" aria-expanded="false" aria-controls="shelf-content">
-                What's on the shelf? <span aria-hidden="true">→</span>
-              </button>
-              <div id="shelf-content" class="shelf-expandable" hidden>
-                <p class="shelf-expandable__text">
-                  I read because the fastest way to have better ideas is to borrow a few from people who have spent years thinking about them. Who said thief?
-                </p>
-              </div>
-            </article>
+.hero-actions__work {
+  background: var(--color-surface);
+  color: #111111;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-            <!-- Card 3: Socrates -->
-            <article class="mosaic-card card-socrates">
-              <div class="mosaic-card__top">
-                <span class="mosaic-tag"></span>
-                <span class="mosaic-dot" aria-hidden="true">•</span>
-              </div>
-              <h3 class="mosaic-headline">Sometimes I have too many thoughts.</h3>
-              <p class="mosaic-body">
-                So I put some of them on the internet. A small corner where I think out loud, ask uncomfortable questions, and occasionally pretend I know what I'm talking about.
-              </p>
-              <div class="mosaic-card__action">
-                <a href="https://substack.com" target="_blank" rel="noopener noreferrer" class="mosaic-link">
-                  Open a thought <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </article>
+.hero-actions__work:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 216, 77, 0.4);
+}
 
-            <!-- Card 4: Pageantry Campaign -->
-            <article class="mosaic-card card-pageantry">
-              <div class="mosaic-card__top">
-                <span class="mosaic-tag">BEING NOLAN</span>
-                <span class="mosaic-ref">UNCHARTED — THE PAGEANTRY</span>
-              </div>
-              <h3 class="mosaic-headline">Wrote it. Directed it. Produced it.</h3>
-              <p class="mosaic-subheadline">
-                <a
-                  href="https://www.instagram.com/reel/DZxtkbKRpi7/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA=="
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="mosaic-subheadline-link"
-                >
-                  A Pageantry Campaign <span aria-hidden="true">↗</span>
-                </a>
-              </p>
-              <p class="mosaic-body">
-                Fashion, art, storytelling, production, and an unhealthy amount of attention to detail.
-              </p>
-              <p class="mosaic-aside">
-                <em>Apparently, having one job wasn't enough.</em>
-              </p>
-            </article>
+.hero-actions__growth {
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 2px;
+}
 
-            <!-- Card 5: Music -->
-            <article class="mosaic-card card-music">
-              <div class="mosaic-card__top">
-                <span class="mosaic-tag">CURRENTLY PLAYING</span>
-                <span class="mosaic-icon" aria-hidden="true">♪</span>
-              </div>
-              <h3 class="mosaic-headline">I'm a sucker for good music.</h3>
-              <div class="genre-pill-cloud">
-                <span class="genre-pill">Country</span>
-                <span class="genre-pill">Afrobeats</span>
-                <span class="genre-pill">K-pop</span>
-                <span class="genre-pill">Rap</span>
-                <span class="genre-pill">Reggae</span>
-                <span class="genre-pill">Fuji</span>
-                <button type="button" class="genre-pill genre-pill--joke" id="saas-music-btn" aria-describedby="saas-joke-tip" tabindex="0">
-                  B2B SaaS
-                </button>
-              </div>
-              <div id="saas-joke-tip" class="saas-punchline" role="tooltip">
-                Not technically music. Still sounds good when the pipeline grows.
-              </div>
-              <p class="mosaic-body music-closing-note">
-                Genre loyalty has never made sense to me. If it's good, it's good.
-              </p>
-            </article>
+.hero-portrait {
+  min-width: 0;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 0 0 auto;
+  border-radius: 8.75rem 2.5rem 7.5rem 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
 
-            <!-- Card 6: Weather -->
-            <article class="mosaic-card card-weather" tabindex="0">
-              <div class="weather-mist-layer" aria-hidden="true"></div>
-              <div class="mosaic-card__top">
-                <span class="mosaic-tag">FAVOURITE WEATHER</span>
-                <span class="mosaic-icon" aria-hidden="true">☁</span>
-              </div>
-              <h3 class="mosaic-headline">Petrichor. Mist. Grey skies.</h3>
-              <p class="mosaic-body">
-                That's weather for two: me and content marketing.
-              </p>
-            </article>
+.hero-portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
 
-            <!-- Card 7: Art Reviewer -->
-            <article class="mosaic-card card-art">
-              <div class="mosaic-card__top">
-                <span class="mosaic-tag">UNPAID POSITION</span>
-                <span class="mosaic-icon" aria-hidden="true">🏛</span>
-              </div>
-              <h3 class="mosaic-headline">Full-time art reviewer.</h3>
-              <p class="mosaic-body">
-                The only problem is that I know absolutely nothing about art. I just look at things for a long time and say, <em>"Interesting use of space."</em>
-              </p>
-              <div class="art-generator-area">
-                <button type="button" class="mosaic-pill-btn" id="art-critique-btn">
-                  Review this artwork <span aria-hidden="true">→</span>
-                </button>
-                <div class="art-critique-display" id="art-critique-output" aria-live="polite">
-                  "The tension between the colours is doing something deeply personal."
-                </div>
-              </div>
-            </article>
+/* ===================================================
+   Homepage: Problem Section
+   =================================================== */
+.problem-section {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  padding: clamp(6rem, 12vw, 9rem) 6%;
+  width: 100%;
+  position: relative;
+  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+}
 
-            <!-- Card 8: The Absurd Flex -->
-            <article class="mosaic-card card-absurd">
-              <div class="mosaic-card__top">
-                <span class="mosaic-tag mosaic-tag--light">A RANDOM TUESDAY.</span>
-                <span class="mosaic-badge-alert">VERIFIED*</span>
-              </div>
-              <h3 class="mosaic-headline-absurd">
-                I once deadlifted 511kg in one hand while writing an SEO article for a tech behemoth with the other.
-              </h3>
-              <div class="absurd-tally">
-                <div class="tally-item">
-                  <span class="tally-label">WEIGHT:</span>
-                  <span class="tally-val">511KG</span>
-                </div>
-                <div class="tally-item">
-                  <span class="tally-label">SEO ARTICLE</span>
-                  <span class="tally-val">PUBLISHED</span>
-                </div>
-                <div class="tally-item">
-                  <span class="tally-label">PIPELINE</span>
-                  <span class="tally-val">+1,000×</span>
-                </div>
-                <div class="tally-item">
-                  <span class="tally-label">CEO</span>
-                  <span class="tally-val">IN TEARS</span>
-                </div>
-              </div>
-              <p class="mosaic-body-light">
-                The article ranked #1, increased their pipeline by approximately 1,000×. I could've pushed it to 10,000×, but then I'd basically be carrying the whole world's pipeline.
-              </p>
-              <p class="absurd-disclaimer">
-                *Several witnesses dispute absolutely nothing because there were no witnesses. Haha...got ya!
-              </p>
-            </article>
+.problem-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 48vh;
+}
 
-            <!-- Card 9: Random Fact Generator -->
-            <article class="mosaic-card card-random-fact">
-              <div class="mosaic-card__top">
-                <span class="mosaic-tag">PRESS FOR A RANDOM FACT</span>
-                <span class="mosaic-icon" aria-hidden="true">⚡</span>
-              </div>
-              <div class="fact-output-stage">
-                <p class="fact-display-text" id="fact-output" aria-live="polite">
-                  "I read books to become smarter and then immediately use the knowledge in conversations nobody asked for."
-                </p>
-              </div>
-              <button type="button" class="mosaic-pill-btn" id="random-fact-btn">
-                Tell me something unnecessary <span aria-hidden="true">→</span>
-              </button>
-            </article>
+.problem-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+  color: #ffffff !important;
+  max-width: 880px;
+}
 
-            <!-- Card 10: Teeka4 Campaign -->
-            <article class="mosaic-card card-teeka4" id="teeka4-campaign">
-              <div class="mosaic-card__top">
-                <span class="mosaic-tag">CAMPAIGN MODE</span>
-                <span class="mosaic-status-pill">VERIFICATION IN PROGRESS</span>
-              </div>
-              <h3 class="mosaic-headline">Teeka4 Influencer Campaign</h3>
-              <p class="mosaic-body">
-                Worked on an influencer campaign built around creators, conversations, and making skincare feel less like an advertisement.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
+.problem-section h2 span {
+  color: #777777 !important;
+}
 
-      <!-- Section 8: Final Dark CTA Footer -->
-      <footer id="contact" class="closing-section" aria-labelledby="closing-heading">
-        <div class="closing-container">
-          <div class="closing-orbital" aria-hidden="true">
-            <div class="orbital-ring orbital-ring--outer"></div>
-            <div class="orbital-ring orbital-ring--inner">
-              <span class="orbital-node"></span>
-            </div>
-          </div>
+.problem-section p {
+  align-self: flex-end;
+  font-family: var(--font-display);
+  color: var(--color-surface) !important;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: clamp(3rem, 6vw, 5rem);
+}
 
-          <div class="closing-content">
-            <div class="closing-badge">
-              <span class="badge-dot"></span>
-              <span class="badge-text">ENOUGH ABOUT ME</span>
-            </div>
+.problem-light {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 0 12px var(--color-surface);
+}
 
-            <h2 id="closing-heading" class="closing-heading">
-              Got something interesting you're trying to <span class="highlight-text">grow?</span>
-            </h2>
+/* ===================================================
+   Homepage: Proof Section
+   =================================================== */
+.proof-section {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  padding: clamp(6rem, 12vw, 9rem) 6% clamp(5rem, 10vw, 8rem);
+  position: relative;
+}
 
-            <p class="closing-subtext">
-              A product. An audience. A content engine. A big idea.<br />
-              I'm always interested in good problems.
-            </p>
+.proof-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  width: 100%;
+}
 
-            <div class="closing-cta">
-              <a
-                href="mailto:makindegbenga00@gmail.com?subject=Let's%20talk"
-                class="closing-btn"
-              >
-                Let's talk <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
+.proof-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.8vw, 3.25rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: var(--color-primary);
+  margin: 0;
+  max-width: 22ch;
+}
 
-          <div class="closing-footer-bar">
-            <p class="copyright">© 2026 Beams. All rights reserved.</p>
-            <nav class="closing-nav" aria-label="Footer navigation">
-              <a href="about.html">About</a>
-              <a href="work-with-me.html">How We Can Work</a>
-              <a href="index.html#portfolio">Portfolio</a>
-              <a
-                href="https://www.linkedin.com/in/oluwagbemiga-makinde-b34629263/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="closing-link-linkedin"
-              >
-                LinkedIn <span aria-hidden="true">↗</span>
-              </a>
-              <a href="#top" class="back-to-top">Back to top ↑</a>
-            </nav>
-          </div>
-        </div>
-      </footer>
-    </main>
+.proof-body {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+}
 
-    <!-- Client-Side Script for Interactive Cards -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // 1. Reading Shelf Expand
-        const shelfBtn = document.getElementById('shelf-btn');
-        const shelfContent = document.getElementById('shelf-content');
-        if (shelfBtn && shelfContent) {
-          shelfBtn.addEventListener('click', () => {
-            const isHidden = shelfContent.hasAttribute('hidden');
-            if (isHidden) {
-              shelfContent.removeAttribute('hidden');
-              shelfBtn.setAttribute('aria-expanded', 'true');
-              shelfBtn.innerHTML = 'Close shelf <span aria-hidden="true">↑</span>';
-            } else {
-              shelfContent.setAttribute('hidden', '');
-              shelfBtn.setAttribute('aria-expanded', 'false');
-              shelfBtn.innerHTML = "What's on the shelf? <span aria-hidden='true'>→</span>";
-            }
-          });
-        }
+.proof-ticker-block {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 2.25rem 0 2.5rem;
+}
 
-        // 2. Art Reviewer Randomizer
-        const artBtn = document.getElementById('art-critique-btn');
-        const artOutput = document.getElementById('art-critique-output');
-        const artCritiques = [
-          '"The tension between the colours is doing something deeply personal."',
-          '"You can really feel the artist\'s commitment to... whatever this is."',
-          '"I wouldn\'t have done it this way, but that\'s probably why I\'m not in the gallery."',
-          '"There\'s clearly something happening here."',
-          '"This piece asks difficult questions. Mostly from me."',
-          '"Bold. Uncompromising. Completely incomprehensible to the untrained eye."'
-        ];
-        if (artBtn && artOutput) {
-          artBtn.addEventListener('click', () => {
-            artOutput.style.opacity = '0';
-            setTimeout(() => {
-              const randomIndex = Math.floor(Math.random() * artCritiques.length);
-              artOutput.textContent = artCritiques[randomIndex];
-              artOutput.style.opacity = '1';
-            }, 150);
-          });
-        }
+.proof-travelled__label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
 
-        // 3. Random Fact Generator
-        const factBtn = document.getElementById('random-fact-btn');
-        const factOutput = document.getElementById('fact-output');
-        const facts = [
-          '"I can spend three hours researching something I only needed to know for fifteen minutes."',
-          '"My definition of \'just one more tab\' is legally questionable."',
-          '"I think good writing should make people stop scrolling for reasons other than poor internet connection."',
-          '"I have strong opinions about things I discovered approximately six minutes ago."',
-          '"I will judge a song within the first twelve seconds and then pretend my opinion is objective."',
-          '"I am convinced somewhere between a good essay and a good campaign is the meaning of life."',
-          '"I treat positioning exercises like archaeological excavations."'
-        ];
-        if (factBtn && factOutput) {
-          let currentFactIdx = 0;
-          factBtn.addEventListener('click', () => {
-            factOutput.style.opacity = '0';
-            setTimeout(() => {
-              let nextIdx;
-              do {
-                nextIdx = Math.floor(Math.random() * facts.length);
-              } while (nextIdx === currentFactIdx && facts.length > 1);
-              currentFactIdx = nextIdx;
-              factOutput.textContent = facts[currentFactIdx];
-              factOutput.style.opacity = '1';
-            }, 150);
-          });
-        }
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
 
-        // 4. B2B SaaS Audio Joke Tap Toggle for Mobile
-        const saasBtn = document.getElementById('saas-music-btn');
-        const saasTip = document.getElementById('saas-joke-tip');
-        if (saasBtn && saasTip) {
-          saasBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            saasTip.classList.toggle('is-visible');
-          });
-          document.addEventListener('click', () => {
-            saasTip.classList.remove('is-visible');
-          });
-        }
-      });
-    </script>
-  </body>
-</html>
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 3rem;
+  white-space: nowrap;
+  animation: marquee-scroll 24s linear infinite;
+}
+
+.marquee-wrapper:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+}
+
+.marquee-dot {
+  color: var(--color-surface);
+  font-size: 1.2rem;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.proof-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: clamp(2rem, 6vw, 4rem);
+  row-gap: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: clamp(1.5rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.metric-number {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 5.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.metric-label {
+  font-family: var(--font-body);
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* ===================================================
+   Homepage: Selected Writing
+   =================================================== */
+.articles-section {
+  background-color: #fafafa;
+  padding: 6rem 6% 7.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.articles-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.articles-header {
+  margin-bottom: 3.5rem;
+}
+
+.articles-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: 0.5rem;
+}
+
+.articles-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.sample-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2.25rem 1.75rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.sample-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.sample-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.sample-tag,
+.sample-source {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.sample-tag {
+  color: #64748b;
+}
+
+.sample-source {
+  color: var(--color-green);
+}
+
+.sample-card__title {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+}
+
+.sample-card__excerpt {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.sample-card__footer {
+  border-top: 1px solid #f1f5f9;
+  padding-top: 1.25rem;
+}
+
+.sample-link {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.sample-link:hover {
+  color: var(--color-accent);
+}
+
+/* ===================================================
+   ABOUT PAGE CORE LAYOUTS
+   =================================================== */
+.about-page {
+  background-color: #faf9f6;
+}
+
+.about-container,
+.rooms-container {
+  max-width: var(--content-width, 1200px);
+  margin: 0 auto;
+}
+
+.whimsical-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: 1rem;
+}
+
+.eyebrow-light {
+  color: var(--color-surface) !important;
+}
+
+.section-heading-editorial {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+}
+
+.italic-serif {
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.highlight-pen {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.highlight-pen::before {
+  content: '';
+  position: absolute;
+  bottom: 12%;
+  left: -4px;
+  right: -4px;
+  height: 38%;
+  background-color: var(--color-surface);
+  border-radius: 4px;
+  z-index: -1;
+  opacity: 0.85;
+}
+
+/* Section 1: About Hero */
+.about-hero-section {
+  padding: clamp(4rem, 8vw, 6.5rem) 6% clamp(3.5rem, 7vw, 5.5rem);
+  border-bottom: 1px solid var(--color-border);
+  background: radial-gradient(circle at 90% 10%, rgba(255, 216, 77, 0.18) 0%, transparent 45%), #ffffff;
+}
+
+.about-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.8fr);
+  gap: clamp(2.5rem, 6vw, 4.5rem);
+  align-items: center;
+}
+
+.about-greeting {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+.about-greeting strong {
+  color: var(--color-primary);
+}
+
+.hand-wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: wave 2.5s infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  20%, 60% { transform: rotate(14deg); }
+  40%, 80% { transform: rotate(-10deg); }
+}
+
+.about-hero-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 4.2vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.about-supporting-lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: var(--color-green);
+  margin-bottom: 1.25rem;
+  max-width: 54ch;
+}
+
+.about-body-narrative {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 1rem;
+  max-width: 56ch;
+}
+
+.about-hero-btn-row {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.btn-yellow-glow {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-yellow-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 216, 77, 0.38);
+}
+
+.link-understated {
+  font-family: var(--font-body);
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 2px;
+}
+
+.portrait-stage {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.decorative-blob {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 220px;
+  height: 220px;
+  background-color: rgba(255, 216, 77, 0.4);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  filter: blur(24px);
+  z-index: 1;
+}
+
+.about-portrait-card {
+  position: relative;
+  z-index: 2;
+  border-radius: 8.75rem 2.5rem 7.5rem 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 4px solid #ffffff;
+}
+
+.about-portrait-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 4.9;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
+
+.whimsical-stamp {
+  position: absolute;
+  bottom: -15px;
+  left: -20px;
+  background-color: var(--color-green);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  transform: rotate(-4deg);
+  z-index: 3;
+  box-shadow: 0 8px 16px rgba(30, 64, 56, 0.2);
+}
+
+/* Section 2: Origin Story */
+.about-origin-section {
+  padding: clamp(5rem, 9vw, 8rem) 6%;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.editorial-duo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 7vw, 6rem);
+  margin-top: 2rem;
+}
+
+.story-chapter-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+}
+
+.story-dropcap-lead {
+  font-size: 1.35rem;
+  line-height: 1.5;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.editorial-duo-grid p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+}
+
+.story-pullquote {
+  border-left: 3px solid var(--color-surface);
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.story-pullquote p {
+  font-family: var(--font-display);
+  font-size: 1.15rem !important;
+  font-weight: 600;
+  color: var(--color-primary) !important;
+  line-height: 1.55 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Section 3: Belief Manifesto */
+.belief-manifesto-section {
+  padding: clamp(5rem, 9vw, 8rem) 6%;
+  background-color: #faf9f6;
+}
+
+.manifesto-card {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: clamp(3rem, 6vw, 5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.manifesto-statement {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  margin-bottom: 2rem;
+}
+
+.highlight-lemon {
+  color: var(--color-surface);
+}
+
+.manifesto-body {
+  max-width: 780px;
+}
+
+.manifesto-body p {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.manifesto-big-text {
+  font-size: 1.3rem !important;
+  color: #f1f5f9 !important;
+  line-height: 1.6 !important;
+}
+
+.manifesto-quote {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-style: italic;
+  color: var(--color-surface);
+  margin: 2rem 0;
+  line-height: 1.3;
+}
+
+.manifesto-close {
+  color: #94a3b8 !important;
+  font-size: 1.05rem !important;
+}
+
+/* Section 4: Travelled Work */
+.about-travel-section {
+  padding: clamp(5rem, 9vw, 8rem) 6%;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.travel-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-top: 3rem;
+}
+
+.travel-tile {
+  background-color: #faf9f6;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.travel-tile:hover {
+  transform: translateY(-3px);
+  border-color: #cbd5e1;
+}
+
+.travel-tile--accent {
+  background-color: #ffffff;
+  border: 2px dashed var(--color-surface);
+}
+
+.tile-number {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.highlight-brand-num {
+  color: var(--color-green);
+}
+
+.tile-tag-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.tile-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+/* Section 5: Rabbit Hole Cards */
+.rabbit-hole-section {
+  padding: clamp(5rem, 9vw, 8rem) 6%;
+  background-color: #faf9f6;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rabbit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.rabbit-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rabbit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+}
+
+.card-step {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-surface);
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.card-body {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+/* Section 6: Human Layer */
+.human-layer-section {
+  padding: clamp(5rem, 9vw, 7.5rem) 6%;
+  background-color: #ffffff;
+}
+
+.human-card {
+  max-width: 820px;
+}
+
+.human-text {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 2.5rem;
+}
+
+.interest-pill-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.interest-pill {
+  background-color: #f1f5f9;
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.interest-pill:hover {
+  background-color: var(--color-surface);
+  transform: translateY(-2px);
+}
+
+.interest-pill--quirky {
+  background-color: #fffbeb;
+  border-color: #fef3c7;
+  color: #92400e;
+  font-weight: 700;
+}
+
+/* Section 7: Controlled Editorial Mosaic */
+.unstructured-section {
+  padding: clamp(5rem, 10vw, 8rem) 6%;
+  background-color: #faf9f6;
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.unstructured-header {
+  max-width: 820px;
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.unstructured-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 4.6vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.unstructured-subhead {
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.6;
+  color: #4a5568;
+}
+
+.mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.mosaic-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: clamp(1.75rem, 3.5vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mosaic-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.03);
+}
+
+.mosaic-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.mosaic-tag {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-green);
+}
+
+.mosaic-tag--light {
+  color: var(--color-surface);
+}
+
+.mosaic-stat {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-primary);
+}
+
+.mosaic-icon {
+  font-size: 1.25rem;
+  color: #94a3b8;
+}
+
+.mosaic-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  color: var(--color-primary);
+  margin-bottom: 0.85rem;
+}
+
+.mosaic-subheadline {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-green);
+  margin-bottom: 0.75rem;
+}
+
+.mosaic-subheadline-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-bottom: 1px solid var(--color-surface);
+}
+
+.mosaic-body {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: #475569;
+}
+
+.mosaic-aside {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 1rem;
+}
+
+.mosaic-link {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 2px;
+  margin-top: auto;
+  align-self: flex-start;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.mosaic-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.card-debate {
+  grid-column: span 7;
+  cursor: pointer;
+  outline: none;
+}
+
+.debate-reveal {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.debate-reveal__text {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-primary);
+  background-color: #f8fafc;
+  border-left: 3px solid var(--color-green);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+}
+
+.card-affordance-hint {
+  font-size: 0.72rem;
+  font-family: var(--font-body);
+  color: #94a3b8;
+  margin-top: 1.25rem;
+  display: block;
+}
+
+.card-debate:hover .debate-reveal,
+.card-debate:focus .debate-reveal,
+.card-debate:active .debate-reveal {
+  max-height: 140px;
+  opacity: 1;
+  margin-top: 1.25rem;
+}
+
+.card-reading {
+  grid-column: span 5;
+}
+
+.inline-expand-trigger {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0;
+  margin-top: 1.5rem;
+  border-bottom: 2px solid var(--color-surface);
+  padding-bottom: 2px;
+  align-self: flex-start;
+}
+
+.shelf-expandable {
+  margin-top: 1rem;
+  background: #fdfaf0;
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--color-surface);
+}
+
+.shelf-expandable__text {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #334155;
+  font-style: italic;
+}
+
+.card-socrates {
+  grid-column: span 4;
+}
+
+.mosaic-dot {
+  color: var(--color-surface);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.mosaic-card__action {
+  margin-top: 1.5rem;
+}
+
+.card-pageantry {
+  grid-column: span 8;
+  background: linear-gradient(135deg, #ffffff 65%, #fcfbf7 100%);
+}
+
+.mosaic-ref {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.card-music {
+  grid-column: span 12;
+  background-color: #ffffff;
+}
+
+.genre-pill-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.genre-pill {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.genre-pill--joke {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border-color: rgba(0, 0, 0, 0.08);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.saas-punchline {
+  display: none;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-green);
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  max-width: 480px;
+}
+
+.genre-pill--joke:hover + .saas-punchline,
+.genre-pill--joke:focus + .saas-punchline,
+.saas-punchline.is-visible {
+  display: block;
+}
+
+.card-weather {
+  grid-column: span 5;
+  overflow: hidden;
+  position: relative;
+}
+
+.weather-mist-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 100% 0%, rgba(226, 232, 240, 0.6) 0%, transparent 70%);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.card-art {
+  grid-column: span 7;
+}
+
+.art-generator-area {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mosaic-pill-btn {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  align-self: flex-start;
+}
+
+.art-critique-display {
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-green);
+  line-height: 1.5;
+  min-height: 3em;
+}
+
+.card-absurd {
+  grid-column: span 12;
+  background-color: #111111;
+  color: #ffffff;
+  border-color: #222222;
+}
+
+.mosaic-badge-alert {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  background: rgba(255, 216, 77, 0.15);
+  color: var(--color-surface);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.mosaic-headline-absurd {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  max-width: 32ch;
+}
+
+.absurd-tally {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tally-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.tally-val {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-surface);
+}
+
+.mosaic-body-light {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  max-width: 65ch;
+  margin-bottom: 1rem;
+}
+
+.absurd-disclaimer {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.card-random-fact {
+  grid-column: span 8;
+  background: #ffffff;
+}
+
+.fact-output-stage {
+  margin: 1rem 0 1.5rem;
+  min-height: 4em;
+  display: flex;
+  align-items: center;
+}
+
+.fact-display-text {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-primary);
+}
+
+.card-teeka4 {
+  grid-column: span 4;
+  background-color: #faf9f6;
+  border: 1px dashed var(--color-border);
+}
+
+.mosaic-status-pill {
+  font-size: 0.65rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  background-color: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* ===================================================
+   Shared Dark Footer & Orbital Accent
+   =================================================== */
+.closing-section {
+  background-color: #0d0f11;
+  color: #ffffff;
+  padding: clamp(6rem, 12vw, 9rem) 6% clamp(2.5rem, 4vw, 3.5rem);
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #1a1d20;
+}
+
+.closing-container {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.closing-orbital {
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  transform: translateY(-60%);
+  width: 600px;
+  height: 600px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.orbital-ring {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.orbital-ring--outer {
+  width: 580px;
+  height: 580px;
+}
+
+.orbital-ring--inner {
+  width: 420px;
+  height: 420px;
+  border-color: rgba(255, 216, 77, 0.25);
+}
+
+.orbital-node {
+  position: absolute;
+  top: 50%;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  box-shadow: 0 0 16px var(--color-surface), 0 0 32px rgba(255, 216, 77, 0.7);
+}
+
+.closing-content {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+}
+
+.closing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.badge-dot {
+  width: 9px;
+  height: 9px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--color-surface);
+}
+
+.badge-text {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #a0aec0;
+}
+
+.closing-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin-bottom: 1.75rem;
+}
+
+.highlight-text {
+  color: var(--color-surface);
+}
+
+.closing-subtext {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+}
+
+.closing-btn {
+  background-color: var(--color-surface);
+  color: #111111;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.closing-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255, 216, 77, 0.35);
+}
+
+.closing-footer-bar {
+  position: relative;
+  z-index: 2;
+  margin-top: clamp(6rem, 12vw, 9rem);
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.closing-nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.closing-nav a {
+  color: #e2e8f0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease;
+}
+
+.closing-nav a:hover,
+.closing-link-linkedin:hover {
+  color: var(--color-surface);
+}
+
+.back-to-top {
+  color: #a0aec0 !important;
+}
+
+/* ===================================================
+   HOW WE CAN WORK: 3D Flip System & Mosaic
+   =================================================== */
+.hww-hero-section {
+  padding: clamp(4.5rem, 8vw, 7rem) 6% clamp(3rem, 6vw, 4.5rem);
+  background: radial-gradient(circle at 90% 15%, rgba(255, 216, 77, 0.16) 0%, transparent 45%), #ffffff;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hww-intro {
+  max-width: 820px;
+  margin-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.hww-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+}
+
+.hww-lead-copy {
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 2vw, 1.28rem);
+  line-height: 1.65;
+  color: #334155;
+  margin-bottom: 0.75rem;
+}
+
+.hww-hint-text {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #64748b;
+  font-style: italic;
+}
+
+.flip-deck-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 2.5vw, 2.25rem);
+  perspective: 1400px;
+}
+
+.flip-card-scene {
+  background-color: transparent;
+  min-height: 520px;
+  perspective: 1400px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
+  text-align: left;
+  transition: transform 0.65s cubic-bezier(0.2, 0.85, 0.4, 1);
+  transform-style: preserve-3d;
+}
+
+.flip-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 18px;
+  padding: clamp(2rem, 3.5vw, 2.5rem);
+  border: 1px solid var(--color-border);
+  box-sizing: border-box;
+}
+
+.flip-card-front {
+  background-color: #faf9f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: rotateY(0deg);
+  z-index: 2;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.flip-card-front:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.04);
+}
+
+.flip-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.flip-front-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+  margin: auto 0 1.25rem;
+}
+
+.flip-front-desc {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #475569;
+  margin-bottom: 2rem;
+}
+
+.flip-action-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 2px solid var(--color-surface);
+  padding: 0 0 4px 0;
+  align-self: flex-start;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.flip-action-btn:hover {
+  color: var(--color-green);
+  border-color: var(--color-green);
+}
+
+.flip-card-back {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.flip-return-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #64748b;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.flip-back-scroll {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.flip-back-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.flip-back-scroll::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 999px;
+}
+
+.flip-back-headline {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.flip-back-body {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 1.5rem;
+}
+
+.flip-back-footer {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.flip-return-pill {
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.process-flow-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: 1rem;
+}
+
+.process-flow {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.flow-step {
+  background-color: #faf9f6;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+}
+
+.flow-step strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.flow-step p {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: #64748b;
+  margin: 0;
+}
+
+.flow-divider {
+  text-align: center;
+  color: var(--color-surface);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.35rem 0;
+}
+
+.flow-pill-line {
+  background-color: #faf9f6;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.production-deliverables {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+}
+
+.deliverable-item {
+  padding-bottom: 0.85rem;
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.deliverable-item strong {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.deliverable-item p {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: #64748b;
+  margin: 0;
+}
+
+.distribution-channels-matrix {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.dist-quadrant {
+  background-color: #faf9f6;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.dist-tag {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-green);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.dist-sub {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.4;
+  margin-bottom: 0.65rem;
+}
+
+.dist-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.dist-list li {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.dist-synthesis {
+  margin-top: 1.25rem;
+  padding: 0.9rem;
+  background-color: #fdfaf0;
+  border-left: 3px solid var(--color-surface);
+  border-radius: 4px;
+}
+
+.dist-synthesis p {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #334155;
+  margin: 0;
+}
+
+.hww-transition-space {
+  margin-top: clamp(4rem, 8vw, 6.5rem);
+  padding-top: clamp(3rem, 6vw, 4.5rem);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.transition-eyebrow {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin-bottom: 0.5rem;
+}
+
+.transition-whisper {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.why-choose-section {
+  padding: clamp(5rem, 9vw, 8rem) 6%;
+  background-color: #faf9f6;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.why-mosaic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.why-mosaic-card {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: clamp(2.25rem, 4vw, 3.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.why-mosaic-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.04);
+  border-color: #cbd5e1;
+}
+
+.why-card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.why-number {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-surface);
+  line-height: 1;
+}
+
+.why-label {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-green);
+}
+
+.why-headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.2vw, 1.95rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.why-body {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #475569;
+  margin-bottom: 0.75rem;
+}
+
+.obsessive-doodle {
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  background-color: #faf9f6;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.doodle-bullet {
+  color: var(--color-green);
+}
+
+.speech-motif {
+  margin-top: 1.25rem;
+  padding: 0.85rem 1.15rem;
+  border-left: 3px solid var(--color-surface);
+  background-color: #faf9f6;
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: #334155;
+  border-radius: 0 8px 8px 0;
+}
+
+.why-card-action {
+  margin-top: 1.5rem;
+}
+
+.growth-vector {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.vector-bar {
+  width: 48px;
+  height: 3px;
+  background-color: var(--color-surface);
+  border-radius: 999px;
+}
+
+.vector-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-green);
+  border-radius: 50%;
+}
+
+/* ===================================================
+   Responsive Breakpoints
+   =================================================== */
+@media (max-width: 1080px) {
+  .flip-deck-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .card-debate { grid-column: span 12; }
+  .card-reading { grid-column: span 6; }
+  .card-socrates { grid-column: span 6; }
+  .card-pageantry { grid-column: span 12; }
+  .card-weather { grid-column: span 6; }
+  .card-art { grid-column: span 6; }
+  .card-random-fact { grid-column: span 12; }
+  .card-teeka4 { grid-column: span 12; }
+  .absurd-tally {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .site-nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 40px;
+  }
+  .hero-portrait {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .problem-section p {
+    align-self: flex-start;
+  }
+  .articles-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .about-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .editorial-duo-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .travel-tiles-grid {
+    grid-template-columns: 1fr;
+  }
+  .closing-orbital {
+    display: none;
+  }
+  .closing-footer-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-mosaic-grid {
+    grid-template-columns: 1fr;
+  }
+  .mosaic-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .card-debate,
+  .card-reading,
+  .card-socrates,
+  .card-pageantry,
+  .card-music,
+  .card-weather,
+  .card-art,
+  .card-absurd,
+  .card-random-fact,
+  .card-teeka4 {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .proof-metrics {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .metric-number {
+    font-size: clamp(2.8rem, 10vw, 3.8rem);
+  }
+  .closing-nav {
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+  .rabbit-grid {
+    grid-template-columns: 1fr;
+  }
+  .manifesto-card {
+    padding: 2.25rem 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-card-inner {
+    transition: transform 0.01ms !important;
+  }
+}
