@@ -472,8 +472,39 @@ That could be before the content exists, while it's being made, or after it's pu
             </div>
           </div>
 
-          </footer>
+         </div>
+        </div>
+      </footer>
     </main>
+
+    <script>
+      (function() {
+        const scenes = document.querySelectorAll('.flip-card-scene');
+
+        scenes.forEach((scene) => {
+          const inner = scene.querySelector('.flip-card-inner');
+          const frontFace = scene.querySelector('.flip-card-front');
+          const returnTriggers = scene.querySelectorAll('.flip-return-btn, .flip-return-pill');
+
+          // Click anywhere on the front card face to flip to the back
+          if (frontFace) {
+            frontFace.addEventListener('click', () => {
+              inner.classList.add('is-flipped');
+            });
+          }
+
+          // Click "Flip back" buttons to return to the front
+          returnTriggers.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              inner.classList.remove('is-flipped');
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
