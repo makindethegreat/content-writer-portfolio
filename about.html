@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=15" />
+    <link rel="stylesheet" href="style.css?v=28" />
   </head>
-  <body class="about-page-body">
-    <!-- Navigation Bar -->
-    <header class="site-header site-header--dark">
+  <body class="about-page">
+    <!-- Header Navigation -->
+    <header class="site-header">
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html#top" class="brand-logo-link" aria-label="Beams home">
           <img src="logo.png" alt="Beams logo" class="brand-logo" />
@@ -30,117 +30,236 @@
     </header>
 
     <main id="top">
-      <!-- 1. Dark About Hero (Reference 1) -->
-      <section class="about-dark-hero" aria-labelledby="about-hero-title">
-        <div class="about-hero-contour" aria-hidden="true"></div>
-        <div class="about-hero-container">
-          <div class="about-hero-content">
-            <span class="about-badge">ABOUT</span>
-
-            <p class="about-name-pronounce">
-              Hi, I’m <strong>Makinde</strong> <span class="phonetic">/mɑːˈkɪn.deɪ/</span> <span class="emoji-bubble">💬</span>
+      <!-- Section 1: Hero -->
+      <section class="about-hero-section">
+        <div class="about-container about-hero-layout">
+          <div class="about-hero-text">
+            <span class="whimsical-eyebrow">ABOUT ME, BUT MAKE IT INTERESTING</span>
+            
+            <p class="about-greeting">
+              Hi, I'm <strong>Makinde</strong> <span class="hand-wave">👋🏾</span>
             </p>
 
-            <h1 id="about-hero-title" class="about-hero-headline">
-              I drive measurable growth for early to mid-stage tech and SaaS startups.
+            <h1 class="about-hero-heading">
+              I help good tech products become <span class="highlight-pen">harder to ignore.</span>
             </h1>
 
-            <p class="about-hero-sub">
-              I’m guessing you already knew that from my homepage.
+            <p class="about-supporting-lead">
+              Mostly with content. Increasingly with strategy, distribution, and a healthy obsession with figuring out why things grow.
             </p>
 
-            <p class="about-hero-body">
-              What you probably don't know is that I treat words as commercial architecture, not decorative copy. Most B2B marketing fails because it explains what software does rather than why someone should part with their budget to use it. I bridge that gap. <span class="emoji-bubble">💬</span>
+            <p class="about-body-narrative">
+              I'm Makinde—a marketer, storyteller, and professional overthinker of why people click, care, buy, and occasionally ignore things that are actually very good.
             </p>
 
-            <div class="about-hero-actions">
-              <a href="mailto:makindegbenga00@gmail.com?subject=Work%20With%20Me" class="about-btn-pill">
+            <p class="about-body-narrative">
+              I work around B2B SaaS and technology, helping turn complicated ideas into clear stories that attract the right people and move businesses forward. 💡
+            </p>
+
+            <div class="about-hero-btn-row">
+              <a href="mailto:makindegbenga00@gmail.com?subject=Work%20With%20Me" class="btn-yellow-glow">
                 Work with me
               </a>
-              <a href="index.html#portfolio" class="about-link-work">
+              <a href="index.html#portfolio" class="link-understated">
                 See the work <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
 
-          <figure class="about-hero-portrait">
-            <img src="Makinde.jpg" alt="Makinde" />
-          </figure>
+          <div class="about-hero-visual">
+            <div class="portrait-stage">
+              <div class="decorative-blob" aria-hidden="true"></div>
+              <figure class="about-portrait-card">
+                <img src="Makinde.jpg" alt="Portrait of Makinde" />
+              </figure>
+              <div class="whimsical-stamp" aria-hidden="true">
+                <span>IDEAS • TASTE • GROWTH</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- 2. Light Editorial Journey Section (Reference 2) -->
-      <section class="journey-section" aria-labelledby="journey-heading">
-        <div class="journey-container">
-          <div class="journey-header">
-            <p class="journey-eyebrow">HOW I GOT HERE</p>
-            <h2 id="journey-heading" class="journey-title">
-              My journey <span class="journey-highlight">so far.</span>
+      <!-- Section 2: Origin Story -->
+      <section class="about-origin-section">
+        <div class="about-container">
+          <div class="section-intro">
+            <span class="whimsical-eyebrow">HOW THIS WHOLE THING STARTED</span>
+            <h2 class="section-heading-editorial">
+              Apparently, I've always <span class="italic-serif">been like this.</span>
             </h2>
           </div>
 
-          <div class="journey-grid">
-            <!-- Left Column: Story -->
-            <div class="journey-story">
-              <span class="journey-col-label">THE LONG WAY ROUND</span>
-
-              <p>
-                The “obsession with language” bit isn't marketing fluff. Long before I started consulting for SaaS startups, I spent years studying communication structures, rhetorical theory, and the psychology behind why certain messages provoke immediate action while others get ignored.
+          <div class="editorial-duo-grid">
+            <div class="duo-left">
+              <span class="story-chapter-tag">BEFORE I DISCOVERED B2B SAAS</span>
+              <p class="story-dropcap-lead">
+                At 14, I had a strange little superpower: I could make things sound interesting.
               </p>
-
               <p>
-                In an ecosystem currently saturated with lazy, synthetic AI-generated summaries, the bar for true authority has never been higher. Startups are in a ruthless race for survival, and software without distinct narrative distribution is functionally invisible.
+                Sometimes, that meant writing essays about why we shouldn't kill fireflies. Other times, it meant trying to convince people that cassava-flavoured ice cream could be the next big thing.
               </p>
-
               <p>
-                With multiple years under the belt across fast-moving spaces, I’ve learned that content means very little if it isn’t moving pipeline. My mission is simple: positioning software to survive, build category authority, and generate repeatable compounding growth.
+                Looking back, I probably wasn't trying to become a marketer. I just liked ideas, stories, and figuring out how to make other people care about them.
               </p>
             </div>
 
-            <!-- Right Column: Specific Track Record -->
-            <div class="journey-track-record">
-              <span class="journey-col-label">SINCE THEN, AMONG OTHERS, I'VE</span>
-
-              <div class="record-item">
-                <div class="record-metric">2</div>
-                <div class="record-text">
-                  Authored feature-length strategic teardowns dissecting B2B SaaS GTM motions and organic distribution economics.
-                </div>
-              </div>
-
-              <div class="record-item">
-                <div class="record-metric">500+</div>
-                <div class="record-text">
-                  Readers reached through targeted publications across HackerNoon, Hashnode, and technical ecosystems.
-                </div>
-              </div>
-
-              <div class="record-item">
-                <div class="record-metric">Page 1</div>
-                <div class="record-text">
-                  Positioned articles to capture prime real estate on Google search generative engines and AI Overviews.
-                </div>
-              </div>
-
-              <div class="record-item">
-                <div class="record-metric">70+</div>
-                <div class="record-text">
-                  Average attendees mobilized across community webinars and high-intent technical presentations.
-                </div>
-              </div>
-
-              <div class="record-item">
-                <div class="record-metric">AEO &amp; GEO</div>
-                <div class="record-text">
-                  Built multi-channel cascades specifically engineered for modern LLM citation engines and conversational search discovery.
-                </div>
+            <div class="duo-right">
+              <p>
+                That instinct followed me into journalism and communication, where I became increasingly interested in how information travels, how people make decisions, and why some messages stick while others disappear into the internet.
+              </p>
+              <p>
+                Eventually, I found my way into marketing. And then into the wonderfully strange world of B2B SaaS—where people build incredibly complicated products and then have the difficult job of explaining them to other humans.
+              </p>
+              <div class="story-pullquote">
+                <p>
+                  That's the part I enjoy: taking something complicated, finding the interesting bit, connecting it to something people already care about, and building systems that help the right people discover it.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 3. Final Orbital Dark Footer -->
+      <!-- Section 3: Belief Manifesto -->
+      <section class="belief-manifesto-section">
+        <div class="about-container">
+          <div class="manifesto-card">
+            <span class="whimsical-eyebrow eyebrow-light">WHAT I BELIEVE NOW</span>
+            <h2 class="manifesto-statement">
+              Good content should <span class="highlight-lemon">do something.</span>
+            </h2>
+            <div class="manifesto-body">
+              <p>I don't think content exists to fill a calendar.</p>
+              <p class="manifesto-big-text">
+                Good content should make a confusing idea clearer. Help a buyer make a decision. Create demand. Build trust. Start a useful conversation. Or occasionally make someone stop scrolling and think:
+              </p>
+              <blockquote class="manifesto-quote">
+                “Huh. That's actually interesting.”
+              </blockquote>
+              <p class="manifesto-close">
+                That's the kind of work I'm interested in getting better at.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Proof / Track Record -->
+      <section class="about-travel-section">
+        <div class="about-container">
+          <div class="section-intro">
+            <span class="whimsical-eyebrow">SO FAR, SO GOOD</span>
+            <h2 class="section-heading-editorial">A few places my work has travelled.</h2>
+          </div>
+
+          <div class="travel-tiles-grid">
+            <div class="travel-tile">
+              <span class="tile-number">3+</span>
+              <p class="tile-description">
+                Highly technical pieces ghostwritten and translated into content that actual humans can understand and enjoy reading.
+              </p>
+            </div>
+
+            <div class="travel-tile">
+              <span class="tile-number highlight-brand-num">2×</span>
+              <p class="tile-description">
+                Featured on HackerNoon, which remains a nice reminder that good work occasionally finds interesting places to live.
+              </p>
+            </div>
+
+            <div class="travel-tile">
+              <span class="tile-number">AI</span>
+              <p class="tile-description">
+                Had my work surface in Google's AI-generated search experience for a piece exploring when SaaS startups should actually invest in content marketing.
+              </p>
+            </div>
+
+            <div class="travel-tile">
+              <span class="tile-tag-label">JOURNALISM + COMMUNICATION</span>
+              <p class="tile-description">
+                My academic background has made me particularly interested in research, interviewing subject-matter experts, understanding audiences, and asking better questions before writing.
+              </p>
+            </div>
+
+            <div class="travel-tile travel-tile--accent">
+              <span class="tile-number">∞</span>
+              <p class="tile-description">
+                Questions currently living in my head about content, positioning, distribution, growth, and why some companies seem impossible to ignore.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Rabbit Hole Cards -->
+      <section class="rabbit-hole-section">
+        <div class="about-container">
+          <div class="section-intro">
+            <span class="whimsical-eyebrow">CURRENTLY DOWN THE RABBIT HOLE</span>
+            <h2 class="section-heading-editorial">Things I'm obsessed with learning.</h2>
+          </div>
+
+          <div class="rabbit-grid">
+            <div class="rabbit-card">
+              <div class="card-step">01</div>
+              <h3 class="card-title">CONTENT STRATEGY</h3>
+              <p class="card-body">
+                How content connects to positioning, customer problems, distribution, and actual business outcomes.
+              </p>
+            </div>
+
+            <div class="rabbit-card">
+              <div class="card-step">02</div>
+              <h3 class="card-title">GROWTH</h3>
+              <p class="card-body">
+                Experimentation, funnels, referral systems, and the mechanics behind how companies actually grow.
+              </p>
+            </div>
+
+            <div class="rabbit-card">
+              <div class="card-step">03</div>
+              <h3 class="card-title">SEARCH &amp; AI DISCOVERY</h3>
+              <p class="card-body">
+                Technical SEO, AEO, and how brands remain discoverable as search becomes increasingly conversational.
+              </p>
+            </div>
+
+            <div class="rabbit-card">
+              <div class="card-step">04</div>
+              <h3 class="card-title">GO-TO-MARKET</h3>
+              <p class="card-body">
+                Positioning, product marketing, distribution, and figuring out how good products find their people.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Human Layer & Pill Cloud -->
+      <section class="human-layer-section">
+        <div class="about-container">
+          <div class="human-card">
+            <span class="whimsical-eyebrow">ALSO, I AM A PERSON</span>
+            <h2 class="section-heading-editorial">When I'm not thinking about marketing things.</h2>
+            <p class="human-text">
+              I'm probably reading something, writing something, going down an internet rabbit hole, analysing why a campaign worked, or collecting another question I don't yet have an answer to.
+            </p>
+
+            <div class="interest-pill-cloud">
+              <span class="interest-pill">Stories</span>
+              <span class="interest-pill">Ideas</span>
+              <span class="interest-pill">Journalism</span>
+              <span class="interest-pill">Technology</span>
+              <span class="interest-pill">Growth</span>
+              <span class="interest-pill">Curiosity</span>
+              <span class="interest-pill interest-pill--quirky">Probably too many tabs open ⚡</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Final Dark CTA Footer with Yellow Glow Orbit -->
       <footer id="contact" class="closing-section" aria-labelledby="closing-heading">
         <div class="closing-container">
           <div class="closing-orbital" aria-hidden="true">
@@ -157,15 +276,20 @@
             </div>
 
             <h2 id="closing-heading" class="closing-heading">
-              The growth your business needs lies between <span class="highlight-text">great content, marketing, and me.</span>
+              Got something interesting you're trying to <span class="highlight-text">grow?</span>
             </h2>
+
+            <p class="closing-subtext">
+              A product. An audience. A content engine. A big idea.<br />
+              I'm always interested in good problems.
+            </p>
 
             <div class="closing-cta">
               <a
-                href="mailto:makindegbenga00@gmail.com?subject=Let's%20build%20momentum"
+                href="mailto:makindegbenga00@gmail.com?subject=Let's%20talk"
                 class="closing-btn"
               >
-                Let's build momentum <span aria-hidden="true">→</span>
+                Let's talk <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
