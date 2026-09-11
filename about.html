@@ -192,6 +192,239 @@
         </div>
       </section>
 
+      <!-- ===================================================
+           5. THE UNSTRUCTURED PART (Controlled Editorial Mosaic)
+           =================================================== -->
+      <section class="unstructured-section" aria-labelledby="unstructured-heading">
+        <div class="rooms-container">
+          <!-- Section Header -->
+          <div class="unstructured-header">
+            <span class="whimsical-eyebrow">THE UNSTRUCTURED PART</span>
+            <h2 id="unstructured-heading" class="unstructured-title">
+              A few things about me that don't fit <span class="italic-serif">neatly into a portfolio.</span>
+            </h2>
+            <p class="unstructured-subhead">
+              Achievements, obsessions, side quests, questionable expertise, and completely unnecessary information.
+            </p>
+          </div>
+
+          <!-- Mosaic Grid -->
+          <div class="mosaic-grid">
+            <!-- Card 1: Debate (Large Statement Card) -->
+            <article class="mosaic-card card-debate" tabindex="0">
+              <div class="mosaic-card__top">
+                <span class="mosaic-stat">×2</span>
+                <span class="mosaic-tag">PERSUASION</span>
+              </div>
+              <h3 class="mosaic-headline">Interfaculty Debate Winner.</h3>
+              <p class="mosaic-body">
+                Won two interfaculty debate competitions. Learned how to think clearly, argue properly, and occasionally defend positions I didn't even agree with.
+              </p>
+              <div class="debate-reveal" aria-live="polite">
+                <p class="debate-reveal__text">
+                  <strong>Debate taught me something useful:</strong><br />
+                  Good communication isn't just about having something to say. It's about understanding what the other person needs to hear.
+                </p>
+              </div>
+              <span class="card-affordance-hint">Hover or tap to reveal lesson</span>
+            </article>
+
+            <!-- Card 2: Reading (Compact Card) -->
+            <article class="mosaic-card card-reading">
+              <div class="mosaic-card__top">
+                <span class="mosaic-stat highlight-brand-num">40+</span>
+                <span class="mosaic-tag">THE STACK</span>
+              </div>
+              <h3 class="mosaic-headline">Books and essays last year.</h3>
+              <p class="mosaic-body">
+                Fiction, non-fiction, essays, philosophy, history, and anything capable of sending me down another rabbit hole.
+              </p>
+              <button type="button" class="inline-expand-trigger" id="shelf-btn" aria-expanded="false" aria-controls="shelf-content">
+                What's on the shelf? <span aria-hidden="true">→</span>
+              </button>
+              <div id="shelf-content" class="shelf-expandable" hidden>
+                <p class="shelf-expandable__text">
+                  I read because the fastest way to have better ideas is to borrow a few from people who have spent years thinking about them.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 3: Socrates (Thought Space) -->
+            <article class="mosaic-card card-socrates">
+              <div class="mosaic-card__top">
+                <span class="mosaic-tag">SOCRATES</span>
+                <span class="mosaic-dot" aria-hidden="true">•</span>
+              </div>
+              <h3 class="mosaic-headline">Sometimes I have too many thoughts.</h3>
+              <p class="mosaic-body">
+                So I put some of them on the internet. A small corner where I think out loud, ask uncomfortable questions, and occasionally pretend I know what I'm talking about.
+              </p>
+              <div class="mosaic-card__action">
+                <a href="https://substack.com" target="_blank" rel="noopener noreferrer" class="mosaic-link">
+                  Open a thought <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 4: Pageantry Campaign (Wide Prominent Card) -->
+            <article class="mosaic-card card-pageantry">
+              <div class="mosaic-card__top">
+                <span class="mosaic-tag">CAMPAIGN MODE</span>
+                <span class="mosaic-ref">UNCHARTED — THE PAGEANTRY</span>
+              </div>
+              <div class="pageantry-sequence" aria-label="Creative roles sequence">
+                <span class="seq-word">WRITE</span>
+                <span class="seq-arrow" aria-hidden="true">→</span>
+                <span class="seq-word">DIRECT</span>
+                <span class="seq-arrow" aria-hidden="true">→</span>
+                <span class="seq-word">PRODUCE</span>
+              </div>
+              <h3 class="mosaic-headline">Wrote it. Directed it. Produced it.</h3>
+              <p class="mosaic-subheadline">A Pageantry Campaign.</p>
+              <p class="mosaic-body">
+                Fashion, art, storytelling, production, and an unhealthy amount of attention to detail.
+              </p>
+              <p class="mosaic-aside">
+                <em>Apparently, having one job wasn't enough.</em>
+              </p>
+            </article>
+
+            <!-- Card 5: Music (Playful Wide Card) -->
+            <article class="mosaic-card card-music">
+              <div class="mosaic-card__top">
+                <span class="mosaic-tag">CURRENTLY PLAYING</span>
+                <span class="mosaic-icon" aria-hidden="true">♪</span>
+              </div>
+              <h3 class="mosaic-headline">I'm a sucker for good music.</h3>
+              <div class="genre-pill-cloud">
+                <span class="genre-pill">Country</span>
+                <span class="genre-pill">Afrobeats</span>
+                <span class="genre-pill">K-pop</span>
+                <span class="genre-pill">Rap</span>
+                <span class="genre-pill">Reggae</span>
+                <span class="genre-pill">Fuji</span>
+                <!-- The Punchline Pill -->
+                <button type="button" class="genre-pill genre-pill--joke" id="saas-music-btn" aria-describedby="saas-joke-tip" tabindex="0">
+                  B2B SaaS
+                </button>
+              </div>
+              <div id="saas-joke-tip" class="saas-punchline" role="tooltip">
+                Not technically music. Still sounds good when the pipeline grows.
+              </div>
+              <p class="mosaic-body music-closing-note">
+                Genre loyalty has never made sense to me. If it's good, it's good.
+              </p>
+            </article>
+
+            <!-- Card 6: Weather (Atmospheric Card) -->
+            <article class="mosaic-card card-weather" tabindex="0">
+              <div class="weather-mist-layer" aria-hidden="true"></div>
+              <div class="mosaic-card__top">
+                <span class="mosaic-tag">FAVOURITE WEATHER</span>
+                <span class="mosaic-icon" aria-hidden="true">☁</span>
+              </div>
+              <h3 class="mosaic-headline">Petrichor. Mist. Grey skies.</h3>
+              <p class="mosaic-body">
+                That's weather for two: me and content marketing.
+              </p>
+              <p class="mosaic-aside">
+                Perfect conditions for overthinking positioning.
+              </p>
+            </article>
+
+            <!-- Card 7: Art Reviewer (Interactive Card) -->
+            <article class="mosaic-card card-art">
+              <div class="mosaic-card__top">
+                <span class="mosaic-tag">UNPAID POSITION</span>
+                <span class="mosaic-icon" aria-hidden="true">🏛</span>
+              </div>
+              <h3 class="mosaic-headline">Full-time art reviewer.</h3>
+              <p class="mosaic-body">
+                The only problem is that I know absolutely nothing about art. I just look at things for a long time and say, <em>"Interesting use of space."</em>
+              </p>
+              <div class="art-generator-area">
+                <button type="button" class="mosaic-pill-btn" id="art-critique-btn">
+                  Review this artwork <span aria-hidden="true">→</span>
+                </button>
+                <div class="art-critique-display" id="art-critique-output" aria-live="polite">
+                  "The tension between the colours is doing something deeply personal."
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 8: The Absurd Flex (High-Contrast Large Humor Card) -->
+            <article class="mosaic-card card-absurd">
+              <div class="mosaic-card__top">
+                <span class="mosaic-tag mosaic-tag--light">COMPLETELY REAL FACT</span>
+                <span class="mosaic-badge-alert">VERIFIED*</span>
+              </div>
+              <h3 class="mosaic-headline-absurd">
+                I once bench-pressed 80kg while writing an SEO article for a tech behemoth.
+              </h3>
+              <div class="absurd-tally">
+                <div class="tally-item">
+                  <span class="tally-label">BENCH PRESS</span>
+                  <span class="tally-val">80KG</span>
+                </div>
+                <div class="tally-item">
+                  <span class="tally-label">SEO ARTICLE</span>
+                  <span class="tally-val">PUBLISHED</span>
+                </div>
+                <div class="tally-item">
+                  <span class="tally-label">PIPELINE</span>
+                  <span class="tally-val">+1,000×</span>
+                </div>
+                <div class="tally-item">
+                  <span class="tally-label">CEO</span>
+                  <span class="tally-val">IN TEARS</span>
+                </div>
+              </div>
+              <p class="mosaic-body-light">
+                The article ranked #1, increased their pipeline by approximately 1,000×, and allegedly caused the CEO to question everything he thought he knew about human potential.
+              </p>
+              <p class="absurd-disclaimer">
+                *The story may contain minor exaggerations. Fact-checking remains a work in progress.
+              </p>
+            </article>
+
+            <!-- Card 9: Random Fact Generator (Interactive Terminal) -->
+            <article class="mosaic-card card-random-fact">
+              <div class="mosaic-card__top">
+                <span class="mosaic-tag">PRESS FOR A RANDOM FACT</span>
+                <span class="mosaic-icon" aria-hidden="true">⚡</span>
+              </div>
+              <div class="fact-output-stage">
+                <p class="fact-display-text" id="fact-output" aria-live="polite">
+                  "I can spend three hours researching something I only needed to know for fifteen minutes."
+                </p>
+              </div>
+              <button type="button" class="mosaic-pill-btn" id="random-fact-btn">
+                Tell me something unnecessary <span aria-hidden="true">→</span>
+              </button>
+            </article>
+
+            <!-- Optional / Future-Proofed Teeka4 Campaign Card (Structure Prepared) -->
+            <article class="mosaic-card card-teeka4" id="teeka4-campaign">
+              <div class="mosaic-card__top">
+                <span class="mosaic-tag">CAMPAIGN MODE</span>
+                <span class="mosaic-status-pill">VERIFICATION IN PROGRESS</span>
+              </div>
+              <h3 class="mosaic-headline">Teeka4 Influencer Campaign</h3>
+              <p class="mosaic-body">
+                Worked on an influencer campaign built around creators, conversations, and making skincare feel less like an advertisement.
+              </p>
+              <!-- Hidden metric slots ready for verified analytics without breaking the UI -->
+              <div class="teeka4-metrics-holder" hidden aria-hidden="true">
+                <span data-metric="creators">[X] Creators</span>
+                <span data-metric="impressions">[XXXK] Impressions</span>
+                <span data-metric="engagement">[XX%] Engagement</span>
+                <span data-metric="conversations">[X] Conversations</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <!-- Section 5: Rabbit Hole Cards -->
       <section class="rabbit-hole-section">
         <div class="about-container">
