@@ -1284,3 +1284,250 @@ body {
     padding: 2.25rem 1.5rem;
   }
 }
+
+/* ===================================================
+   "Different Rooms. Same Obsession." (About Redesign)
+   =================================================== */
+.rooms-container {
+  max-width: var(--content-width, 1200px);
+  margin: 0 auto;
+}
+
+/* 1. Header & Overview */
+.rooms-hero-section {
+  padding: clamp(5rem, 10vw, 8rem) 6% clamp(3rem, 6vw, 4.5rem);
+  background: radial-gradient(circle at 85% 15%, rgba(255, 216, 77, 0.16) 0%, transparent 45%), #faf9f6;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.rooms-main-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: var(--color-primary);
+  margin-bottom: 1.75rem;
+  max-width: 16ch;
+}
+
+.rooms-body-lead {
+  font-family: var(--font-body);
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  line-height: 1.65;
+  color: #334155;
+  max-width: 44ch;
+}
+
+/* 2. Four Identities Grid */
+.identities-section {
+  padding: clamp(4rem, 8vw, 6.5rem) 6%;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.identities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.identity-card {
+  background-color: #faf9f6;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: clamp(2.2rem, 4vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.identity-card:hover {
+  transform: translateY(-4px);
+  border-color: #cbd5e1;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.04);
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.identity-tag {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-green);
+}
+
+.identity-arrow {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: #94a3b8;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.identity-card:hover .identity-arrow {
+  transform: translateX(4px);
+  color: var(--color-primary);
+}
+
+.identity-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.identity-description {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #475569;
+}
+
+/* 3. Socrates / Blog Section */
+.socrates-section {
+  padding: clamp(5rem, 9vw, 7.5rem) 6%;
+  background-color: #faf9f6;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.socrates-card {
+  max-width: 820px;
+}
+
+.socrates-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+  margin-bottom: 1.75rem;
+}
+
+.socrates-narrative p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 1.25rem;
+}
+
+.socrates-note {
+  font-family: 'Newsreader', Georgia, serif;
+  font-style: italic;
+  font-size: 1.25rem !important;
+  color: var(--color-green) !important;
+  margin-bottom: 2rem !important;
+}
+
+.socrates-link {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.socrates-link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* 4. A Few More Things (Clean Table / Micro-Grid) */
+.more-things-section {
+  padding: clamp(5rem, 9vw, 7.5rem) 6%;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.more-things-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.thing-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2rem;
+  align-items: baseline;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.thing-category {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+}
+
+.thing-note {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* 5. Editorial Footer & Callout */
+.rooms-footer-section {
+  padding: clamp(5rem, 9vw, 7.5rem) 6% 3rem;
+  background-color: #faf9f6;
+}
+
+.rooms-cta-box {
+  max-width: 820px;
+  margin-bottom: clamp(5rem, 9vw, 7.5rem);
+}
+
+.rooms-callout-lead {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-green);
+  margin-bottom: 1.25rem;
+}
+
+.rooms-cta-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+  margin-bottom: 2.25rem;
+}
+
+.rooms-btn-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive Rules */
+@media (max-width: 860px) {
+  .identities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .thing-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
