@@ -460,30 +460,11 @@
       </section>
 
       <!-- ===================================================
-           SECTION THREE: MINIMAL EDITORIAL CLOSING CTA
+           FINAL FULL-BLEED DARK EDITORIAL CTA & FOOTER
            =================================================== -->
-      <section class="simple-cta-section" aria-labelledby="simple-cta-title">
-        <div class="rooms-container">
-          <div class="simple-cta-box">
-            <span class="whimsical-eyebrow">GOT SOMETHING WORTH FIGURING OUT?</span>
-            <h2 id="simple-cta-title" class="simple-cta-headline">
-              That's usually where the <span class="highlight-pen">interesting work starts.</span>
-            </h2>
-            <p class="simple-cta-subtext">
-              Strategy, content, distribution—or wherever the problem starts.
-            </p>
-            <div class="simple-cta-action">
-              <a href="mailto:makindegbenga00@gmail.com?subject=Let's%20Talk" class="btn-yellow-glow">
-                LET'S TALK <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
       <footer id="contact" class="closing-section" aria-labelledby="closing-heading">
         <div class="closing-container">
+          <!-- Orbital Graphic Accent -->
           <div class="closing-orbital" aria-hidden="true">
             <div class="orbital-ring orbital-ring--outer"></div>
             <div class="orbital-ring orbital-ring--inner">
@@ -494,14 +475,23 @@
           <div class="closing-content">
             <div class="closing-badge">
               <span class="badge-dot"></span>
-              <span class="badge-text">BEAMS</span>
+              <span class="badge-text">GOT SOMETHING WORTH FIGURING OUT?</span>
             </div>
+
             <h2 id="closing-heading" class="closing-heading">
-              The growth your business needs lies between <span class="highlight-text">great content, marketing, and me.</span>
+              That's usually where the <span class="highlight-text">interesting work starts.</span>
             </h2>
+
+            <p class="closing-subtext">
+              Strategy, content, distribution—or wherever the problem starts.
+            </p>
+
             <div class="closing-cta">
-              <a href="mailto:makindegbenga00@gmail.com?subject=Let's%20build%20momentum" class="closing-btn">
-                Let's build momentum <span aria-hidden="true">→</span>
+              <a
+                href="mailto:makindegbenga00@gmail.com?subject=Let's%20talk"
+                class="closing-btn"
+              >
+                Let's talk <span aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -525,39 +515,6 @@
           </div>
         </div>
       </footer>
-    </main>
-
-    <!-- Accessible 3D Flip Script -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const scenes = document.querySelectorAll('.flip-card-scene');
-
-        scenes.forEach((scene) => {
-          const inner = scene.querySelector('.flip-card-inner');
-          const frontTrigger = scene.querySelector('.flip-action-btn');
-          const returnTriggers = scene.querySelectorAll('.flip-return-btn, .flip-return-pill');
-
-          const flipToBack = () => {
-            inner.classList.add('is-flipped');
-            if (frontTrigger) frontTrigger.setAttribute('aria-expanded', 'true');
-          };
-
-          const flipToFront = () => {
-            inner.classList.remove('is-flipped');
-            if (frontTrigger) frontTrigger.setAttribute('aria-expanded', 'false');
-          };
-
-          if (frontTrigger) {
-            frontTrigger.addEventListener('click', flipToBack);
-          }
-
-          returnTriggers.forEach((btn) => {
-            btn.addEventListener('click', (e) => {
-              e.stopPropagation();
-              flipToFront();
-            });
-          });
-        });
       });
     </script>
   </body>
