@@ -374,7 +374,7 @@
           <div class="section-intro">
             <span class="whimsical-eyebrow">WHY CHOOSE ME?</span>
             <h2 id="why-title" class="section-heading-editorial">
-              Four things I bring <span class="italic-serif">to the work.</span>
+              Things that <span class="italic-serif">sets me apart.</span>
             </h2>
           </div>
 
@@ -407,13 +407,12 @@
               </div>
               <h3 class="why-headline">Good communication makes good work possible.</h3>
               <p class="why-body">
-                My background in Media and Communication comes in handy here.
               </p>
               <p class="why-body">
                 I communicate across teams, ask questions, interview subject-matter experts, and keep digging until we get the answers we actually need.
               </p>
               <div class="speech-motif">
-                “Sometimes, they even tell me things they probably weren't planning to.”
+                Sometimes, they even tell me things they probably weren't planning to.
               </div>
             </article>
 
@@ -423,7 +422,7 @@
                 <span class="why-number">03</span>
                 <span class="why-label">THE WORK</span>
               </div>
-              <h3 class="why-headline">I know what I'm doing.</h3>
+              <h3 class="why-headline">I know my onions.</h3>
               <p class="why-body">
                 Strategy. Research. Writing. Distribution.
               </p>
@@ -459,7 +458,7 @@
         </div>
       </section>
 
-      <!-- ===================================================
+     <!-- ===================================================
            FINAL FULL-BLEED DARK EDITORIAL CTA & FOOTER
            =================================================== -->
       <footer id="contact" class="closing-section" aria-labelledby="closing-heading">
@@ -527,14 +526,12 @@
           const frontFace = scene.querySelector('.flip-card-front');
           const returnTriggers = scene.querySelectorAll('.flip-return-btn, .flip-return-pill');
 
-          // Clicking anywhere on the front face flips to the process back
           if (frontFace) {
             frontFace.addEventListener('click', () => {
               inner.classList.add('is-flipped');
             });
           }
 
-          // Clicking "Flip back" returns to the front
           returnTriggers.forEach((btn) => {
             btn.addEventListener('click', (e) => {
               e.stopPropagation();
