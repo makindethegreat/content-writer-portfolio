@@ -277,6 +277,47 @@
       </footer>
     </main>
 
-    <script src="script.js?v=120"></script>
+  <script>
+      (function () {
+        const dynamicWord = document.getElementById('dynamic-word');
+        if (!dynamicWord) return;
+
+        const words = ['business', 'measurable', 'adaptive'];
+        let wordIndex = 0;
+        let charIndex = words[0].length;
+        let isDeleting = true;
+
+        const typingSpeed = 110;
+        const erasingSpeed = 65;
+        const pauseBetweenWords = 2000;
+
+        function typeEffect() {
+          const currentWord = words[wordIndex];
+
+          if (isDeleting) {
+            charIndex--;
+            dynamicWord.textContent = currentWord.substring(0, charIndex);
+          } else {
+            charIndex++;
+            dynamicWord.textContent = currentWord.substring(0, charIndex);
+          }
+
+          let delay = isDeleting ? erasingSpeed : typingSpeed;
+
+          if (!isDeleting && charIndex === currentWord.length) {
+            delay = pauseBetweenWords;
+            isDeleting = true;
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            delay = 350;
+          }
+
+          setTimeout(typeEffect, delay);
+        }
+
+        setTimeout(typeEffect, pauseBetweenWords);
+      })();
+    </script>
   </body>
 </html>
