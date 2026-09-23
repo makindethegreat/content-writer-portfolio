@@ -3160,3 +3160,27 @@ a.nav-cta:hover {
     font-size: 0.75rem !important;
   }
 }
+
+/* ===================================================
+   INTERACTIVE CARDS REVEAL CONTROLS
+   =================================================== */
+
+/* 1. Debate Card Hover & Tap Reveal */
+.card-debate:hover .debate-reveal,
+.card-debate:focus .debate-reveal,
+.card-debate:active .debate-reveal {
+  max-height: 160px !important;
+  opacity: 1 !important;
+  margin-top: 1.25rem !important;
+}
+
+/* 2. B2B SaaS Audio Joke Toggle */
+.saas-punchline.is-visible {
+  display: block !important;
+}
+
+/* 3. Art Output & Random Fact Transitions */
+.art-critique-display,
+.fact-display-text {
+  transition: opacity 0.2s ease;
+}
