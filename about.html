@@ -527,7 +527,7 @@
       </footer>
     </main>
 
-    <!-- Client-Side Script for Interactive Cards -->
+   <!-- Client-Side Script for Interactive Cards -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         // 1. Reading Shelf Expand
@@ -553,7 +553,7 @@
         const artOutput = document.getElementById('art-critique-output');
         const artCritiques = [
           '"The tension between the colours is doing something deeply personal."',
-          '"Captures the essence of art in ways you can't see."',
+          '"Captures the essence of art in ways you can\'t see."',
           '"You can really feel the artist\'s commitment to... whatever this is."',
           '"I wouldn\'t have done it this way, but that\'s probably why I\'m not in the gallery."',
           '"There\'s clearly something happening here."',
@@ -599,7 +599,7 @@
           });
         }
 
-        // 4. B2B SaaS Audio Joke Tap Toggle for Mobile
+        // 4. B2B SaaS Audio Joke Tap Toggle
         const saasBtn = document.getElementById('saas-music-btn');
         const saasTip = document.getElementById('saas-joke-tip');
         if (saasBtn && saasTip) {
@@ -611,6 +611,8 @@
             saasTip.classList.remove('is-visible');
           });
         }
+      });
+    </script>
       });
     </script>
   </body>
