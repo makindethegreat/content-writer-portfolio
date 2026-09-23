@@ -3071,3 +3071,92 @@ a.nav-cta:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===================================================
+   Mobile Header & Navigation Refinement
+   =================================================== */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 12px 5%;
+  }
+
+  /* Two-tier structured mobile bar */
+  .site-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  /* Row 1 Left: Logo */
+  .brand-logo-link {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    height: 32px;
+  }
+
+  .brand-logo {
+    height: 28px;
+    width: auto;
+  }
+
+  /* Row 2: Clean, single-line editorial links */
+  .site-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+    padding: 8px 0 0;
+    margin: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  /* Prevents "How We Can Work" from breaking vertically */
+  .site-nav ul li a {
+    font-size: 0.84rem;
+    font-weight: 600;
+    white-space: nowrap;
+    color: #334155;
+  }
+
+  .site-nav ul li a.active-nav {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  /* Row 1 Right: Compact horizontal Book a Call button */
+  .site-nav li:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .site-nav li:last-child a.nav-cta,
+  a.nav-cta {
+    padding: 6px 14px !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    border-radius: 999px !important;
+    gap: 4px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .site-nav ul {
+    gap: 12px;
+  }
+
+  .site-nav ul li a {
+    font-size: 0.78rem;
+  }
+
+  .site-nav li:last-child a.nav-cta,
+  a.nav-cta {
+    padding: 5px 12px !important;
+    font-size: 0.75rem !important;
+  }
+}
