@@ -10,22 +10,21 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=vevnit1" />
-  </head>
+    <link rel="stylesheet" href="style.css?v=vevnit-system-1" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
   <body class="about-page">
     <!-- Standard Navigation -->
     <header class="site-header">
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html#top" class="brand-logo-link" aria-label="Vevnit home">
-          <img src="vevnit-mark.svg" alt="Vevnit" class="brand-logo" />
-        </a>
-        <ul>
+        <a href="index.html#top" class="brand-lockup" aria-label="Vevnit home"><span class="brand-wordmark">vevnit<span>.</span></span><small>CONTENT MARKETING STUDIO</small></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">Menu <span>+</span></button>
+        <ul id="primary-menu">
           <li><a href="about.html">About</a></li>
-          <li><a href="work-with-me.html">How We Can Work</a></li>
-          <li><a href="index.html#portfolio">Portfolio</a></li>
-          <li>
-            <a href="mailto:makindegbenga00@gmail.com" class="nav-cta">Book a Call <span aria-hidden="true">→</span></a>
-          </li>
+          <li><a href="work-with-me.html">Services</a></li>
+          <li><a href="case-studies.html">Work</a></li>
+          <li><a href="blog/leadbay-vs-leadloft/">Journal</a></li>
+          <li><a class="nav-cta" href="mailto:makindegbenga00@gmail.com?subject=Vevnit%20project%20enquiry">Let's talk <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
     </header>
@@ -442,5 +441,7 @@
         }, { passive: true });
       });
     </script>
-  </body>
+  
+  <script src="script.js?v=vevnit-system-1"></script>
+</body>
 </html>
