@@ -4423,3 +4423,91 @@ a.nav-cta,
 .link-understated {
   font-weight: 600;
 }
+
+
+/* ===================================================
+   VEVNIT — DUNE / HARKONNEN DESIGN SYSTEM
+   =================================================== */
+:root{
+ --color-background:#0B0B0A;--color-dark:#0B0B0A;--color-primary:#E8E0D3;
+ --color-surface:#C9B8A0;--color-accent:#A75A3B;--color-border:rgba(232,224,211,.16);
+ --color-green:#6D6459;--color-mint:#C9B8A0;
+ --dune-obsidian:#0B0B0A;--dune-basalt:#2A2A2A;--dune-sand:#C9B8A0;
+ --dune-spice:#A75A3B;--dune-stone:#6D6459;--dune-bone:#E8E0D3;
+ --font-display:'Jost',sans-serif;--font-body:'Jost',sans-serif;
+}
+html{background:var(--dune-obsidian);scroll-behavior:smooth}
+body{background:var(--dune-obsidian);color:var(--dune-bone);font-family:var(--font-body)}
+.site-header{background:rgba(11,11,10,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--color-border);padding:15px 6%}
+.brand-logo{height:38px;width:142px;object-fit:contain;object-position:left center}
+.site-nav ul a{color:var(--dune-bone);font-weight:400;letter-spacing:.015em}
+.site-nav ul a:hover,.site-nav ul a.active-nav{color:var(--dune-sand)}
+.site-nav li:last-child a.nav-cta,a.nav-cta{background:var(--dune-spice)!important;color:var(--dune-bone)!important;border-radius:2px!important;padding:10px 20px!important;letter-spacing:.04em;text-transform:uppercase;font-size:.78rem;box-shadow:none!important}
+.site-nav li:last-child a.nav-cta:hover,a.nav-cta:hover{background:var(--dune-sand)!important;color:var(--dune-obsidian)!important;transform:translateY(-2px)}
+.hero{max-width:none;padding:clamp(76px,10vw,150px) 8% clamp(80px,10vw,140px);grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:7vw;align-items:center;background:radial-gradient(ellipse at 76% 40%,rgba(167,90,59,.12),transparent 40%),linear-gradient(110deg,#0B0B0A 0%,#151411 60%,#211a16 100%)}
+.hero::before{border-color:rgba(201,184,160,.12);width:650px;height:650px;top:0;left:-280px}
+.hero-eyebrow,.vevnit-kicker{font-size:.72rem;letter-spacing:.2em;color:var(--dune-sand);font-weight:400}
+.hero-eyebrow::before{background:var(--dune-spice);height:1px}
+.hero-content h1{font-size:clamp(4rem,8vw,8.7rem);font-weight:300;line-height:.94;letter-spacing:-.065em;color:var(--dune-bone);margin:28px 0}
+.hero-highlight{color:var(--dune-spice)}
+.hero-content>p{color:#B8AEA1;max-width:510px;font-size:1.12rem;line-height:1.8}
+.hero-actions{margin-top:36px;gap:28px}
+.hero-actions__work{background:var(--dune-spice);color:var(--dune-bone);border-radius:2px;padding:14px 22px;font-weight:400;text-transform:uppercase;letter-spacing:.07em;font-size:.78rem}
+.hero-actions__work:hover{background:var(--dune-sand);color:var(--dune-obsidian);box-shadow:none}
+.hero-actions__growth{color:var(--dune-bone);border-color:var(--dune-stone);font-weight:400}
+.hero-portrait{max-width:390px;border-radius:0;border:1px solid rgba(201,184,160,.24);box-shadow:18px 18px 0 rgba(167,90,59,.14);filter:saturate(.62) sepia(.14)}
+.problem-section{background:#151513!important;color:var(--dune-bone)!important;border-color:var(--color-border);padding:clamp(100px,14vw,190px) 8%}
+.problem-section h2{font-size:clamp(2.8rem,6.2vw,6.5rem);font-weight:300;line-height:1.04;letter-spacing:-.05em;color:var(--dune-bone)!important;max-width:1050px}
+.problem-section h2 span{color:var(--dune-spice)!important}
+.problem-section p{color:var(--dune-sand)!important;font-weight:400;letter-spacing:.06em}
+.problem-light{background:var(--dune-spice);box-shadow:0 0 12px var(--dune-spice)}
+.proof-section,.articles-section{background:var(--dune-bone);color:var(--dune-obsidian)}
+.proof-heading,.articles-title{color:var(--dune-obsidian)}
+.proof-travelled__label,.articles-eyebrow{color:#75695D;letter-spacing:.17em}
+.marquee-item{color:var(--dune-obsidian)}
+.metric-number{color:var(--dune-spice)}
+.metric-label{color:#655C53}
+.sample-card{background:#F0E9DE;border:1px solid rgba(11,11,10,.14);border-radius:0;box-shadow:none}
+.sample-tag{background:var(--dune-spice);color:var(--dune-bone)}
+.sample-source{color:#766B60}
+.sample-card__title{color:var(--dune-obsidian)}
+.sample-card__excerpt{color:#625B53}
+.sample-link{color:var(--dune-spice);border-color:var(--dune-spice)}
+.closing-section{background:var(--dune-obsidian);color:var(--dune-bone)}
+.closing-heading{color:var(--dune-bone)}
+.highlight-text{color:var(--dune-spice)}
+.closing-btn{background:var(--dune-spice);color:var(--dune-bone);border-radius:2px}
+.closing-nav a{color:var(--dune-sand)}
+/* New Vevnit editorial sections */
+.vevnit-intro-section{background:var(--dune-bone);color:var(--dune-obsidian);padding:clamp(88px,12vw,150px) 8%}
+.vevnit-intro-wrap,.vevnit-services-wrap{max-width:1200px;margin:auto}
+.vevnit-intro-section .vevnit-kicker,.vevnit-services .vevnit-kicker{color:var(--dune-spice);margin-bottom:30px}
+.vevnit-intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:8vw;align-items:end}
+.vevnit-intro-grid h2,.vevnit-section-head h2{font-size:clamp(2.8rem,5.3vw,5.7rem);line-height:.98;letter-spacing:-.055em;font-weight:300}
+.vevnit-intro-grid h2 em,.vevnit-section-head h2 em{font-style:normal;color:var(--dune-spice)}
+.vevnit-intro-copy{max-width:430px;color:#61594F;font-size:1.05rem;line-height:1.85}
+.vevnit-intro-copy p+p{margin-top:16px}
+.vevnit-principles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;border-top:1px solid rgba(11,11,10,.2);margin-top:70px;padding-top:20px;font-size:.68rem;letter-spacing:.13em;color:#73695E}
+.vevnit-services{background:#171614;color:var(--dune-bone);padding:clamp(90px,12vw,150px) 8%}
+.vevnit-section-head h2{margin-bottom:65px}
+.vevnit-service-list{border-top:1px solid var(--color-border)}
+.vevnit-service-list article{display:grid;grid-template-columns:70px 1fr 30px;gap:25px;align-items:start;padding:28px 0;border-bottom:1px solid var(--color-border)}
+.vevnit-service-list article>span{color:var(--dune-spice);font-size:.8rem;letter-spacing:.1em;padding-top:8px}
+.vevnit-service-list h3{font-size:clamp(1.35rem,2.3vw,2rem);font-weight:300;margin-bottom:8px}
+.vevnit-service-list p{max-width:650px;color:#B8AEA1;line-height:1.7}
+.vevnit-service-list b{font-weight:300;color:var(--dune-spice);font-size:1.3rem}
+/* Internal pages inherit the same Dune palette */
+.about-page{background:var(--dune-obsidian);color:var(--dune-bone)}
+.about-page .site-header{background:rgba(11,11,10,.94)}
+.about-page .about-hero-section,.about-page .cs-index-hero,.about-page .hww-hero-section,.about-page .cs-hero-header{background:#11110F;color:var(--dune-bone)}
+.about-page .about-hero-heading,.about-page .cs-index-title,.about-page .hww-main-title,.about-page .cs-title{color:var(--dune-bone)}
+.about-page .about-supporting-lead,.about-page .about-body-narrative,.about-page .cs-index-lead,.about-page .hww-lead-copy{color:#B8AEA1}
+.about-page .highlight-pen,.about-page .italic-serif{color:var(--dune-spice)}
+.about-page .cs-featured-section,.about-page .cs-content-section,.about-page .hww-process-section{background:var(--dune-bone);color:var(--dune-obsidian)}
+.about-page .cs-featured-card,.about-page .flip-card-front,.about-page .flip-card-back{background:#E0D5C5;color:var(--dune-obsidian);border-color:rgba(11,11,10,.18)}
+.about-page .cs-status-tag,.about-page .cs-header-badge{color:var(--dune-spice)}
+.about-page a{accent-color:var(--dune-spice)}
+.about-page .nav-cta{background:var(--dune-spice)!important}
+/* Responsive adjustments */
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:78px 7% 88px;gap:45px}.hero-content h1{font-size:clamp(3.5rem,15vw,6rem)}.hero-portrait{max-width:330px;margin:0}.vevnit-intro-grid{grid-template-columns:1fr;gap:35px}.vevnit-principles{grid-template-columns:repeat(2,1fr);row-gap:16px;margin-top:45px}.vevnit-service-list article{grid-template-columns:35px 1fr 20px;gap:12px}.site-nav ul{gap:14px}.brand-logo{width:112px;height:32px}}
+@media(max-width:560px){.site-header{padding:12px 5%}.site-nav{align-items:flex-start}.site-nav ul{gap:10px;flex-wrap:wrap;justify-content:flex-end}.site-nav ul a{font-size:.77rem}.site-nav li:last-child a.nav-cta{padding:7px 11px!important}.hero-actions{flex-wrap:wrap}.hero-portrait{max-width:78%}.problem-container{min-height:38vh}.vevnit-intro-section,.vevnit-services{padding-left:7%;padding-right:7%}.vevnit-service-list article{padding:22px 0}}
