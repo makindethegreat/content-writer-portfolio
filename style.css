@@ -595,7 +595,7 @@ a.nav-cta:hover {
 }
 
 .italic-serif {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
 }
@@ -872,7 +872,7 @@ a.nav-cta:hover {
 }
 
 .manifesto-quote {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-style: italic;
   color: var(--color-surface);
@@ -1399,7 +1399,7 @@ a.nav-cta:hover {
 }
 
 .art-critique-display {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-size: 1.05rem;
   color: var(--color-green);
@@ -2098,7 +2098,7 @@ a.nav-cta:hover {
 }
 
 .transition-whisper {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: var(--font-display);
   font-size: clamp(1.4rem, 2.5vw, 2rem);
   font-style: italic;
   color: var(--color-primary);
@@ -2200,7 +2200,7 @@ a.nav-cta:hover {
   padding: 0.85rem 1.15rem;
   border-left: 3px solid var(--color-surface);
   background-color: #faf9f6;
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-size: 1.05rem;
   color: #334155;
@@ -2983,7 +2983,7 @@ a.nav-cta:hover {
 
 /* Editorial Learnings */
 .cs-editorial-quote {
-  font-family: 'Newsreader', Georgia, serif;
+  font-family: var(--font-display);
   font-size: clamp(1.4rem, 2.2vw, 1.85rem);
   font-style: italic;
   line-height: 1.4;
@@ -4383,4 +4383,43 @@ grid-template-columns: 1fr;
   .art-triad-breakdown {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* ===================================================
+   BEAMS TYPOGRAPHY SYSTEM — JOST
+   Display: Light 300 | Body: Regular 400 | Emphasis: SemiBold 600
+   =================================================== */
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6,
+.hero-content h1,
+.problem-section h2,
+.proof-heading,
+.articles-title,
+.section-heading-editorial,
+.about-hero-heading,
+.manifesto-statement,
+.journal-hero-title,
+.journal-card-headline,
+.art-main-title,
+.art-subheading {
+  font-family: var(--font-display);
+  font-weight: 300;
+}
+
+strong, b,
+.site-nav ul a,
+a.nav-cta,
+.hero-eyebrow,
+.hero-actions__work,
+.sample-tag,
+.sample-source,
+.sample-link,
+.btn-yellow-glow,
+.link-understated {
+  font-weight: 600;
 }
