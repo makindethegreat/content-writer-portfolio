@@ -4684,3 +4684,31 @@ button{font:inherit}
  .footer-brand{grid-column:1/-1}.footer-bottom{padding:15px 7%;font-size:.48rem;flex-direction:column}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+
+/* Legacy page components inherit the current Vevnit tokens */
+:root{
+  --color-background:var(--sand);
+  --color-dark:var(--charcoal);
+  --color-primary:var(--charcoal);
+  --color-surface:var(--clay);
+  --color-accent:var(--clay);
+  --color-border:var(--line);
+  --color-green:var(--olive);
+  --color-mint:var(--dune);
+  --font-display:var(--font);
+  --font-body:var(--font);
+}
+body.about-page{background:var(--sand);color:var(--charcoal)}
+.about-hero-section,.cs-index-hero,.cs-featured-section,.hww-hero-section,.cs-hero-header,.art-hero-header{
+  background-color:var(--sand)!important;
+  background-image:none!important;
+}
+.about-origin-section,.about-skills-section,.about-fun-section,.cs-pipeline-section{
+  background-color:var(--dune);
+}
+.about-page .site-header{background:var(--sand);border-bottom:1px solid var(--line)}
+.about-page .closing-section{background:var(--charcoal);color:var(--sand)}
+.about-page .closing-btn,.about-page .btn-yellow-glow{background:var(--clay);color:var(--sand);box-shadow:none}
+.about-page .closing-btn:hover,.about-page .btn-yellow-glow:hover{background:var(--olive)}
+.about-page .highlight-pen,.about-page .italic-serif{color:var(--clay)}
