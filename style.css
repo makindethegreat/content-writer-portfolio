@@ -5634,3 +5634,27 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
     grid-template-rows:none!important;
   }
 }
+
+
+/* Work With Me — keep the four differentiator cards in a 2×2 grid
+   across desktop and mobile without changing their content or styling. */
+.about-page .why-mosaic-grid{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-auto-flow:row!important;
+  align-items:stretch;
+}
+.about-page .why-mosaic-grid > .why-mosaic-card{
+  grid-column:auto!important;
+  width:100%;
+  min-width:0;
+}
+@media(max-width:640px){
+  .about-page .why-mosaic-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:0.75rem!important;
+  }
+  .about-page .why-mosaic-grid > .why-mosaic-card{
+    padding:1rem!important;
+  }
+}
