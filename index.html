@@ -268,6 +268,55 @@
     <span class="home-footer-bottom-right"><i aria-hidden="true"></i>LAGOS&nbsp; / &nbsp;REMOTE&nbsp; / &nbsp;GLOBAL</span>
   </div>
 </footer>
+  <script>
+    (() => {
+      const slots = document.querySelectorAll('.hero-dynamic-slot');
+      if (!slots.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      slots.forEach((slot, slotIndex) => {
+        const words = (slot.dataset.words || '').split('|').filter(Boolean);
+        const word = slot.querySelector('.hero-dynamic-word');
+        if (words.length < 2 || !word) return;
+
+        let wordIndex = 0;
+        const typeDelay = 105;
+        const deleteDelay = 52;
+        const pauseAfterType = 1450;
+        const pauseBetweenWords = 280;
+
+        const typeNext = () => {
+          const nextWord = words[wordIndex];
+          let length = word.textContent.length;
+          const erase = () => {
+            if (length > 0) {
+              word.textContent = nextWord.slice(0, --length);
+              window.setTimeout(erase, deleteDelay);
+            } else {
+              wordIndex = (wordIndex + 1) % words.length;
+              window.setTimeout(type, pauseBetweenWords);
+            }
+          };
+          const type = () => {
+            const target = words[wordIndex];
+            let position = 0;
+            const write = () => {
+              if (position < target.length) {
+                word.textContent = target.slice(0, ++position);
+                window.setTimeout(write, typeDelay);
+              } else {
+                slot.setAttribute('aria-label', target);
+                window.setTimeout(typeNext, pauseAfterType);
+              }
+            };
+            write();
+          };
+          erase();
+        };
+
+        window.setTimeout(typeNext, 1700 + slotIndex * 360);
+      });
+    })();
+  </script>
   <script src="script.js?v=vevnit-system-1"></script>
 </body>
 </html>
