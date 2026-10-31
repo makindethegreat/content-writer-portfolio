@@ -66,7 +66,7 @@ eleventyExcludeFromCollections: true
         <article class="blog-archive-card">
           <a href="{{ post.url | url }}">
             {% if post.data.featuredImage %}<img class="blog-card-image" src="{{ post.data.featuredImage | url }}" alt="{{ post.data.title }} featured image" loading="lazy">{% endif %}
-            <div class="blog-card-meta"><span class="blog-card-category">{{ post.data.category or "Article" }}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %Y" }}</time></div>
+            <div class="blog-card-meta"><span class="blog-card-category">{{ post.data.category or "Article" }}</span><time datetime="{{ post.data.date | date: '%Y-%m-%d' }}">{{ post.data.date | date: "%B %Y" }}</time></div>
             <h2 class="blog-card-title">{{ post.data.title }}</h2>
             <p class="blog-card-excerpt">{{ post.data.excerpt }}</p>
             <span class="blog-card-read">Read the article ↗</span>
