@@ -5474,28 +5474,40 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
 }
 
 
-/* About footer: replace the old SVG linework and dot field with the supplied landscape image */
+
+
+/* About footer particle landscape — lightweight vector treatment inspired by the supplied artwork */
 .about-page .vevnit-editorial-footer{
-  background-color:#0b0c0b!important;
-  background-image:
-    linear-gradient(180deg,rgba(11,12,11,1) 0%,rgba(11,12,11,.98) 34%,rgba(11,12,11,.58) 58%,rgba(11,12,11,.08) 100%),
-    url("vevnit-footer-landscape.jpg.png")!important;
-  background-position:center top,center bottom!important;
-  background-repeat:no-repeat!important;
-  background-size:100% 100%,100% auto!important;
+  background:#0b0c0b!important;
+  background-image:radial-gradient(ellipse at 48% 100%,rgba(65,72,67,.22),transparent 58%)!important;
   position:relative!important;
   isolation:isolate;
   overflow:hidden;
 }
-.about-page .vevnit-editorial-footer .footer-landscape{display:none!important}
-.about-page .vevnit-footer-top,.about-page .vevnit-footer-bottom{position:relative;z-index:2}
+.about-page .vevnit-editorial-footer .footer-landscape{
+  display:block!important;
+  position:absolute!important;
+  z-index:1!important;
+  left:0;right:0;bottom:35px;
+  height:clamp(210px,27vw,360px);
+  width:100%;
+  pointer-events:none;
+  opacity:.92;
+}
+.about-page .footer-particle-landscape svg{width:100%;height:100%;display:block}
+.about-page .vevnit-footer-top,.about-page .vevnit-footer-bottom{
+  position:relative;z-index:3;
+}
 @media(max-width:900px){
- .about-page .vevnit-editorial-footer{
-  background-size:100% 100%,auto 46%!important;
+ .about-page .vevnit-editorial-footer .footer-landscape{
+   height:260px;bottom:45px;opacity:.72;
  }
 }
 @media(max-width:600px){
- .about-page .vevnit-editorial-footer{
-  background-size:100% 100%,auto 35%!important;
+ .about-page .vevnit-editorial-footer .footer-landscape{
+   height:210px;bottom:58px;left:-12%;width:124%;opacity:.58;
  }
+}
+@media(max-width:380px){
+ .about-page .vevnit-editorial-footer .footer-landscape{height:185px;bottom:62px}
 }
