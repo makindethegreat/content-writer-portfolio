@@ -51,7 +51,7 @@
   <main class="cms-article">
     <article class="cms-article-inner">
       <nav class="cms-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a> / <a href="{{ '/blog/' | url }}">Blog</a> / {{ title }}</nav>
-      <div class="cms-article-meta"><span>{{ category or "Article" }}</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time><span>By {{ author or "Makinde" }}</span></div>
+      <div class="cms-article-meta"><span>{{ category or "Article" }}</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date("%B %d, %Y") }}</time><span>By {{ author or "Makinde" }}</span></div>
       <h1>{{ title }}</h1>
       <p class="cms-article-excerpt">{{ excerpt }}</p>
       {% if featuredImage %}<img class="cms-featured-image" src="{{ featuredImage | url }}" alt="{{ title }} featured image">{% endif %}
