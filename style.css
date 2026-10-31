@@ -4808,3 +4808,143 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
 .about-page .highlight-lemon,.about-page .highlight-pen{background:none!important;text-decoration:none}
 .about-page .rabbit-card,.about-page .travel-tile,.about-page .cs-placeholder-card{border-radius:2px!important}
 .about-page .decorative-blob,.about-page .whimsical-stamp{box-shadow:none!important}
+
+
+/* About page — typography, legibility and Vevnit visual language */
+.about-page,
+.about-page *:not(svg):not(path):not(circle) {
+  font-family:'Jost',sans-serif!important;
+}
+.about-page {
+  color:#292a27;
+  background:#F3EFE0;
+}
+.about-page p,
+.about-page .tile-description,
+.about-page .card-body,
+.about-page .mosaic-body,
+.about-page .human-text,
+.about-page .about-body-narrative,
+.about-page .about-supporting-lead,
+.about-page .duo-left>p,
+.about-page .duo-right>p {
+  color:#55534c;
+  font-size:clamp(.96rem,1.05vw,1.06rem);
+  line-height:1.75;
+  font-weight:400;
+}
+.about-page .about-hero-heading,
+.about-page .section-heading-editorial,
+.about-page .manifesto-statement,
+.about-page .unstructured-title {
+  color:#292a27;
+  font-weight:400;
+  letter-spacing:-.045em;
+  line-height:1.12;
+}
+.about-page .about-hero-heading{font-size:clamp(2.65rem,5.1vw,4.6rem);max-width:13ch}
+.about-page .about-supporting-lead{font-size:1.12rem;color:#4B5B4A;line-height:1.65}
+.about-page .whimsical-eyebrow,
+.about-page .story-chapter-tag,
+.about-page .tile-tag-label,
+.about-page .card-step,
+.about-page .mosaic-tag,
+.about-page .mosaic-ref,
+.about-page .card-affordance-hint {
+  color:#8C513B;
+  letter-spacing:.12em;
+}
+.about-page .about-origin-section,
+.about-page .about-travel-section,
+.about-page .rabbit-hole-section,
+.about-page .human-layer-section,
+.about-page .unstructured-section {
+  background:#F3EFE0;
+}
+.about-page .about-origin-section,
+.about-page .about-travel-section,
+.about-page .rabbit-hole-section,
+.about-page .human-layer-section{border-color:rgba(45,43,38,.12)}
+.about-page .travel-tile,
+.about-page .rabbit-card,
+.about-page .human-card,
+.about-page .mosaic-card {
+  background:#EAE3D3!important;
+  border:1px solid rgba(45,43,38,.13)!important;
+  color:#292a27;
+}
+.about-page .travel-tile--accent{background:#E3D9C7!important;border:1px solid rgba(201,95,60,.45)!important}
+.about-page .story-pullquote{border-left:2px solid #C95F3C}
+.about-page .manifesto-card,
+.about-page .belief-manifesto-section {
+  background:#343936!important;
+  color:#F3EFE0!important;
+}
+.about-page .manifesto-card p,
+.about-page .manifesto-card .manifesto-big-text,
+.about-page .manifesto-card .manifesto-close{color:#E3DFD5!important}
+.about-page .manifesto-statement{color:#F3EFE0!important}
+.about-page .highlight-lemon{color:#D58A6C!important}
+.about-page .highlight-pen{color:#B75B3E!important}
+.about-page .closing-section{
+  background:linear-gradient(115deg,#292E2B 0%,#343B35 58%,#29312E 100%)!important;
+  color:#F3EFE0!important;
+  padding:clamp(5rem,9vw,7.5rem) 6% 2.2rem;
+  border-top:1px solid rgba(243,239,224,.15);
+}
+.about-page .closing-section:before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;
+  background-image:radial-gradient(rgba(243,239,224,.35) .7px,transparent .7px);
+  background-size:18px 18px;
+  mask-image:linear-gradient(90deg,transparent 0%,#000 72%);
+}
+.about-page .closing-container{max-width:1200px}
+.about-page .closing-orbital{
+  top:44%;right:-95px;width:min(56vw,650px);height:min(56vw,650px);
+  transform:translateY(-50%);opacity:.88;
+}
+.about-page .orbital-ring{border-color:rgba(243,239,224,.18)}
+.about-page .orbital-ring--outer{width:100%;height:100%;border-style:dashed;border-color:rgba(243,239,224,.18)}
+.about-page .orbital-ring--middle{position:absolute;inset:13%;border:1px solid rgba(201,95,60,.42);border-radius:50%;transform:rotate(-24deg) scaleY(.68)}
+.about-page .orbital-ring--inner{width:65%;height:65%;border-color:rgba(243,239,224,.3);transform:translate(-50%,-50%) rotate(26deg) scaleY(.72)}
+.about-page .orbital-node{background:#C95F3C;box-shadow:0 0 0 6px rgba(201,95,60,.15);width:9px;height:9px}
+.about-page .footer-topography{
+  position:absolute;width:100%;height:72%;right:-2%;bottom:4%;fill:none;
+  stroke:rgba(231,223,206,.4);stroke-width:1;opacity:.6;
+}
+.about-page .closing-content{max-width:700px}
+.about-page .closing-badge{margin-bottom:1.4rem}
+.about-page .badge-dot{background:#C95F3C;box-shadow:none}
+.about-page .badge-text{color:#D8CDBB;font-weight:500;letter-spacing:.16em}
+.about-page .closing-heading{font-family:'Jost',sans-serif!important;font-size:clamp(2.8rem,6vw,5.4rem);line-height:1.02;letter-spacing:-.055em;font-weight:400;color:#F3EFE0;max-width:11ch}
+.about-page .closing-subtext{max-width:48ch;margin-top:1.25rem;color:#D2CCBF!important;font-size:1.05rem;line-height:1.7}
+.about-page .closing-btn{background:#C95F3C!important;color:#fff!important;border:0;border-radius:999px;padding:15px 23px;font-weight:500}
+.about-page .closing-btn .circle-chevron circle,
+.about-page .closing-btn .circle-chevron path{stroke:#fff}
+.about-page .closing-footer-bar{
+  margin-top:clamp(4rem,8vw,6rem);padding-top:1.5rem;
+  border-top:1px solid rgba(243,239,224,.22);align-items:flex-end;
+}
+.about-page .closing-footer-brand{display:flex;flex-direction:column;gap:.45rem}
+.about-page .footer-wordmark{font-size:2.1rem;line-height:1;font-weight:600;letter-spacing:-.09em;color:#F3EFE0;text-decoration:none}
+.about-page .footer-wordmark span{color:#C95F3C}
+.about-page .footer-brand-note{font-size:.58rem;letter-spacing:.13em;color:#C9C1B3}
+.about-page .copyright{font-size:.72rem;color:#C9C1B3;margin-top:.45rem}
+.about-page .closing-nav{gap:clamp(.8rem,1.8vw,1.6rem);flex-wrap:wrap;justify-content:flex-end}
+.about-page .closing-nav a{font-size:.78rem;color:#E5DED1}
+.about-page .closing-nav a:hover{color:#D58A6C}
+.about-page .closing-nav .circle-chevron circle,
+.about-page .closing-nav .circle-chevron path{stroke:currentColor}
+@media(max-width:760px){
+ .about-page .about-hero-heading{font-size:clamp(2.55rem,10vw,3.6rem)}
+ .about-page .closing-orbital{width:88vw;height:88vw;right:-38vw;top:34%;opacity:.48}
+ .about-page .closing-heading{max-width:12ch}
+ .about-page .closing-footer-bar{display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem}
+ .about-page .closing-nav{justify-content:flex-start;gap:.85rem 1.1rem}
+ .about-page .footer-topography{width:145%;right:-28%;opacity:.42}
+}
+@media(max-width:420px){
+ .about-page .about-hero-heading{font-size:2.5rem}
+ .about-page .closing-section{padding-left:7%;padding-right:7%}
+ .about-page .closing-nav a{font-size:.72rem}
+}
