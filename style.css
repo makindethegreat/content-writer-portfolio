@@ -4948,3 +4948,37 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
  .about-page .closing-section{padding-left:7%;padding-right:7%}
  .about-page .closing-nav a{font-size:.72rem}
 }
+
+
+/* Correct the absurd-flex card: retain its dark treatment for legible contrast */
+.about-page .mosaic-card.card-absurd{
+  background:#343936!important;
+  color:#F3EFE0!important;
+  border-color:rgba(243,239,224,.2)!important;
+}
+.about-page .card-absurd .mosaic-tag--light{
+  color:#D58A6C!important;
+}
+.about-page .card-absurd .mosaic-badge-alert{
+  background:rgba(201,95,60,.2)!important;
+  color:#F0B49B!important;
+}
+.about-page .card-absurd .mosaic-headline-absurd{
+  color:#F3EFE0!important;
+}
+.about-page .card-absurd .absurd-tally{
+  border-top-color:rgba(243,239,224,.2);
+  border-bottom-color:rgba(243,239,224,.2);
+}
+.about-page .card-absurd .tally-label{
+  color:#C9C1B3!important;
+}
+.about-page .card-absurd .tally-val{
+  color:#E6A184!important;
+}
+.about-page .card-absurd .mosaic-body-light{
+  color:#E0DAD0!important;
+}
+.about-page .card-absurd .absurd-disclaimer{
+  color:#C9C1B3!important;
+}
