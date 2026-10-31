@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | Vevnit</title>
+  <meta name="description" content="{{ excerpt }}">
+  <meta name="theme-color" content="#F3EFE0">
+  <link rel="canonical" href="https://makindethegreat.github.io/content-writer-portfolio{{ page.url }}">
+  <link rel="icon" href="{{ '/favicon.svg' | url }}" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/style.css' | url }}">
+  <style>
+    .cms-article{background:#F3EFE0;color:#1F2224;min-height:80vh;padding:clamp(64px,9vw,120px) 24px 120px}
+    .cms-article-inner{max-width:1120px;margin:0 auto}
+    .cms-breadcrumb{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#777168;margin-bottom:48px}
+    .cms-breadcrumb a{color:inherit;text-decoration:none}
+    .cms-article-meta{display:flex;gap:18px;flex-wrap:wrap;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#8A6A59;margin-bottom:22px}
+    .cms-article h1{font-size:clamp(42px,7vw,82px);line-height:1.02;letter-spacing:-.055em;font-weight:400;max-width:980px;margin:0 0 26px}
+    .cms-article-excerpt{font-size:clamp(18px,2vw,23px);line-height:1.55;color:#5D5A53;max-width:760px;margin:0 0 42px}
+    .cms-featured-image{display:block;width:100%;max-height:560px;aspect-ratio:16/9;object-fit:cover;margin:0 0 64px;background:#E7DFCE}
+    .cms-prose{max-width:760px;margin:0 auto;font-size:18px;line-height:1.85;color:#343936}
+    .cms-prose h2{font-size:clamp(28px,4vw,40px);line-height:1.15;letter-spacing:-.035em;font-weight:500;color:#1F2224;margin:2.2em 0 .7em}
+    .cms-prose h3{font-size:24px;line-height:1.25;font-weight:500;color:#1F2224;margin:1.8em 0 .6em}
+    .cms-prose p,.cms-prose ul,.cms-prose ol{margin:0 0 1.25em}
+    .cms-prose a{color:#A34F35;text-decoration-thickness:1px;text-underline-offset:3px}
+    .cms-prose img{max-width:100%;height:auto}
+    .cms-prose blockquote{border-left:2px solid #C95F3C;padding-left:24px;margin:2em 0;color:#5D5A53}
+    .cms-prose table{width:100%;border-collapse:collapse;font-size:15px;display:block;overflow-x:auto}
+    .cms-prose th,.cms-prose td{padding:12px;border-bottom:1px solid #D7CEBC;text-align:left}
+    .cms-article-footer{max-width:760px;margin:64px auto 0;padding-top:24px;border-top:1px solid #D7CEBC;font-size:13px;color:#777168}
+    @media(max-width:600px){.cms-prose{font-size:16px}.cms-featured-image{margin-bottom:42px}}
+  </style>
+</head>
+<body class="blog-archive-page">
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="brand-lockup" href="{{ '/' | url }}" aria-label="Vevnit home"><span class="brand-wordmark">vevnit<span>.</span></span></a>
+      <a class="mobile-nav-cta" href="mailto:makindegbenga00@gmail.com?subject=Vevnit%20project%20enquiry">Work with me</a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
+      <ul id="primary-menu">
+        <li><a href="{{ '/about.html' | url }}">About</a></li>
+        <li><a href="{{ '/blog/' | url }}">Blog</a></li>
+        <li><a href="{{ '/case-studies.html' | url }}">Work</a></li>
+        <li><a class="nav-cta" href="mailto:makindegbenga00@gmail.com?subject=Vevnit%20project%20enquiry">Work with me</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="cms-article">
+    <article class="cms-article-inner">
+      <nav class="cms-breadcrumb" aria-label="Breadcrumb"><a href="{{ '/' | url }}">Home</a> / <a href="{{ '/blog/' | url }}">Blog</a> / {{ title }}</nav>
+      <div class="cms-article-meta"><span>{{ category or "Article" }}</span><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time><span>By {{ author or "Makinde" }}</span></div>
+      <h1>{{ title }}</h1>
+      <p class="cms-article-excerpt">{{ excerpt }}</p>
+      {% if featuredImage %}<img class="cms-featured-image" src="{{ featuredImage | url }}" alt="{{ title }} featured image">{% endif %}
+      <div class="cms-prose">{{ content | safe }}</div>
+      <footer class="cms-article-footer"><a href="{{ '/blog/' | url }}">← Back to all articles</a></footer>
+    </article>
+  </main>
+  <script src="{{ '/script.js' | url }}"></script>
+</body>
+</html>
