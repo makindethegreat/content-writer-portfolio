@@ -4,31 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vevnit — Work with Vevnit</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap"
-      rel="stylesheet"
-    />
+    
   <link rel="stylesheet" href="style.css?v=vevnit1" />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
   <body class="about-page">
     <!-- Navigation Bar -->
     <header class="site-header">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html#top" class="brand-logo-link" aria-label="Vevnit home">
-          <img src="vevnit-mark.svg" alt="Vevnit" class="brand-logo" />
-        </a>
-       <ul>
-  <li><a href="about.html">About</a></li>
-  <li><a href="work-with-me.html">How We Can Work</a></li>
-  <li><a href="index.html#portfolio">Portfolio</a></li>
-  <li>
-    <a href="mailto:makindegbenga00@gmail.com?subject=Let's%20Talk" class="nav-cta">Let's Talk <span aria-hidden="true">→</span></a>
-  </li>
-</ul>
-      </nav>
-    </header>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand-lockup" href="index.html#top" aria-label="Vevnit home"><span class="brand-wordmark">vevnit<span>.</span></span></a>
+    <a class="mobile-nav-cta" href="mailto:makindegbenga00@gmail.com?subject=Vevnit%20project%20enquiry">Work with me</a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
+    <ul id="primary-menu">
+      <li><a href="about.html">About</a></li><li><a href="work-with-me.html">Services</a></li><li><a href="case-studies.html">Work</a></li><li><a href="blog/leadbay-vs-leadloft/">Journal</a></li>
+      <li><a class="nav-cta" href="mailto:makindegbenga00@gmail.com?subject=Vevnit%20project%20enquiry">Work with me</a></li>
+    </ul>
+  </nav>
+</header>
 
     <main id="top">
       <!-- ===================================================
@@ -67,7 +59,7 @@
                     Figuring out what to say, who needs to hear it, and why it should exist in the first place.
                   </p>
                   <button type="button" class="flip-action-btn" aria-controls="card-inner-1" aria-expanded="false">
-                    EXPLORE THE PROCESS <span aria-hidden="true">→</span>
+                    EXPLORE THE PROCESS <span class="text-arrow" aria-hidden="true">→</span>
                   </button>
                 </article>
 
@@ -165,7 +157,7 @@
                     Researching, structuring, writing, editing, and turning ideas into things people actually want to consume.
                   </p>
                   <button type="button" class="flip-action-btn" aria-controls="card-inner-2" aria-expanded="false">
-                    SEE WHAT I MAKE <span aria-hidden="true">→</span>
+                    SEE WHAT I MAKE <span class="text-arrow" aria-hidden="true">→</span>
                   </button>
                 </article>
 
@@ -265,7 +257,7 @@
                     Because publishing something and getting it in front of the right people are two different jobs.
                   </p>
                   <button type="button" class="flip-action-btn" aria-controls="card-inner-3" aria-expanded="false">
-                    HOW IT TRAVELS <span aria-hidden="true">→</span>
+                    HOW IT TRAVELS <span class="text-arrow" aria-hidden="true">→</span>
                   </button>
                 </article>
 
@@ -427,7 +419,7 @@
               </p>
               <div class="why-card-action">
                 <a href="index.html#portfolio" class="mosaic-link">
-                  SEE THE WORK <span aria-hidden="true">→</span>
+                  SEE THE WORK <span class="text-arrow" aria-hidden="true">→</span>
                 </a>
               </div>
             </article>
@@ -486,7 +478,7 @@
                 href="mailto:makindegbenga00@gmail.com?subject=Let's%20talk"
                 class="closing-btn"
               >
-                Let's talk <span aria-hidden="true">→</span>
+                Let's talk <span class="text-arrow" aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -537,5 +529,6 @@
         });
       })();
     </script>
-  </body>
+    <script src="script.js" defer></script>
+</body>
 </html>
