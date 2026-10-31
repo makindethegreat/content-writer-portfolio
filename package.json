@@ -1,0 +1,13 @@
+{
+  "name": "vevnit-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Vevnit website and editorial publishing system",
+  "scripts": {
+    "build": "eleventy",
+    "build:local": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
