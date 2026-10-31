@@ -5557,3 +5557,80 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
 .about-page .footer-landscape{opacity:.62!important;height:clamp(150px,22vw,260px)!important}
 .about-page .footer-landscape svg{overflow:hidden}
 @media(max-width:600px){.about-page .footer-landscape{height:150px!important;opacity:.48!important;left:0!important;right:0!important;width:100%!important}}
+
+
+/* WORK WITH ME — restore Vevnit palette and accessible contrast */
+.about-page .hww-hero-section{
+  background:var(--sand)!important;
+  color:var(--charcoal)!important;
+  border-bottom:1px solid rgba(31,34,36,.18)!important;
+}
+.about-page .hww-main-title{color:var(--charcoal)!important}
+.about-page .hww-lead-copy{color:#454640!important}
+.about-page .hww-hint-text{color:#625E55!important}
+.about-page .hww-hero-section .whimsical-eyebrow{color:#8F3F27!important}
+.about-page .flip-card-front{
+  background:var(--dune)!important;
+  color:var(--charcoal)!important;
+  border:1px solid rgba(31,34,36,.28)!important;
+}
+.about-page .flip-card-back{
+  background:#F8F5EC!important;
+  color:var(--charcoal)!important;
+  border:1px solid rgba(31,34,36,.28)!important;
+}
+.about-page .flip-front-title,
+.about-page .flip-back-headline,
+.about-page .flip-card-back strong{color:var(--charcoal)!important}
+.about-page .flip-front-desc,
+.about-page .flip-back-body,
+.about-page .flow-step p,
+.about-page .deliverable-item p,
+.about-page .dist-sub,
+.about-page .dist-list li{color:#454640!important}
+.about-page .mosaic-stat,
+.about-page .mosaic-tag,
+.about-page .process-flow-label,
+.about-page .dist-tag{color:#88402B!important}
+.about-page .flip-action-btn{
+  background:var(--charcoal)!important;
+  color:var(--sand)!important;
+  border:1px solid var(--charcoal)!important;
+}
+.about-page .flip-action-btn svg circle{stroke:var(--sand)!important}
+.about-page .flip-action-btn svg path{stroke:var(--sand)!important}
+.about-page .flip-return-btn,
+.about-page .flip-return-pill{color:var(--charcoal)!important}
+.about-page .distribution-channels-matrix{
+  display:grid!important;
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-template-rows:auto auto!important;
+  gap:14px!important;
+}
+.about-page .dist-quadrant{
+  min-width:0;
+  background:var(--dune)!important;
+  border:1px solid rgba(31,34,36,.22)!important;
+  border-radius:3px!important;
+  padding:1.1rem!important;
+}
+.about-page .dist-tag{color:#88402B!important}
+.about-page .why-choose-section{
+  background:var(--dune)!important;
+  color:var(--charcoal)!important;
+}
+.about-page .why-mosaic-card{
+  background:#F8F5EC!important;
+  color:var(--charcoal)!important;
+  border:1px solid rgba(31,34,36,.22)!important;
+  border-radius:3px!important;
+  box-shadow:none!important;
+}
+.about-page .why-mosaic-card p,
+.about-page .why-mosaic-card li{color:#454640!important}
+@media(max-width:640px){
+  .about-page .distribution-channels-matrix{
+    grid-template-columns:1fr!important;
+    grid-template-rows:none!important;
+  }
+}
