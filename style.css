@@ -5065,3 +5065,156 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
  .about-page .footer-landscape{height:190px;bottom:62px}
  .about-page .vevnit-footer-bottom{margin-top:170px}
 }
+
+
+/* Footer correction — explicit mobile structure and line-art landscape */
+.about-page .vevnit-editorial-footer{
+  background:#1E2421!important;
+  color:#E7DFCE!important;
+}
+.about-page .vevnit-footer-top{
+  display:grid!important;
+  align-items:start;
+}
+.about-page .vevnit-footer-column{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  white-space:normal!important;
+}
+.about-page .vevnit-footer-column a{
+  display:block!important;
+  white-space:normal!important;
+  color:#E7DFCE!important;
+}
+.about-page .vevnit-footer-brand .footer-brand-copy{
+  color:#D8D1C5!important;
+}
+.about-page .footer-terrain-fill{
+  display:none!important;
+}
+.about-page .footer-mountains{
+  fill:none!important;
+  stroke:rgba(231,223,206,.62)!important;
+  stroke-width:1.15!important;
+  vector-effect:non-scaling-stroke;
+}
+.about-page .footer-orbit-lines{
+  fill:none!important;
+  stroke:rgba(231,223,206,.34)!important;
+}
+.about-page .footer-sphere-highlight{
+  fill:none!important;
+  stroke:rgba(231,223,206,.45)!important;
+}
+@media(max-width:600px){
+  .about-page .vevnit-editorial-footer{
+    min-height:0!important;
+    padding:34px 7% 0!important;
+  }
+  .about-page .footer-rule{top:34px;left:7%;right:7%}
+  .about-page .vevnit-footer-top{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    gap:28px 22px!important;
+    padding-top:62px!important;
+    min-height:0!important;
+  }
+  .about-page .vevnit-footer-brand{
+    grid-column:1/-1!important;
+    max-width:34rem;
+  }
+  .about-page .vevnit-footer-brand .footer-wordmark{font-size:3.35rem}
+  .about-page .footer-brand-note{
+    color:#D8D0C2!important;
+    font-size:.59rem;
+    letter-spacing:.12em;
+    line-height:1.6;
+  }
+  .about-page .vevnit-footer-brand .footer-brand-copy{
+    color:#E0D9CD!important;
+    font-size:1rem!important;
+    line-height:1.55!important;
+    max-width:31ch;
+  }
+  .about-page .vevnit-footer-column{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    gap:11px!important;
+    min-width:0;
+  }
+  .about-page .vevnit-footer-column .footer-column-label{
+    display:block!important;
+    color:#C9BFAE!important;
+    font-size:.62rem!important;
+    margin:0 0 4px!important;
+    letter-spacing:.2em;
+  }
+  .about-page .vevnit-footer-column a{
+    display:block!important;
+    color:#F0EADD!important;
+    font-size:.88rem!important;
+    line-height:1.4!important;
+    padding:0!important;
+  }
+  .about-page .vevnit-footer-motto{
+    grid-column:1/-1;
+    display:flex!important;
+    flex-direction:row!important;
+    align-items:center!important;
+    flex-wrap:wrap;
+    gap:5px 9px!important;
+    min-height:0!important;
+    border-left:0!important;
+    border-top:1px solid rgba(231,223,206,.22);
+    padding:15px 0 0!important;
+    margin-top:0;
+    color:#D8D0C2!important;
+    font-size:.62rem!important;
+    letter-spacing:.16em!important;
+  }
+  .about-page .vevnit-footer-motto>i{display:none!important}
+  .about-page .vevnit-footer-motto .footer-location{
+    display:block!important;
+    width:100%;
+    margin:7px 0 0!important;
+    color:#C9BFAE!important;
+    font-size:.65rem!important;
+    line-height:1.8!important;
+    letter-spacing:.2em!important;
+  }
+  .about-page .footer-landscape{
+    left:0!important;
+    right:0!important;
+    width:100%!important;
+    height:190px!important;
+    bottom:64px!important;
+    opacity:.82!important;
+  }
+  .about-page .footer-landscape svg{overflow:visible}
+  .about-page .footer-orbit-lines{opacity:.8}
+  .about-page .footer-mountains{stroke:rgba(231,223,206,.68)!important;stroke-width:1.05!important}
+  .about-page .vevnit-footer-bottom{
+    position:relative!important;
+    z-index:4!important;
+    margin-top:175px!important;
+    min-height:55px!important;
+    padding:14px 0 18px!important;
+    gap:12px!important;
+    border-top:1px solid rgba(231,223,206,.25)!important;
+    color:#D0C8BA!important;
+    font-size:.68rem!important;
+  }
+  .about-page .vevnit-footer-bottom p,
+  .about-page .vevnit-footer-bottom a{
+    color:#D0C8BA!important;
+    font-size:.68rem!important;
+  }
+}
+@media(max-width:380px){
+  .about-page .vevnit-footer-top{gap:24px 14px!important}
+  .about-page .vevnit-footer-column a{font-size:.82rem!important}
+  .about-page .footer-landscape{height:165px!important;bottom:66px!important}
+  .about-page .vevnit-footer-bottom{margin-top:155px!important}
+}
