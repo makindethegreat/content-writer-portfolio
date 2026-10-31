@@ -53,3 +53,7 @@ content:
         label: Article
         type: rich-text
         required: true
+        options:
+          format: markdown
+          media: blog-images
+          path: assets/images/blog
