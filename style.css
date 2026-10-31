@@ -4982,3 +4982,86 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
 .about-page .card-absurd .absurd-disclaimer{
   color:#C9C1B3!important;
 }
+
+
+/* About page footer — full-width Vevnit topographic signature */
+.about-page .vevnit-editorial-footer{
+  isolation:isolate;position:relative;overflow:hidden;
+  min-height:560px;padding:54px max(6.2%,calc((100vw - 1440px)/2)) 0;
+  background:#1E2421!important;color:#E7DFCE!important;border-top:0;
+}
+.about-page .vevnit-editorial-footer:before{display:none}
+.about-page .footer-rule{height:1px;background:rgba(231,223,206,.34);position:absolute;top:54px;left:6.2%;right:6.2%}
+.about-page .vevnit-footer-top{
+  position:relative;z-index:3;display:grid;
+  grid-template-columns:minmax(330px,2.15fr) .62fr .9fr .62fr .58fr;
+  gap:clamp(22px,3.5vw,58px);padding-top:72px;min-height:290px;
+}
+.about-page .vevnit-footer-brand{max-width:500px}
+.about-page .vevnit-footer-brand .footer-wordmark{display:inline-block;font-size:clamp(3.4rem,5vw,4.8rem);font-weight:600;letter-spacing:-.105em;line-height:.85;color:#E7DFCE}
+.about-page .vevnit-footer-brand .footer-wordmark span{color:#C95F3C}
+.about-page .footer-brand-note{display:block;margin-top:17px;font-size:.68rem;letter-spacing:.18em;color:#D2C9B8}
+.about-page .footer-accent-rule{display:block;width:78px;height:2px;background:#C95F3C;margin:24px 0 18px}
+.about-page .vevnit-footer-brand .footer-brand-copy{font-size:1.08rem;line-height:1.48;color:#D8D1C5;max-width:32ch}
+.about-page .vevnit-footer-column{display:flex;flex-direction:column;align-items:flex-start;gap:11px;padding-top:3px}
+.about-page .vevnit-footer-column .footer-column-label{
+  font-size:.65rem;letter-spacing:.24em;color:#AFA99D;margin-bottom:7px;font-weight:500
+}
+.about-page .vevnit-footer-column a{font-size:.88rem;line-height:1.35;color:#E5DED1;text-decoration:none;transition:color .2s ease}
+.about-page .vevnit-footer-column a:hover{color:#D58A6C}
+.about-page .vevnit-footer-motto{
+  min-height:145px;border-left:1px solid rgba(231,223,206,.45);
+  padding:43px 0 0 clamp(22px,3.5vw,60px);display:flex;flex-direction:column;
+  align-items:flex-start;gap:5px;font-size:.68rem;letter-spacing:.22em;color:#D2C9B8;
+}
+.about-page .vevnit-footer-motto>i{display:block;width:30px;height:2px;background:#C95F3C;margin-top:19px}
+.about-page .vevnit-footer-motto .footer-location{display:none}
+.about-page .footer-landscape{
+  position:absolute;z-index:1;left:0;right:0;bottom:34px;height:clamp(220px,30vw,390px);
+  pointer-events:none;opacity:.94
+}
+.about-page .footer-landscape svg{width:100%;height:100%;display:block;overflow:visible}
+.about-page .footer-orbit-lines{stroke:rgba(231,223,206,.34);stroke-width:1;stroke-dasharray:none}
+.about-page .footer-orbit-dot{fill:#E7DFCE}
+.about-page .footer-orbit-dot--clay{fill:#C95F3C}
+.about-page .footer-orbit-dot--olive{fill:#596858}
+.about-page .footer-sphere-highlight{fill:none;stroke:rgba(231,223,206,.35);stroke-width:1}
+.about-page .footer-mountains{stroke:rgba(231,223,206,.57);stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+.about-page .footer-terrain-fill{fill:url(#vevnitTerrainDots);stroke:rgba(231,223,206,.16);stroke-width:1}
+.about-page .vevnit-footer-bottom{
+  position:relative;z-index:4;min-height:54px;margin-top:0;padding:15px 0 18px;
+  border-top:1px solid rgba(231,223,206,.24);display:flex;justify-content:space-between;align-items:center;
+  color:#BEB7AA;font-size:.7rem;letter-spacing:.04em
+}
+.about-page .vevnit-footer-bottom p{margin:0;color:#BEB7AA;font-size:.7rem}
+.about-page .vevnit-footer-bottom a{color:#BEB7AA;text-decoration:none}
+.about-page .vevnit-footer-bottom a:hover{color:#D58A6C}
+@media(max-width:900px){
+ .about-page .vevnit-editorial-footer{padding-left:5%;padding-right:5%;min-height:600px}
+ .about-page .footer-rule{left:5%;right:5%}
+ .about-page .vevnit-footer-top{grid-template-columns:1.5fr 1fr 1.2fr;gap:30px;padding-top:62px}
+ .about-page .vevnit-footer-brand{grid-column:1/-1}
+ .about-page .vevnit-footer-motto{display:none}
+ .about-page .footer-landscape{height:270px;bottom:45px;opacity:.68}
+}
+@media(max-width:600px){
+ .about-page .vevnit-editorial-footer{min-height:760px;padding:34px 7% 0}
+ .about-page .footer-rule{top:34px;left:7%;right:7%}
+ .about-page .vevnit-footer-top{grid-template-columns:1fr 1fr;gap:30px 20px;padding-top:62px;min-height:0}
+ .about-page .vevnit-footer-brand{grid-column:1/-1}
+ .about-page .vevnit-footer-brand .footer-wordmark{font-size:3.5rem}
+ .about-page .footer-brand-note{font-size:.55rem;letter-spacing:.13em}
+ .about-page .vevnit-footer-brand .footer-brand-copy{font-size:.98rem}
+ .about-page .vevnit-footer-column{gap:10px}
+ .about-page .vevnit-footer-column .footer-column-label{font-size:.6rem}
+ .about-page .vevnit-footer-column a{font-size:.82rem}
+ .about-page .footer-landscape{height:220px;bottom:58px;left:-42%;right:-42%;width:184%;opacity:.55}
+ .about-page .vevnit-footer-bottom{margin-top:190px;min-height:55px;gap:10px;font-size:.62rem}
+ .about-page .vevnit-footer-bottom p{font-size:.62rem}
+}
+@media(max-width:380px){
+ .about-page .vevnit-editorial-footer{min-height:800px}
+ .about-page .vevnit-footer-top{gap:26px 15px}
+ .about-page .footer-landscape{height:190px;bottom:62px}
+ .about-page .vevnit-footer-bottom{margin-top:170px}
+}
