@@ -4801,3 +4801,10 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
  .site-nav ul li:last-child{display:none}
 }
 @media(max-width:380px){.site-nav{grid-template-columns:auto 1fr 38px;gap:7px;padding-left:15px;padding-right:10px}.brand-wordmark{font-size:1.55rem}.mobile-nav-cta{min-height:44px;padding:0 15px;font-size:.84rem}.menu-toggle{width:38px;height:38px}}
+
+/* Final typography and editorial consistency */
+.italic-serif,.section-heading-editorial,.cs-featured-headline,.cs-title,.hww-main-title{font-family:'Jost',sans-serif!important;font-style:normal}
+.about-page .btn-yellow-glow,.about-page .mosaic-pill-btn,.about-page .flip-action-btn{border-radius:999px!important;letter-spacing:.03em}
+.about-page .highlight-lemon,.about-page .highlight-pen{background:none!important;text-decoration:none}
+.about-page .rabbit-card,.about-page .travel-tile,.about-page .cs-placeholder-card{border-radius:2px!important}
+.about-page .decorative-blob,.about-page .whimsical-stamp{box-shadow:none!important}
