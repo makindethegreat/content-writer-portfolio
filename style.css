@@ -4747,3 +4747,57 @@ body.about-page{background:var(--sand);color:var(--charcoal)}
 .service-card>a{display:inline-flex;align-items:center;gap:0;color:var(--clay)}
 .service-card>a:hover .circle-chevron{color:var(--clay);transform:translateX(2px)}
 .service-card>a .circle-chevron{transition:transform .2s ease,color .2s ease}
+
+/* ===================================================
+   Vevnit identity reconciliation — shared page system
+   =================================================== */
+:root{
+  --color-background:#F3EFE0;--color-dark:#1F2224;--color-primary:#1F2224;
+  --color-surface:#E7DFCE;--color-accent:#C95F3C;--color-border:rgba(31,34,36,.18);
+  --color-green:#4B5B4A;--color-mint:#E7DFCE;
+  --sand:#F3EFE0;--dune:#E7DFCE;--clay:#C95F3C;--olive:#4B5B4A;--charcoal:#1F2224;
+  --ink:#1F2224;--muted:#68645C;--line:rgba(31,34,36,.22);--paper:#F3EFE0;
+  --font-display:'Jost',sans-serif;--font-body:'Jost',sans-serif;--font:'Jost',sans-serif;
+}
+html,body{background:var(--sand);color:var(--charcoal);font-family:'Jost',sans-serif}
+h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(243,239,224,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(31,34,36,.10);padding:18px 6%}
+.site-nav{max-width:1320px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand-lockup{display:inline-flex;align-items:center;color:var(--charcoal);text-decoration:none;flex-shrink:0}
+.brand-wordmark{font-size:2.45rem;line-height:.9;font-weight:600;letter-spacing:-.09em;color:var(--charcoal)}
+.brand-wordmark>span{color:var(--clay)}
+.site-nav ul{display:flex;align-items:center;gap:clamp(16px,2.5vw,34px);list-style:none;margin:0;padding:0}
+.site-nav ul a{font-size:.76rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--charcoal)}
+.site-nav ul a:hover,.site-nav ul a.active-nav{color:var(--clay)}
+.site-nav ul a.nav-cta,.nav-cta{display:inline-flex;align-items:center;justify-content:center;background:#351006!important;color:#fff!important;border:1px solid #351006;border-radius:999px!important;padding:13px 22px!important;font-size:.76rem!important;font-weight:500!important;letter-spacing:.04em!important;text-transform:none!important;box-shadow:0 7px 16px rgba(53,16,6,.12)!important}
+.site-nav ul a.nav-cta:hover,.nav-cta:hover{background:var(--clay)!important;border-color:var(--clay);transform:translateY(-1px)}
+.mobile-nav-cta,.menu-toggle{display:none}
+.text-arrow{display:inline-block;margin-left:.25em;color:var(--charcoal)}
+/* Recolour legacy page components without changing their content structure */
+.about-page,.about-page main{background:var(--sand);color:var(--charcoal)}
+.about-page .btn-yellow-glow,.about-page .cs-primary-link,.about-page .flip-action-btn,.about-page .mosaic-pill-btn{background:#351006!important;color:#fff!important;border-color:#351006!important;box-shadow:none!important}
+.about-page .highlight-pen,.about-page .highlight-brand-num,.about-page .tile-number.highlight-brand-num{color:var(--clay)!important}
+.about-page .whimsical-eyebrow,.about-page .story-chapter-tag,.about-page .cs-status-tag,.about-page .cs-placeholder-status{color:var(--clay)}
+.about-page .manifesto-card,.about-page .belief-manifesto-section{background:var(--charcoal)!important;color:var(--sand)!important}
+.about-page .highlight-lemon{color:var(--clay)!important}
+.about-page .decorative-blob{background:var(--dune)!important}
+.about-page .rabbit-card,.about-page .travel-tile,.about-page .cs-placeholder-card,.about-page .flip-card-front,.about-page .flip-card-back{background:var(--dune)!important;border-color:var(--line)!important;box-shadow:none!important}
+.about-page .mosaic-card{box-shadow:none!important;border-radius:2px}
+.about-page .nav-cta .circle-chevron{display:none}
+@media(max-width:640px){
+ .site-header{padding:14px 5%;border:0;background:var(--sand)}
+ .site-nav{min-height:78px;padding:12px 16px 12px 20px;display:grid;grid-template-columns:auto 1fr 44px;align-items:center;gap:12px;background:#FBFAF6;border:1px solid rgba(31,34,36,.09);border-radius:999px;box-shadow:0 8px 28px rgba(31,34,36,.07)}
+ .brand-wordmark{font-size:1.72rem}
+ .mobile-nav-cta{display:inline-flex;justify-self:center;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;background:#351006;color:#fff!important;font-size:.92rem;font-weight:500;white-space:nowrap;text-decoration:none;box-shadow:0 7px 16px rgba(53,16,6,.15)}
+ .menu-toggle{display:flex;width:42px;height:42px;align-items:center;justify-content:center;border:0;border-radius:50%;background:transparent;color:var(--olive);cursor:pointer}
+ .menu-icon{width:27px;height:22px;display:flex;flex-direction:column;justify-content:space-between}
+ .menu-icon i{display:block;width:100%;height:3px;border-radius:4px;background:var(--olive);transition:transform .22s ease,opacity .22s ease}
+ .menu-toggle[aria-expanded="true"] .menu-icon i:first-child{transform:translateY(9.5px) rotate(45deg)}
+ .menu-toggle[aria-expanded="true"] .menu-icon i:nth-child(2){opacity:0}
+ .menu-toggle[aria-expanded="true"] .menu-icon i:last-child{transform:translateY(-9.5px) rotate(-45deg)}
+ .site-nav ul{display:none;grid-column:1/-1;order:initial;flex-basis:auto;margin:4px 0 2px;padding:16px 8px 8px;border-top:1px solid var(--line);align-items:stretch;flex-direction:column;gap:0}
+ .site-nav ul.is-open{display:flex}
+ .site-nav ul li a{display:block;padding:12px 4px;font-size:.78rem}
+ .site-nav ul li:last-child{display:none}
+}
+@media(max-width:380px){.site-nav{grid-template-columns:auto 1fr 38px;gap:7px;padding-left:15px;padding-right:10px}.brand-wordmark{font-size:1.55rem}.mobile-nav-cta{min-height:44px;padding:0 15px;font-size:.84rem}.menu-toggle{width:38px;height:38px}}
