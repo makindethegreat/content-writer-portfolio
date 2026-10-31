@@ -19,15 +19,6 @@ module.exports = function (eleventyConfig) {
     return new Intl.DateTimeFormat("en", options).format(date);
   });
 
-  // Draft posts must not produce public article pages.
-  eleventyConfig.addGlobalData("eleventyComputed.permalink", function (data) {
-    const inputPath = data.page && data.page.inputPath ? data.page.inputPath : "";
-    if (inputPath.includes("content/posts/") && inputPath.endsWith(".md")) {
-      return data.draft === true
-        ? false
-        : `/blog/${data.page.fileSlug}/index.html`;
-    }
-  });
 
   eleventyConfig.addCollection("publishedPosts", function (collectionApi) {
     return collectionApi.getFilteredByGlob("content/posts/*.md")
