@@ -5511,3 +5511,43 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
 @media(max-width:380px){
  .about-page .vevnit-editorial-footer .footer-landscape{height:185px;bottom:62px}
 }
+
+
+/* Homepage hero: stable-width typewriter slots */
+.vevnit-home .hero h1 .hero-dynamic-slot{
+  display:inline-grid;
+  grid-template-areas:"word";
+  vertical-align:baseline;
+  white-space:nowrap;
+  color:var(--clay);
+  font:inherit;
+  letter-spacing:inherit;
+  line-height:inherit;
+}
+.vevnit-home .hero-dynamic-word,
+.vevnit-home .hero-dynamic-sizer{
+  grid-area:word;
+  display:block;
+}
+.vevnit-home .hero-dynamic-sizer{
+  visibility:hidden;
+  pointer-events:none;
+  user-select:none;
+}
+.vevnit-home .hero-dynamic-word{
+  min-width:0;
+}
+.vevnit-home .hero-dynamic-word::after{
+  content:"";
+  display:inline-block;
+  width:1px;
+  height:.78em;
+  margin-left:.07em;
+  vertical-align:-.02em;
+  background:currentColor;
+  animation:vevnit-type-caret .85s steps(1,end) infinite;
+}
+@keyframes vevnit-type-caret{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){
+  .vevnit-home .hero-dynamic-word::after{animation:none;opacity:0}
+}
