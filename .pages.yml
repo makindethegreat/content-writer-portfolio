@@ -1,0 +1,55 @@
+media:
+  - name: blog-images
+    label: Blog images
+    input: assets/images/blog
+    output: /assets/images/blog
+    extensions: [jpg, jpeg, png, webp, gif]
+    categories: [image]
+    rename: safe
+
+content:
+  - name: posts
+    label: Blog posts
+    type: collection
+    path: content/posts
+    filename: "{fields.slug}.md"
+    view:
+      fields: [title, date, category, draft]
+      sort: [date, title]
+    fields:
+      - name: title
+        label: Article title
+        type: string
+        required: true
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+      - name: date
+        label: Publication date
+        type: date
+        required: true
+      - name: category
+        label: Category
+        type: string
+      - name: excerpt
+        label: Short description
+        type: text
+        required: true
+      - name: featuredImage
+        label: Featured image
+        type: image
+        options:
+          media: blog-images
+      - name: author
+        label: Author
+        type: string
+        default: Makinde
+      - name: draft
+        label: Keep as draft
+        type: boolean
+        default: true
+      - name: body
+        label: Article
+        type: rich-text
+        required: true
