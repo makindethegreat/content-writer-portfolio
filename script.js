@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.addEventListener("click", () => {
       const open = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", String(!open));
-      toggle.querySelector("span").textContent = open ? "+" : "−";
+      toggle.setAttribute("aria-label", open ? "Open navigation menu" : "Close navigation menu");
       menu.classList.toggle("is-open", !open);
     });
     menu.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
       toggle.setAttribute("aria-expanded", "false");
-      toggle.querySelector("span").textContent = "+";
+      toggle.setAttribute("aria-label", "Open navigation menu");
       menu.classList.remove("is-open");
     }));
   }
