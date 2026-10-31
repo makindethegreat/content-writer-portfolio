@@ -5218,3 +5218,55 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
   .about-page .footer-landscape{height:165px!important;bottom:66px!important}
   .about-page .vevnit-footer-bottom{margin-top:155px!important}
 }
+
+
+/* Vevnit homepage — mechanism as a restrained animated background */
+.vevnit-home .hero{isolation:isolate;width:100%;max-width:none;min-height:clamp(680px,82vh,900px);padding:clamp(100px,12vw,160px) max(8%,calc((100vw - 1320px)/2)) clamp(90px,10vw,130px);display:flex;align-items:center;background:radial-gradient(ellipse at 76% 46%,rgba(201,95,60,.10),transparent 43%),linear-gradient(110deg,#1B1D1B 0%,#202320 58%,#24231F 100%);overflow:hidden}
+.vevnit-home .hero::before{z-index:0;left:-330px;top:-240px;width:760px;height:760px;border-color:rgba(231,223,206,.08)}
+.vevnit-home .hero-content{position:relative;z-index:3;width:min(100%,690px);max-width:690px;padding:0}
+.vevnit-home .hero .eyebrow{color:#D8CDBB}
+.vevnit-home .hero h1{max-width:690px;color:#F3EFE0;text-wrap:balance}
+.vevnit-home .hero h1 span{color:#C95F3C}
+.vevnit-home .hero-copy{color:#D0C9BD;max-width:470px}
+.vevnit-home .hero-index{z-index:3;color:rgba(231,223,206,.68)}
+.vevnit-home .hero-index i{background:rgba(231,223,206,.28)}
+.vevnit-home .mechanical-hero{position:absolute;z-index:1;width:min(78vw,1120px);max-width:none;right:-5%;top:50%;transform:translateY(-45%);margin:0;opacity:.23;pointer-events:none;filter:none}
+.vevnit-home .mechanical-hero svg{width:100%;height:auto;display:block}
+.vevnit-home .machine-lines{stroke:rgba(231,223,206,.66);stroke-width:2.4}
+.vevnit-home .machine-solid{fill:#D9D0BD;stroke:#D9D0BD;stroke-width:1}
+.vevnit-home .machine-nodes{fill:#D9D0BD;stroke:rgba(231,223,206,.6);stroke-width:1}
+.vevnit-home .machine-guides{stroke:rgba(231,223,206,.42);stroke-width:1}
+.vevnit-home .machine-arm{transform-box:view-box;transform-origin:365px 166px}
+.vevnit-home .machine-arm--upper{animation:vevnit-upper-rock 8s ease-in-out infinite}
+.vevnit-home .machine-arm--lower{transform-origin:430px 310px;animation:vevnit-lower-rock 8s ease-in-out infinite}
+.vevnit-home .machine-arm--right{transform-origin:550px 180px;animation:vevnit-right-rock 8s ease-in-out infinite}
+.vevnit-home .machine-node{transform-box:fill-box;transform-origin:center}
+.vevnit-home .machine-node--pivot{animation:vevnit-pivot-pulse 4s ease-in-out infinite}
+.vevnit-home .machine-node--clay{fill:#C95F3C!important;opacity:.9!important;animation:vevnit-clay-pulse 4s ease-in-out infinite}
+.vevnit-home .machine-node--lower{animation-delay:1.2s}
+.vevnit-home .hero-actions .button-dark{background:#C95F3C;border-color:#C95F3C;color:#fff!important}
+.vevnit-home .hero-actions .button-dark:hover{background:#A94F34;border-color:#A94F34}
+.vevnit-home .hero-actions .text-link{color:#F3EFE0;border-color:#C95F3C}
+@keyframes vevnit-upper-rock{0%,100%{transform:rotate(0deg)}50%{transform:rotate(2.2deg)}}
+@keyframes vevnit-lower-rock{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-2.4deg)}}
+@keyframes vevnit-right-rock{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-1.2deg)}}
+@keyframes vevnit-pivot-pulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.22);opacity:.62}}
+@keyframes vevnit-clay-pulse{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.14);opacity:1}}
+.vevnit-home .trust-strip{position:relative;z-index:2;background:#F3EFE0;color:#1F2224;border-color:rgba(31,34,36,.18)}
+@media(max-width:800px){
+ .vevnit-home .hero{min-height:720px;padding:105px 7% 90px;display:flex;align-items:center}
+ .vevnit-home .hero-content{max-width:640px}
+ .vevnit-home .hero h1{font-size:clamp(3.25rem,10vw,5.3rem)}
+ .vevnit-home .mechanical-hero{width:112vw;right:-34%;top:56%;transform:translateY(-40%);opacity:.17}
+ .vevnit-home .hero-index{display:none}
+}
+@media(max-width:560px){
+ .vevnit-home .hero{min-height:690px;padding:92px 7% 82px}
+ .vevnit-home .hero h1{font-size:clamp(3rem,11.8vw,4.25rem);max-width:12ch;line-height:1.01}
+ .vevnit-home .hero-copy{font-size:.96rem;line-height:1.65;max-width:36ch}
+ .vevnit-home .mechanical-hero{width:145vw;right:-62%;top:58%;opacity:.12}
+ .vevnit-home .machine-arm--upper,.vevnit-home .machine-arm--lower,.vevnit-home .machine-arm--right{animation-duration:10s}
+}
+@media(prefers-reduced-motion:reduce){
+ .vevnit-home .machine-arm,.vevnit-home .machine-node{animation:none!important}
+}
