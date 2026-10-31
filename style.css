@@ -5463,3 +5463,12 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
  .vevnit-home-footer .home-footer-art{height:205px;margin-left:-6vw;width:calc(100% + 12vw)}
  .vevnit-home-footer .home-footer-art svg{width:175%;transform:translateX(-32%)}
 }
+
+
+/* Ensure the homepage footer wordmark inherits the light-on-dark lockup */
+.vevnit-home-footer .home-footer-brand .brand-lockup .brand-wordmark{
+  color:#F3EFE0!important;
+}
+.vevnit-home-footer .home-footer-brand .brand-lockup .brand-wordmark>span{
+  color:#C95F3C!important;
+}
