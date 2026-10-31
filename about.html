@@ -4,31 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vevnit — About</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&display=swap"
-      rel="stylesheet"
-    />
+    
 <link rel="stylesheet" href="style.css?v=vevnit1" />
-  </head>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
   <body class="about-page">
     <!-- Header Navigation -->
     <header class="site-header">
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html#top" class="brand-logo-link" aria-label="Vevnit home">
-          <img src="vevnit-mark.svg" alt="Vevnit" class="brand-logo" />
-        </a>
-       <ul>
-  <li><a href="about.html">About</a></li>
-  <li><a href="work-with-me.html">How We Can Work</a></li>
-  <li><a href="index.html#portfolio">Portfolio</a></li>
-  <li>
-    <a href="mailto:makindegbenga00@gmail.com?subject=Let's%20Talk" class="nav-cta">Let's Talk <span aria-hidden="true">→</span></a>
-  </li>
-</ul>
-      </nav>
-    </header>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="brand-lockup" href="index.html#top" aria-label="Vevnit home"><span class="brand-wordmark">vevnit<span>.</span></span></a>
+    <a class="mobile-nav-cta" href="mailto:makindegbenga00@gmail.com?subject=Vevnit%20project%20enquiry">Work with me</a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu"><span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span></button>
+    <ul id="primary-menu">
+      <li><a href="about.html">About</a></li><li><a href="work-with-me.html">Services</a></li><li><a href="case-studies.html">Work</a></li><li><a href="blog/leadbay-vs-leadloft/">Journal</a></li>
+      <li><a class="nav-cta" href="mailto:makindegbenga00@gmail.com?subject=Vevnit%20project%20enquiry">Work with me</a></li>
+    </ul>
+  </nav>
+</header>
 
     <main id="top">
       <!-- Section 1: Hero -->
@@ -58,7 +50,7 @@
                 Work with me
               </a>
               <a href="index.html#portfolio" class="link-understated">
-                See the work <span aria-hidden="true">→</span>
+                See the work <span class="text-arrow" aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -296,7 +288,7 @@
                 Fiction, non-fiction, essays, philosophy, history, and anything capable of making me feel like the modern-day Socrates. 
               </p>
               <button type="button" class="inline-expand-trigger" id="shelf-btn" aria-expanded="false" aria-controls="shelf-content">
-                What's on the shelf? <span aria-hidden="true">→</span>
+                What's on the shelf? <span class="text-arrow" aria-hidden="true">→</span>
               </button>
               <div id="shelf-content" class="shelf-expandable" hidden>
                 <p class="shelf-expandable__text">
@@ -317,7 +309,7 @@
               </p>
               <div class="mosaic-card__action">
                 <a href="https://makindetheescritor.medium.com/" target="_blank" rel="noopener noreferrer" class="mosaic-link">
-                  Open a thought <span aria-hidden="true">→</span>
+                  Open a thought <span class="text-arrow" aria-hidden="true">→</span>
                 </a>
               </div>
             </article>
@@ -398,7 +390,7 @@
               </p>
               <div class="art-generator-area">
                 <button type="button" class="mosaic-pill-btn" id="art-critique-btn">
-                  Review this artwork <span aria-hidden="true">→</span>
+                  Review this artwork <span class="text-arrow" aria-hidden="true">→</span>
                 </button>
                 <div class="art-critique-display" id="art-critique-output" aria-live="polite">
                   "The tension between the colours is doing something deeply personal."
@@ -453,7 +445,7 @@
                 </p>
               </div>
               <button type="button" class="mosaic-pill-btn" id="random-fact-btn">
-                Tell me something unnecessary <span aria-hidden="true">→</span>
+                Tell me something unnecessary <span class="text-arrow" aria-hidden="true">→</span>
               </button>
             </article>
 
@@ -501,7 +493,7 @@
                 href="mailto:makindegbenga00@gmail.com?subject=Let's%20talk"
                 class="closing-btn"
               >
-                Let's talk <span aria-hidden="true">→</span>
+                Let's talk <span class="text-arrow" aria-hidden="true">→</span>
               </a>
             </div>
           </div>
@@ -615,5 +607,6 @@
     </script>
       });
     </script>
-  </body>
+    <script src="script.js" defer></script>
+</body>
 </html>
