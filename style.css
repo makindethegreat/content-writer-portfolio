@@ -5812,3 +5812,12 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
 .vevnit-home .hero-dynamic-logo svg{display:block;width:100%;height:100%;overflow:visible}
 @keyframes vevnit-caret{50%{opacity:0}}
 @media(prefers-reduced-motion:reduce){.vevnit-home .hero-dynamic-word:after{animation:none}.vevnit-home .hero-dynamic-logo{transition:none}}
+
+/* Render supplied transparent brand artwork crisply inside the existing inline logo slot. */
+.vevnit-home .hero-dynamic-logo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  background:transparent;
+}
