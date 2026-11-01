@@ -5799,3 +5799,16 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
 .vevnit-home .discovery-platform img{display:block;width:88px!important;height:88px!important;flex:0 0 88px!important;object-fit:contain;opacity:1!important;visibility:visible!important}
 @media(max-width:850px){.vevnit-home .discovery-platforms{gap:14px 18px}.vevnit-home .discovery-platform{flex-basis:82px}.vevnit-home .discovery-platform img{width:78px!important;height:78px!important;flex-basis:78px!important}}
 @media(max-width:480px){.vevnit-home .discovery-platforms{gap:12px 10px;margin-top:20px}.vevnit-home .discovery-platform{flex-basis:calc(33.333% - 8px);font-size:.78rem!important}.vevnit-home .discovery-platform img{width:76px!important;height:76px!important;flex-basis:76px!important}}
+
+/* Inline hero typewriter: fixed-width headline slot and transparent logo marks. */
+.vevnit-home .hero h1 .hero-dynamic-slot{display:inline-grid;grid-template-areas:"dynamic";vertical-align:baseline;width:9.9ch;max-width:100%;white-space:nowrap;color:inherit;font-family:"Atkinson Hyperlegible",sans-serif;font-size:1em;font-weight:inherit;line-height:inherit;letter-spacing:inherit}
+.vevnit-home .hero-dynamic-sizer,.vevnit-home .hero-dynamic-content{grid-area:dynamic;display:flex;align-items:baseline;min-width:0}
+.vevnit-home .hero-dynamic-sizer{visibility:hidden;pointer-events:none;user-select:none}
+.vevnit-home .hero-dynamic-content{white-space:nowrap}
+.vevnit-home .hero-dynamic-word{display:inline-block;min-width:0;color:#F3EFE0}
+.vevnit-home .hero-dynamic-word:after{content:"";display:inline-block;width:2px;height:.76em;margin-left:.07em;background:#C95F3C;vertical-align:-.015em;animation:vevnit-caret 850ms steps(1,end) infinite}
+.vevnit-home .hero-dynamic-logo{display:inline-flex;align-items:center;justify-content:center;width:.9em;height:.9em;margin-left:.17em;vertical-align:-.04em;flex:0 0 .9em;opacity:0;transform:translateY(.12em) scale(.82);transition:opacity 420ms ease,transform 520ms cubic-bezier(.2,.75,.25,1)}
+.vevnit-home .hero-dynamic-logo.is-visible{opacity:1;transform:translateY(0) scale(1)}
+.vevnit-home .hero-dynamic-logo svg{display:block;width:100%;height:100%;overflow:visible}
+@keyframes vevnit-caret{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.vevnit-home .hero-dynamic-word:after{animation:none}.vevnit-home .hero-dynamic-logo{transition:none}}

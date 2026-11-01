@@ -12,8 +12,8 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=vevnit-platform-illustrations-1">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=vevnit-typewriter-2">
 </head>
 <body class="vevnit-home">
   <header class="site-header">
@@ -36,14 +36,16 @@
     <section class="hero hero-editorial" aria-labelledby="hero-heading">
       <div class="hero-index"><span>01</span><i></i></div>
       <div class="hero-content">
-        <h1 id="hero-heading">Be the answer when<br class="hero-title-break"> your buyers ask</h1>
-        <div class="discovery-platforms" aria-label="Google, ChatGPT, Perplexity, Gemini and Claude">
-          <span class="discovery-platform"><img src="assets/images/platform-google.webp" alt="" width="192" height="192" loading="eager"><span>Google</span></span>
-          <span class="discovery-platform"><img src="assets/images/platform-chatgpt.webp" alt="" width="192" height="192" loading="eager"><span>ChatGPT</span></span>
-          <span class="discovery-platform"><img src="assets/images/platform-perplexity.webp" alt="" width="192" height="192" loading="eager"><span>Perplexity</span></span>
-          <span class="discovery-platform"><img src="assets/images/platform-gemini.webp" alt="" width="192" height="192" loading="eager"><span>Gemini</span></span>
-          <span class="discovery-platform"><img src="assets/images/platform-claude.webp" alt="" width="192" height="192" loading="eager"><span>Claude</span></span>
-        </div>
+        <h1 id="hero-heading">
+          Be the answer when<br class="hero-title-break"> your buyers ask
+          <span class="hero-dynamic-slot" aria-label="Google, ChatGPT, Perplexity, Gemini and Claude">
+            <span class="hero-dynamic-sizer" aria-hidden="true">Perplexity</span>
+            <span class="hero-dynamic-content">
+              <span class="hero-dynamic-word" aria-hidden="true"></span>
+              <span class="hero-dynamic-logo" aria-hidden="true"></span>
+            </span>
+          </span>
+        </h1>
         <div class="accent-rule"></div>
         <p class="hero-copy">Your buyers research on Google and AI before they ever book a demo. I create content for early-to-mid-stage B2B SaaS that helps you get found, recommended, and chosen over your competitors.</p>
         <div class="hero-actions">
@@ -324,5 +326,6 @@
     })();
   </script>
   <script src="script.js?v=vevnit-system-1"></script>
+  <script src="hero-typewriter.js?v=1" defer></script>
 </body>
 </html>
