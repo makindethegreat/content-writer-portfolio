@@ -5743,3 +5743,51 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
   .vevnit-home .discovery-platform{font-size:.91rem!important;padding:8px 10px;min-height:42px}
   .vevnit-home .discovery-platform img{width:22px!important;height:22px!important;flex-basis:22px!important}
 }
+
+
+/* Homepage hero refinement based on the supplied visual reference. */
+.vevnit-home .hero-content{max-width:640px}
+.vevnit-home .hero h1{
+  max-width:640px;
+  font-size:clamp(3.15rem,5.3vw,5.15rem);
+  line-height:.98;
+  letter-spacing:-.065em;
+}
+.vevnit-home .hero-title-break{display:block}
+.vevnit-home .discovery-platforms{
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:center;
+  gap:7px;
+  max-width:none;
+  margin-top:20px;
+}
+.vevnit-home .discovery-platform{
+  gap:6px;
+  padding:6px 9px;
+  min-height:34px;
+  background:rgba(243,239,224,.62);
+  border:1px solid rgba(31,34,36,.16);
+  border-radius:7px;
+  font-size:.78rem!important;
+  font-weight:500!important;
+  line-height:1;
+  letter-spacing:-.01em;
+}
+.vevnit-home .discovery-platform img{
+  width:18px!important;
+  height:18px!important;
+  flex:0 0 18px!important;
+}
+.vevnit-home .accent-rule{margin:24px 0 15px}
+@media(max-width:1100px){
+  .vevnit-home .discovery-platforms{flex-wrap:wrap}
+}
+@media(max-width:850px){
+  .vevnit-home .hero h1{font-size:clamp(3rem,8vw,4.6rem)}
+  .vevnit-home .discovery-platforms{flex-wrap:wrap;gap:8px}
+}
+@media(max-width:480px){
+  .vevnit-home .hero h1{font-size:clamp(2.8rem,11vw,3.5rem)}
+  .vevnit-home .discovery-platform{font-size:.78rem!important;padding:6px 8px}
+}
