@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("logo.png");
   eleventyConfig.addPassthroughCopy("vevnit-mark.svg");
   eleventyConfig.addPassthroughCopy("Makinde.jpg");
+  eleventyConfig.addPassthroughCopy("404.html");
 
   eleventyConfig.addFilter("date", (value, format) => {
     const date = value instanceof Date ? value : new Date(value);
