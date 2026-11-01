@@ -5700,3 +5700,46 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
   .discovery-platform{font-size:.76rem;gap:5px}
   .discovery-platform img{width:17px;height:17px;flex-basis:17px}
 }
+
+
+/* Increase platform mark and label legibility in the homepage hero. */
+.vevnit-home .discovery-platforms{
+  gap:12px 14px;
+  max-width:680px;
+  margin-top:26px;
+}
+.vevnit-home .discovery-platform{
+  display:inline-flex!important;
+  align-items:center;
+  gap:9px;
+  padding:9px 13px;
+  min-height:44px;
+  background:rgba(231,223,206,.58);
+  border:1px solid rgba(31,34,36,.18);
+  border-radius:2px;
+  color:#1F2224!important;
+  font-size:1rem!important;
+  font-weight:600!important;
+  line-height:1.2;
+  letter-spacing:0;
+  opacity:1!important;
+  visibility:visible!important;
+}
+.vevnit-home .discovery-platform span{
+  display:inline!important;
+  color:#1F2224!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+.vevnit-home .discovery-platform img{
+  width:24px!important;
+  height:24px!important;
+  flex:0 0 24px!important;
+  opacity:1!important;
+  visibility:visible!important;
+}
+@media(max-width:480px){
+  .vevnit-home .discovery-platforms{gap:9px;margin-top:22px}
+  .vevnit-home .discovery-platform{font-size:.91rem!important;padding:8px 10px;min-height:42px}
+  .vevnit-home .discovery-platform img{width:22px!important;height:22px!important;flex-basis:22px!important}
+}
