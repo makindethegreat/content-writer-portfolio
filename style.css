@@ -5791,3 +5791,11 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
   .vevnit-home .hero h1{font-size:clamp(2.8rem,11vw,3.5rem)}
   .vevnit-home .discovery-platform{font-size:.78rem!important;padding:6px 8px}
 }
+
+/* Supplied Vevnit platform illustrations — hero cluster */
+.vevnit-home .discovery-platforms{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:flex-start;gap:14px 20px;max-width:650px;margin-top:26px}
+.vevnit-home .discovery-platform{display:flex!important;flex:0 0 92px;flex-direction:column;align-items:center;justify-content:flex-start;gap:7px;min-height:0;padding:0;border:0;border-radius:0;background:transparent;color:#1F2224!important;font-size:.84rem!important;font-weight:500!important;line-height:1.2}
+.vevnit-home .discovery-platform span{display:block!important;color:#1F2224!important;text-align:center}
+.vevnit-home .discovery-platform img{display:block;width:88px!important;height:88px!important;flex:0 0 88px!important;object-fit:contain;opacity:1!important;visibility:visible!important}
+@media(max-width:850px){.vevnit-home .discovery-platforms{gap:14px 18px}.vevnit-home .discovery-platform{flex-basis:82px}.vevnit-home .discovery-platform img{width:78px!important;height:78px!important;flex-basis:78px!important}}
+@media(max-width:480px){.vevnit-home .discovery-platforms{gap:12px 10px;margin-top:20px}.vevnit-home .discovery-platform{flex-basis:calc(33.333% - 8px);font-size:.78rem!important}.vevnit-home .discovery-platform img{width:76px!important;height:76px!important;flex-basis:76px!important}}
