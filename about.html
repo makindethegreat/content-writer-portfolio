@@ -192,26 +192,6 @@
             <p class="aw-music-close">Genre loyalty has never made sense to me. If it’s good, it’s good.</p>
           </article>
 
-          <article class="aw-card aw-mosaic-card aw-weather">
-            <div class="aw-mosaic-top"><span class="aw-mini-label">FAVOURITE WEATHER</span><span aria-hidden="true">☁</span></div>
-            <h3>Petrichor. Mist. Grey skies.</h3>
-            <p>That’s weather for two: me and content marketing.</p>
-          </article>
-
-          <article class="aw-card aw-mosaic-card aw-art">
-            <div class="aw-mosaic-top"><span class="aw-mini-label">UNPAID POSITION</span><span aria-hidden="true">⌂</span></div>
-            <h3>Full-time art reviewer.</h3>
-            <p>The only problem is that I know absolutely nothing about art. I just look at things for a long time and say, <em>“Interesting use of space.”</em></p>
-            <button class="aw-text-button" type="button" id="art-critique-btn">Review this artwork →</button>
-            <p class="aw-art-output" id="art-critique-output" aria-live="polite">“The tension between the colours is doing something deeply personal.”</p>
-          </article>
-
-          <article class="aw-card aw-mosaic-card aw-random">
-            <div class="aw-mosaic-top"><span class="aw-mini-label">PRESS FOR A RANDOM FACT</span><span aria-hidden="true">✳</span></div>
-            <p class="aw-random-output" id="fact-output" aria-live="polite">“I read books to become smarter and then immediately use the knowledge in conversations nobody asked for.”</p>
-            <button class="aw-text-button" type="button" id="random-fact-btn">Tell me something unnecessary →</button>
-          </article>
-
           <article class="aw-card aw-mosaic-card aw-deadlift">
             <div class="aw-mosaic-top"><span class="aw-mini-label">A RANDOM TUESDAY.</span><span class="aw-verified">VERIFIED*</span></div>
             <h3>I once deadlifted 511kg in one hand while writing an SEO article for a tech behemoth with the other.</h3>
@@ -338,46 +318,6 @@
               jokeButton.setAttribute("aria-expanded", "false");
               jokeTip.hidden = true;
             }
-          });
-        }
-
-        const critiques = [
-          "“The tension between the colours is doing something deeply personal.”",
-          "“Captures the essence of art in ways you can’t see.”",
-          "“You can really feel the artist’s commitment to... whatever this is.”",
-          "“I wouldn’t have done it this way, but that’s probably why I’m not in the gallery.”",
-          "“There’s clearly something happening here.”",
-          "“This piece asks difficult questions. Sit with it.”",
-          "“Bold. Uncompromising. Completely incomprehensible to the untrained eye.”"
-        ];
-        const artButton = document.getElementById("art-critique-btn");
-        const artOutput = document.getElementById("art-critique-output");
-        if (artButton && artOutput) {
-          artButton.addEventListener("click", () => {
-            const current = artOutput.textContent;
-            let next = current;
-            while (next === current && critiques.length > 1) next = critiques[Math.floor(Math.random() * critiques.length)];
-            artOutput.textContent = next;
-          });
-        }
-
-        const facts = [
-          "“I can spend three hours researching something I only needed to know for fifteen minutes.”",
-          "“My definition of ‘just one more tab’ is legally questionable.”",
-          "“I think good writing should make people stop scrolling for reasons other than poor internet connection.”",
-          "“I have strong opinions about things I discovered approximately six minutes ago.”",
-          "“I will judge a song within the first twelve seconds and then pretend my opinion is objective.”",
-          "“I am convinced somewhere between a good essay and a good campaign is the meaning of life.”",
-          "“I treat positioning exercises like archaeological excavations.”"
-        ];
-        const factButton = document.getElementById("random-fact-btn");
-        const factOutput = document.getElementById("fact-output");
-        if (factButton && factOutput) {
-          factButton.addEventListener("click", () => {
-            const current = factOutput.textContent;
-            let next = current;
-            while (next === current && facts.length > 1) next = facts[Math.floor(Math.random() * facts.length)];
-            factOutput.textContent = next;
           });
         }
       });
