@@ -13,6 +13,37 @@ permalink: work-with-me.html
     <link rel="icon" type="image/svg+xml" href="/content-writer-portfolio/favicon.svg?v=20261102">
     <link rel="icon" type="image/png" sizes="48x48" href="/content-writer-portfolio/favicon.png?v=20261102">
     <link rel="apple-touch-icon" sizes="180x180" href="/content-writer-portfolio/apple-touch-icon.png?v=20261102">
+    <style id="work-footer-brand-mark">
+      /* The Vevnit mark is drawn as part of the footer's orbital line system. */
+      .about-page .closing-orbital .work-footer-brand-mark{
+        position:absolute;z-index:2;left:50%;top:50%;
+        width:clamp(190px,29vw,340px);height:auto;
+        overflow:visible;transform:translate(-50%,-50%) rotate(-7deg);
+        opacity:.78;pointer-events:none;
+        filter:drop-shadow(0 0 18px rgba(201,95,60,.08));
+      }
+      .about-page .work-footer-brand-mark__v{
+        fill:none;stroke:#F3EFE0;stroke-width:2.15;
+        stroke-linecap:square;stroke-linejoin:miter;
+        vector-effect:non-scaling-stroke;
+      }
+      .about-page .work-footer-brand-mark__orbit{
+        fill:none;stroke:#C95F3C;stroke-width:2.35;
+        vector-effect:non-scaling-stroke;
+      }
+      .about-page .work-footer-brand-mark__axis{
+        fill:none;stroke:rgba(243,239,224,.42);stroke-width:1;
+        stroke-dasharray:2 5;vector-effect:non-scaling-stroke;
+      }
+      @media(max-width:760px){
+        .about-page .closing-orbital .work-footer-brand-mark{
+          width:clamp(175px,48vw,260px);opacity:.58;
+        }
+      }
+      @media(prefers-reduced-motion:reduce){
+        .about-page .closing-orbital .work-footer-brand-mark{filter:none}
+      }
+    </style>
 </head>
   <body class="about-page">
     <!-- Navigation Bar -->
@@ -462,6 +493,11 @@ permalink: work-with-me.html
             <div class="orbital-ring orbital-ring--inner">
               <span class="orbital-node"></span>
             </div>
+            <svg class="work-footer-brand-mark" viewBox="0 0 240 200" focusable="false">
+              <path class="work-footer-brand-mark__v" d="M24 24H77L120 158L163 24H216" />
+              <circle class="work-footer-brand-mark__orbit" cx="166" cy="112" r="27" />
+              <path class="work-footer-brand-mark__axis" d="M120 158L166 112" />
+            </svg>
           </div>
 
           <div class="closing-content">
