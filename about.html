@@ -157,6 +157,46 @@
       .about-wireframe-page .aw-section.aw-is-visible .aw-origin-grid>div{animation:none!important}
     }
   </style>
+  <style id="about-footer-orbital-art">
+    /* Decorative footer artwork only. Content remains in its original semantic layout. */
+    .about-page .vevnit-editorial-footer{background:#1F2224!important;isolation:isolate}
+    .about-page .vevnit-editorial-footer:after{
+      content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+      background:radial-gradient(ellipse at 50% 78%,rgba(75,91,74,.25),transparent 56%),
+                 linear-gradient(180deg,rgba(31,34,36,.06),rgba(12,14,13,.42));
+    }
+    .about-page .vevnit-editorial-footer .footer-landscape.footer-orbital-art{
+      display:block!important;position:absolute!important;z-index:1!important;
+      left:0!important;right:0!important;bottom:34px!important;width:100%!important;
+      height:clamp(260px,34vw,430px)!important;opacity:1!important;overflow:hidden;
+      pointer-events:none;
+      -webkit-mask-image:linear-gradient(to bottom,transparent 0%,black 15%,black 88%,transparent 100%);
+      mask-image:linear-gradient(to bottom,transparent 0%,black 15%,black 88%,transparent 100%);
+    }
+    .about-page .footer-orbital-art svg{display:block;width:100%;height:100%;overflow:visible}
+    .about-page .footer-orbit-line{stroke:rgba(231,223,206,.36);stroke-width:1.15}
+    .about-page .footer-orbit-line-dashed{stroke:rgba(201,95,60,.55);stroke-dasharray:3 8;stroke-width:1.25}
+    .about-page .footer-orbit-cross{stroke:rgba(231,223,206,.12);stroke-width:1}
+    .about-page .footer-orbit-marker{transform-box:fill-box;transform-origin:center;animation:footer-marker-pulse 5s ease-in-out infinite}
+    .about-page .footer-orbit-marker-sand{fill:#F3EFE0}
+    .about-page .footer-orbit-marker-clay{fill:#C95F3C;animation-delay:-1.4s}
+    .about-page .footer-orbit-marker-small{animation-delay:-2.8s}
+    .about-page .footer-orbit-marker-olive{fill:#7A8A76;animation-delay:-3.6s}
+    .about-page .vevnit-footer-top,.about-page .vevnit-footer-bottom{position:relative;z-index:3}
+    .about-page .vevnit-footer-brand,.about-page .vevnit-footer-column,.about-page .vevnit-footer-motto{position:relative;z-index:3}
+    @keyframes footer-marker-pulse{0%,100%{opacity:.86;transform:scale(1)}50%{opacity:1;transform:scale(1.16)}}
+    @media(max-width:900px){
+      .about-page .vevnit-editorial-footer .footer-landscape.footer-orbital-art{height:280px!important;bottom:44px!important;opacity:.82!important}
+    }
+    @media(max-width:600px){
+      .about-page .vevnit-editorial-footer .footer-landscape.footer-orbital-art{
+        left:-8%!important;width:116%!important;height:220px!important;bottom:62px!important;opacity:.68!important
+      }
+    }
+    @media(prefers-reduced-motion:reduce){
+      .about-page .footer-orbit-marker{animation:none!important}
+    }
+  </style>
 </head>
 <body class="about-page about-wireframe-page">
   <header class="site-header">
@@ -363,12 +403,34 @@
 
       <footer id="contact" class="closing-section vevnit-editorial-footer" aria-label="Vevnit footer">
   <div class="footer-rule" aria-hidden="true"></div>
-<div class="footer-landscape" aria-hidden="true">
-    <svg viewBox="0 0 1600 360" preserveAspectRatio="xMidYMax slice" role="presentation">
-      <path d="M-40 270 C210 190 330 305 555 235 S900 175 1080 235 S1370 260 1640 105"
-        fill="none" stroke="#E7DFCE" stroke-opacity=".24" stroke-width="1.4" stroke-linecap="round"/>
-      <path d="M-40 300 C210 220 330 335 555 265 S900 205 1080 265 S1370 290 1640 135"
-        fill="none" stroke="#C95F3C" stroke-opacity=".42" stroke-width="1.8" stroke-linecap="round"/>
+<div class="footer-landscape footer-orbital-art" aria-hidden="true">
+    <svg viewBox="0 0 1600 520" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <defs>
+        <filter id="vevnit-footer-grain">
+          <feTurbulence type="fractalNoise" baseFrequency=".82" numOctaves="2" stitchTiles="stitch"/>
+          <feColorMatrix type="saturate" values="0"/>
+        </filter>
+        <radialGradient id="vevnit-footer-glow">
+          <stop offset="0" stop-color="#4B5B4A" stop-opacity=".36"/>
+          <stop offset="1" stop-color="#1F2224" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <rect width="1600" height="520" fill="url(#vevnit-footer-glow)"/>
+      <rect width="1600" height="520" filter="url(#vevnit-footer-grain)" opacity=".13"/>
+      <g class="footer-orbit-system" fill="none" stroke-linecap="round">
+        <ellipse class="footer-orbit-line" cx="800" cy="330" rx="245" ry="650" transform="rotate(0 800 330)"/>
+        <ellipse class="footer-orbit-line footer-orbit-line-dashed" cx="800" cy="330" rx="340" ry="650" transform="rotate(0 800 330)"/>
+        <ellipse class="footer-orbit-line" cx="800" cy="330" rx="455" ry="650" transform="rotate(0 800 330)"/>
+        <ellipse class="footer-orbit-line footer-orbit-line-dashed" cx="800" cy="330" rx="570" ry="650" transform="rotate(0 800 330)"/>
+        <ellipse class="footer-orbit-line" cx="800" cy="330" rx="685" ry="650" transform="rotate(0 800 330)"/>
+        <path class="footer-orbit-line footer-orbit-cross" d="M0 330H1600M800 0V520"/>
+      </g>
+      <g class="footer-orbit-markers">
+        <circle class="footer-orbit-marker footer-orbit-marker-sand" cx="555" cy="190" r="9"/>
+        <circle class="footer-orbit-marker footer-orbit-marker-clay" cx="800" cy="330" r="15"/>
+        <circle class="footer-orbit-marker footer-orbit-marker-clay footer-orbit-marker-small" cx="1138" cy="420" r="11"/>
+        <circle class="footer-orbit-marker footer-orbit-marker-olive" cx="260" cy="430" r="7"/>
+      </g>
     </svg>
   </div>
   <div class="vevnit-footer-top">
