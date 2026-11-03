@@ -30,7 +30,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/content-writer-portfolio/",
+    pathPrefix: "/",
     dir: {
       input: ".",
       includes: "_includes",
