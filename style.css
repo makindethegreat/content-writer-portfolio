@@ -6093,7 +6093,12 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
 }
 @media(prefers-reduced-motion:reduce){.about-wireframe-page .aw-button,.about-wireframe-page .aw-reveal{transition:none!important}}
 
-/* Keep article sections visually continuous; retain the FAQ section divider. */
+/* Tighten article rhythm and remove excess whitespace between sections.
+   The FAQ keeps its separate spacing and divider treatment. */
 body.about-page .art-section:not(#faq) {
+  padding-top: 2rem !important;
+  padding-bottom: 0 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
   border: 0 !important;
 }
