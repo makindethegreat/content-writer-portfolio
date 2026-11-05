@@ -6092,3 +6092,8 @@ h1,h2,h3,h4,p,a,button,li,span,small{font-family:'Jost',sans-serif}
  .about-wireframe-page .aw-tally{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media(prefers-reduced-motion:reduce){.about-wireframe-page .aw-button,.about-wireframe-page .aw-reveal{transition:none!important}}
+
+/* Keep article sections visually continuous; retain the FAQ section divider. */
+body.about-page .art-section:not(#faq) {
+  border: 0 !important;
+}
