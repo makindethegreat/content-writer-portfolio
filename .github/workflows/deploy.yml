@@ -1,4 +1,5 @@
 name: Build and deploy Vevnit with Eleventy
+# GitHub Pages source must remain set to GitHub Actions; Eleventy is the canonical site build.
 
 on:
   push:
