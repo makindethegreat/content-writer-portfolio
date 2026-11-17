@@ -1,0 +1,22 @@
+paths:
+  static: ''
+  uploads: uploads
+timezone: Africa/Lagos
+markdown:
+  engine: commonmark
+  options:
+    html: true
+source: /
+collections_config:
+  pages:
+    path: ''
+    icon: wysiwyg
+  blog:
+    path: blog
+    icon: event_available
+  posts:
+    path: content/posts
+    icon: event_available
+  preview:
+    path: preview
+    icon: preview
