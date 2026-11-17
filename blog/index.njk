@@ -90,15 +90,6 @@ eleventyExcludeFromCollections: true
       <h1>Ideas, Strategy, Deep Dives.</h1>
       <p class="blog-archive-intro">Research, teardowns and practical perspectives on building a more deliberate content practice for B2B SaaS.</p>
       <section class="blog-archive-grid" aria-label="Blog posts">
-        <article class="blog-archive-card">
-          <a href="/blog/leadbay-vs-leadloft/" aria-label="Read Leadbay vs. Leadloft on Vevnit">
-            <img class="blog-card-image" src="/assets/images/leadbay-vs-leadloft-cover.webp" alt="Leadbay vs. Leadloft comparison cover artwork for Vevnit" width="768" height="402" fetchpriority="high">
-            <div class="blog-card-meta"><span class="blog-card-category">Tool comparison</span><time datetime="2026-10">October 2026</time><span>12 min read</span></div>
-            <h2 class="blog-card-title">Leadbay vs. Leadloft: Which Tool Is Right for Your Team?</h2>
-            <p class="blog-card-excerpt">A closer look at two prospecting platforms, their approaches to lead discovery, and the differences that matter when choosing a tool for your sales workflow.</p>
-            <span class="blog-card-read">Read the article ↗</span>
-          </a>
-        </article>
         {% for post in collections.publishedPosts %}
         <article class="blog-archive-card">
           <a href="{{ post.url | url }}">
