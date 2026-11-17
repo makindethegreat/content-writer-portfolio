@@ -34,7 +34,19 @@ That is what this article is about: the right tool stack for solo SaaS content m
 
 ## Quick glance at the top SaaS content marketing tools
 
-\| Tool \| Best for \| Trade-off \| Workflow stage \| Starting cost \| \|---\|---\|---\|---\|---:\| \| Ahrefs \| SEO research, backlinking, link prospecting, website audits and content opportunities \| Does not include PPC, SMM or a complete content optimisation suite \| SEO research \| $29 \| \| Apify \| Collecting audience and other raw data across the web \| Extracted data requires cleaning and analysis \| Audience research \| Free; paid from $19/month \| \| ChatGPT \| Brainstorming, research assistance, drafting, editing and everyday content tasks \| Requires human judgement, context and fact-checking \| AI assistance \| Free; paid from $8/month \| \| Notion \| Editorial calendars, content repositories, projects and documentation \| Flexible but requires setup; can have a learning curve \| Content planning and productivity \| Free \| \| Hemingway Editor \| Improving readability, identifying wordy sentences and editing content \| Readability suggestions can oversimplify technical content \| Content editing \| Free \| \| Neuronwriter \| Optimising articles and landing pages for organic search \| Content scores can encourage over-optimisation if followed blindly \| SEO content optimisation \| $23/month \| \| Undetectable AI \| Reworking AI-written content to improve its flow and phrasing \| Does not guarantee undetectability \| Content refinement \| $19/month \| \| Descript \| Turning webinars, podcasts, interviews and product demos into shorter content \| Less suitable for complex professional video production \| Content repurposing \| $16/month \| \| Buffer \| Scheduling and distributing content across social platforms \| Limited social listening and competitor intelligence \| Social distribution \| Free \| \| Microsoft Clarity \| Understanding visitor behaviour through heatmaps and session recordings \| Requires time to review recordings and interpret behavioural patterns \| Website behaviour analytics \| Free \| \| Google Analytics 4 \| Measuring website traffic, user interactions and conversion events \| Does not provide comprehensive SEO analysis \| Content performance and conversion tracking \| Free \|
+| Tool | Best for | Trade-off | Workflow stage | Starting cost |
+| --- | --- | --- | --- | ---: |
+| Ahrefs | SEO research, backlinking, link prospecting, website audits and content opportunities | Does not include PPC, SMM or a complete content optimisation suite | SEO research | $29 |
+| Apify | Collecting audience and other raw data across the web | Extracted data requires cleaning and analysis | Audience research | Free; paid from $19/month |
+| ChatGPT | Brainstorming, research assistance, drafting, editing and everyday content tasks | Requires human judgement, context and fact-checking | AI assistance | Free; paid from $8/month |
+| Notion | Editorial calendars, content repositories, projects and documentation | Flexible but requires setup; can have a learning curve | Content planning and productivity | Free |
+| Hemingway Editor | Improving readability, identifying wordy sentences and editing content | Readability suggestions can oversimplify technical content | Content editing | Free |
+| Neuronwriter | Optimising articles and landing pages for organic search | Content scores can encourage over-optimisation if followed blindly | SEO content optimisation | $23/month |
+| Undetectable AI | Reworking AI-written content to improve its flow and phrasing | Does not guarantee undetectability | Content refinement | $19/month |
+| Descript | Turning webinars, podcasts, interviews and product demos into shorter content | Less suitable for complex professional video production | Content repurposing | $16/month |
+| Buffer | Scheduling and distributing content across social platforms | Limited social listening and competitor intelligence | Social distribution | Free |
+| Microsoft Clarity | Understanding visitor behaviour through heatmaps and session recordings | Requires time to review recordings and interpret behavioural patterns | Website behaviour analytics | Free |
+| Google Analytics 4 | Measuring website traffic, user interactions and conversion events | Does not provide comprehensive SEO analysis | Content performance and conversion tracking | Free |
 
 *Prices are the figures used in this article's comparison and may change. Check each provider's pricing page before purchasing.*
 
@@ -227,7 +239,13 @@ Beyond traditional SEO, Neuronwriter has an AI Visibility feature that lets you 
 
 #### Neuronwriter pricing
 
-\| Plan \| Price \| \|---\|---:\| \| Bronze \| $23/month \| \| Silver \| $45/month \| \| Gold \| $69/month \| \| Platinum \| $93/month \| \| Diamond \| $117/month \|
+| Plan | Price |
+| --- | ---: |
+| Bronze | $23/month |
+| Silver | $45/month |
+| Gold | $69/month |
+| Platinum | $93/month |
+| Diamond | $117/month |
 
 ### 6\. Hemingway Editor: best for content editing
 
@@ -432,7 +450,9 @@ I do not use all of these tools in this article myself. You probably do not need
 
 The table below shows the estimated monthly cost based on what you add to your stack.
 
-\| Stack \| Tools \| Monthly cost \| \|---\|---\|---:\| \| Free starter \| ChatGPT, Notion, Hemingway, GA4 and Clarity \| $0 \| \| Growth \| Free starter + Ahrefs + Neuronwriter \| $52 \| \| Full \| Growth + Descript + Buffer + Apify \| $93 \|
+| Stack | Tools | Monthly cost | --- | --- |
+| ---: | Free starter | ChatGPT, Notion, Hemingway, GA4 and Clarity | $0 | Growth |
+| Free starter + Ahrefs + Neuronwriter | $52 | Full | Growth + Descript + Buffer + Apify | $93 |
 
 If you are starting with a limited budget, begin with the free pack that covers the essentials: ChatGPT for content assistance, Notion for organisation, Hemingway Editor for readability, Google Analytics 4 for performance measurement and Microsoft Clarity for website behaviour.
 
