@@ -6102,3 +6102,41 @@ body.about-page .art-section:not(#faq) {
   margin-bottom: 2rem !important;
   border: 0 !important;
 }
+
+
+/* Homepage hero — restrained dotted-field artwork replacing the mechanical illustration. */
+.vevnit-home .hero-wave-field{
+  position:absolute;
+  z-index:1;
+  width:min(66vw,900px);
+  max-width:none;
+  right:-7%;
+  top:50%;
+  transform:translateY(-50%);
+  margin:0;
+  opacity:.19;
+  pointer-events:none;
+}
+.vevnit-home .hero-wave-field img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+@media(max-width:800px){
+  .vevnit-home .hero-wave-field{
+    width:112vw;
+    right:-36%;
+    top:58%;
+    transform:translateY(-42%);
+    opacity:.12;
+  }
+}
+@media(max-width:560px){
+  .vevnit-home .hero-wave-field{
+    width:145vw;
+    right:-66%;
+    top:58%;
+    opacity:.10;
+  }
+}
