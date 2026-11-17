@@ -7,7 +7,6 @@ excerpt: "A closer look at two prospecting platforms, their approaches to lead d
 author: Makinde
 readTime: "12 min read"
 featuredImage: "/blog/leadbay-vs-leadloft/assets/hero-cover.png.png"
-permalink: "/blog/leadbay-vs-leadloft/index.html"
 ---
 
 ## TL;DR
