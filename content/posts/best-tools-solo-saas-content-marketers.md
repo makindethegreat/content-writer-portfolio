@@ -75,7 +75,15 @@ For me, it is helpful when I want to know how my website is performing across us
 
 I turned on the Always-On Audit so I receive email alerts when a new technical issue is detected on my site.
 
+![Ahrefs Site Audit alert showing a newly detected technical issue on a website](/assets/images/ahrefs-site-audit-alert.webp)
+
+_An Ahrefs Site Audit alert highlighting a technical issue that needs attention._
+
 The Site Explorer tool makes you feel like a space satellite. It gives you comprehensive data on any website. All you need to do is input your competitors to see how they perform in terms of Domain Rating (DR), backlinks, site structure and other important data.
+
+![Ahrefs project overview showing website SEO metrics and performance data](/assets/images/ahrefs-project-overview.webp)
+
+_A snapshot of the Ahrefs project overview and its core website metrics._
 
 I then move to Content Explorer to find top-performing content in a niche and identify content opportunities competitors might have missed.
 
@@ -143,6 +151,10 @@ Since I connected its MCP integration with ChatGPT, I can capture my thoughts an
 
 For work, I create full brand guidelines, documentation, editorial calendars, project trackers, project repositories and simple CRM systems.
 
+![Notion editorial calendar showing a structured content planning workspace](/assets/images/notion-editorial-calendar.webp)
+
+_A Notion editorial calendar for organising content and keeping projects on track._
+
 Whenever I need to work on a new account, I populate my Notion workspace with the necessary information. That way, when I need to get a task done with ChatGPT, I can attach the relevant Notion project file instead of repeatedly providing the same background context.
 
 #### Notion pros and cons
@@ -195,6 +207,10 @@ It analyses top-ranking Google search results based on your target keyword to id
 
 As you write, Neuronwriter gives your draft a real-time content score based on how well you include recommended terms, structure your headings (H1, H2 and H3) and meet target word counts. You can also explore its AI tools to generate content, outlines and FAQs.
 
+![Neuronwriter content optimisation interface showing recommendations and an article content score](/assets/images/neuronwriter-content-optimisation.webp)
+
+_Neuronwriter's optimisation workspace for reviewing topical coverage and on-page recommendations._
+
 Beyond traditional SEO, Neuronwriter has an AI Visibility feature that lets you monitor how often your brand appears in AI-generated answers and whether your website is cited as a source.
 
 #### Neuronwriter pros and cons
@@ -228,6 +244,10 @@ Hemingway helps ensure your writing is concise and easy to read. Your content is
 
 All you need to do is paste your draft, and it immediately highlights areas that need attention. I also use Grammarly, but it is more useful for spotting grammar, spelling, punctuation and other writing issues.
 
+![Hemingway Editor highlighting complex sentences and readability issues in a draft](/assets/images/hemingway-readability-editing.webp)
+
+_Hemingway Editor flags sentences that may need simplifying during the editing process._
+
 Hemingway is what I use in my editing process because the free version gets me halfway through the process. If you need additional features such as AI rewriting, document uploads and more advanced editing capabilities, you can upgrade to its paid version.
 
 #### Hemingway pros and cons
@@ -253,6 +273,10 @@ Sometimes, you already have the idea and a clear direction for a particular scri
 Here is what you could do on those days: record a voice message to ChatGPT or Claude explaining everything you want in the first draft. Make sure the direction, tone, structure, ideas and argument you want to explore are clear enough.
 
 Depending on how the first draft comes out, either provide more context and annotate it or, if it is good enough, move it to Undetectable AI to rewrite and refine it.
+
+![Undetectable AI workflow interface for reviewing and refining a draft](/assets/images/undetectable-ai-workflow.webp)
+
+_An example of an AI-assisted rewriting workflow. Always review the output for accuracy, meaning and voice._
 
 However, my stance on AI writing is that it will not ever get everything right. It is better to write the larger part of a first draft yourself and use AI to improve it than to depend on it to produce a piece from scratch. Or, a better way to use an AI-generated draft is to rely on it strictly for short-form content where you can more easily manage the lack of a human touch.
 
@@ -282,6 +306,10 @@ Descript helps you turn webinars, product demos, interviews and podcasts into sh
 One thing that makes Descript interesting is its transcription-based editing workflow. Instead of working entirely on a traditional video timeline, you edit your footage by editing its transcript. You can delete sentences, remove unnecessary sections and rearrange parts of a recording by making changes to the text.
 
 The tool also makes it easier to remove filler words, generate captions, improve audio quality and translate or dub content into different languages. You can use its AI features, called Underlord, to find interesting parts of long videos and create shorter versions for social media audiences.
+
+![Descript transcript-based editing interface showing an audio or video transcript alongside its editing timeline](/assets/images/descript-transcript-editing.webp)
+
+_Descript's transcript-based editing workflow makes it easier to turn long recordings into shorter content._
 
 For instance, imagine your SaaS company has just hosted a one-hour webinar on how businesses can automate their procurement processes. Instead of letting the recording sit on YouTube, you can import it into Descript, generate a transcript, dub it into multiple languages depending on your market, create hook-strong short clips for social media or use the transcript for a blog post.
 
