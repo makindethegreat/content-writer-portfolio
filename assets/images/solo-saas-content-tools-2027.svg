@@ -1,33 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
-<title id="title">A system of connected tools for SaaS content marketing</title>
-<desc id="desc">Minimal geometric illustration with overlapping translucent green circles along a horizontal axis, fine orbital lines, and small clay and olive markers on a warm ivory background.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1672 941" role="img" aria-labelledby="title desc">
+<title id="title">Layered green and peach circles</title>
+<desc id="desc">Six overlapping translucent circles transition from deep forest green through muted olive into warm peach on a textured ivory background.</desc>
 <defs>
-  <radialGradient id="paper"><stop stop-color="#F8F4E9"/><stop offset="1" stop-color="#F1EBDD"/></radialGradient>
-  <linearGradient id="green" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07563E"/><stop offset="1" stop-color="#092F27"/></linearGradient>
-  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18"/></filter>
+  <radialGradient id="paper" cx="48%" cy="46%" r="80%">
+    <stop offset="0" stop-color="#F7F0E2"/>
+    <stop offset="1" stop-color="#F0E7D6"/>
+  </radialGradient>
+  <filter id="grain">
+    <feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="2" seed="8" stitchTiles="stitch"/>
+    <feColorMatrix type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="table" tableValues="0 .13"/></feComponentTransfer>
+  </filter>
+  <filter id="softEdge" x="-8%" y="-8%" width="116%" height="116%">
+    <feGaussianBlur stdDeviation=".35"/>
+  </filter>
 </defs>
-<rect width="1600" height="900" fill="url(#paper)"/>
-<g fill="none" stroke="#817D70" stroke-width="1.4" opacity=".78">
-  <path d="M150 450H1450"/>
-  <path d="M380 180V715"/>
-  <path d="M1210 220V680"/>
-  <ellipse cx="590" cy="450" rx="340" ry="310" stroke-dasharray="5 8" opacity=".7"/>
-  <ellipse cx="1210" cy="450" rx="190" ry="180" stroke-dasharray="5 8" opacity=".55"/>
-  <path d="M245 450a330 330 0 0 1 330-330"/>
-  <path d="M245 450a330 330 0 0 0 330 330"/>
+<rect width="1672" height="941" fill="url(#paper)"/>
+<g filter="url(#softEdge)">
+  <circle cx="508" cy="455" r="148" fill="#09271F"/>
+  <circle cx="632" cy="455" r="148" fill="#657461" fill-opacity=".78"/>
+  <circle cx="756" cy="455" r="148" fill="#97886C" fill-opacity=".66"/>
+  <circle cx="880" cy="455" r="148" fill="#D78F68" fill-opacity=".58"/>
+  <circle cx="1004" cy="455" r="148" fill="#E7A47E" fill-opacity=".54"/>
+  <circle cx="1128" cy="455" r="148" fill="#F0B995" fill-opacity=".48"/>
 </g>
-<ellipse cx="770" cy="570" rx="590" ry="34" fill="#746F61" opacity=".13" filter="url(#shadow)"/>
-<g>
-  <circle cx="525" cy="450" r="148" fill="url(#green)"/>
-  <circle cx="685" cy="450" r="148" fill="#174F3D" opacity=".70"/>
-  <circle cx="845" cy="450" r="148" fill="#47705A" opacity=".58"/>
-  <circle cx="1005" cy="450" r="148" fill="#78907A" opacity=".42"/>
-  <circle cx="1165" cy="450" r="148" fill="#AAB29A" opacity=".30"/>
-  <circle cx="1325" cy="450" r="148" fill="#D0CDBB" opacity=".25"/>
-</g>
-<g>
-  <circle cx="245" cy="450" r="10" fill="#07563E"/>
-  <circle cx="380" cy="715" r="15" fill="#B8A78C"/>
-  <circle cx="1210" cy="450" r="12" fill="#C95F3C"/>
-</g>
+<rect width="1672" height="941" filter="url(#grain)" opacity=".42"/>
 </svg>
