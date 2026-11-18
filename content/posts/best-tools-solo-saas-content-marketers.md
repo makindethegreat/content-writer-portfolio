@@ -8,7 +8,7 @@ excerpt: Solo SaaS content marketer? Compare the best tools for research, SEO,
   and trade-offs.
 featuredImage: /assets/images/solo-saas-content-tools-2027.svg
 author: Makinde
-draft: true
+draft: false
 ---
 ## TL;DR
 
