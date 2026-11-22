@@ -1,24 +1,71 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800" fill="none" role="img" aria-labelledby="title desc">
-<title id="title">Inward-facing dotted field</title>
-<desc id="desc">Two opposing fields of fine concentric dotted curves sweep inward from the left and right edges, leaving a quiet central opening.</desc>
-<defs>
-  <linearGradient id="dotTone" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#F3EFE0" stop-opacity=".56"/>
-    <stop offset=".5" stop-color="#E7DFCE" stop-opacity=".9"/>
-    <stop offset="1" stop-color="#F3EFE0" stop-opacity=".48"/>
-  </linearGradient>
-  <clipPath id="leftField"><rect x="0" y="0" width="520" height="800"/></clipPath>
-  <clipPath id="rightField"><rect x="580" y="0" width="520" height="800"/></clipPath>
-</defs>
-<g stroke="url(#dotTone)" stroke-width="2.1" stroke-linecap="round" stroke-dasharray=".12 9.6" opacity=".86" clip-path="url(#leftField)">
-<ellipse cx="0" cy="400" rx="48.0" ry="39.4"/>\n<ellipse cx="0" cy="400" rx="60.0" ry="49.2"/>\n<ellipse cx="0" cy="400" rx="72.0" ry="59.0"/>\n<ellipse cx="0" cy="400" rx="84.0" ry="68.9"/>\n<ellipse cx="0" cy="400" rx="96.0" ry="78.7"/>\n<ellipse cx="0" cy="400" rx="108.0" ry="88.6"/>\n<ellipse cx="0" cy="400" rx="120.0" ry="98.4"/>\n<ellipse cx="0" cy="400" rx="132.0" ry="108.2"/>\n<ellipse cx="0" cy="400" rx="144.0" ry="118.1"/>\n<ellipse cx="0" cy="400" rx="156.0" ry="127.9"/>\n<ellipse cx="0" cy="400" rx="168.0" ry="137.8"/>\n<ellipse cx="0" cy="400" rx="180.0" ry="147.6"/>\n<ellipse cx="0" cy="400" rx="192.0" ry="157.4"/>\n<ellipse cx="0" cy="400" rx="204.0" ry="167.3"/>\n<ellipse cx="0" cy="400" rx="216.0" ry="177.1"/>\n<ellipse cx="0" cy="400" rx="228.0" ry="187.0"/>\n<ellipse cx="0" cy="400" rx="240.0" ry="196.8"/>\n<ellipse cx="0" cy="400" rx="252.0" ry="206.6"/>\n<ellipse cx="0" cy="400" rx="264.0" ry="216.5"/>\n<ellipse cx="0" cy="400" rx="276.0" ry="226.3"/>\n<ellipse cx="0" cy="400" rx="288.0" ry="236.2"/>\n<ellipse cx="0" cy="400" rx="300.0" ry="246.0"/>\n<ellipse cx="0" cy="400" rx="312.0" ry="255.8"/>\n<ellipse cx="0" cy="400" rx="324.0" ry="265.7"/>\n<ellipse cx="0" cy="400" rx="336.0" ry="275.5"/>\n<ellipse cx="0" cy="400" rx="348.0" ry="285.4"/>\n<ellipse cx="0" cy="400" rx="360.0" ry="295.2"/>\n<ellipse cx="0" cy="400" rx="372.0" ry="305.0"/>\n<ellipse cx="0" cy="400" rx="384.0" ry="314.9"/>\n<ellipse cx="0" cy="400" rx="396.0" ry="324.7"/>\n<ellipse cx="0" cy="400" rx="408.0" ry="334.6"/>\n<ellipse cx="0" cy="400" rx="420.0" ry="344.4"/>\n<ellipse cx="0" cy="400" rx="432.0" ry="354.2"/>\n<ellipse cx="0" cy="400" rx="444.0" ry="364.1"/>\n<ellipse cx="0" cy="400" rx="456.0" ry="373.9"/>\n<ellipse cx="0" cy="400" rx="468.0" ry="383.8"/>\n<ellipse cx="0" cy="400" rx="480.0" ry="393.6"/>\n<ellipse cx="0" cy="400" rx="492.0" ry="403.4"/>\n<ellipse cx="0" cy="400" rx="504.0" ry="413.3"/>\n<ellipse cx="0" cy="400" rx="516.0" ry="423.1"/>\n<ellipse cx="0" cy="400" rx="528.0" ry="433.0"/>\n<ellipse cx="0" cy="400" rx="540.0" ry="442.8"/>\n<ellipse cx="0" cy="400" rx="552.0" ry="452.6"/>\n<ellipse cx="0" cy="400" rx="564.0" ry="462.5"/>\n<ellipse cx="0" cy="400" rx="576.0" ry="472.3"/>\n</g>
-<g stroke="url(#dotTone)" stroke-width="2.1" stroke-linecap="round" stroke-dasharray=".12 9.6" opacity=".86" clip-path="url(#rightField)">
-<ellipse cx="1100" cy="400" rx="48.0" ry="39.4"/>\n<ellipse cx="1100" cy="400" rx="60.0" ry="49.2"/>\n<ellipse cx="1100" cy="400" rx="72.0" ry="59.0"/>\n<ellipse cx="1100" cy="400" rx="84.0" ry="68.9"/>\n<ellipse cx="1100" cy="400" rx="96.0" ry="78.7"/>\n<ellipse cx="1100" cy="400" rx="108.0" ry="88.6"/>\n<ellipse cx="1100" cy="400" rx="120.0" ry="98.4"/>\n<ellipse cx="1100" cy="400" rx="132.0" ry="108.2"/>\n<ellipse cx="1100" cy="400" rx="144.0" ry="118.1"/>\n<ellipse cx="1100" cy="400" rx="156.0" ry="127.9"/>\n<ellipse cx="1100" cy="400" rx="168.0" ry="137.8"/>\n<ellipse cx="1100" cy="400" rx="180.0" ry="147.6"/>\n<ellipse cx="1100" cy="400" rx="192.0" ry="157.4"/>\n<ellipse cx="1100" cy="400" rx="204.0" ry="167.3"/>\n<ellipse cx="1100" cy="400" rx="216.0" ry="177.1"/>\n<ellipse cx="1100" cy="400" rx="228.0" ry="187.0"/>\n<ellipse cx="1100" cy="400" rx="240.0" ry="196.8"/>\n<ellipse cx="1100" cy="400" rx="252.0" ry="206.6"/>\n<ellipse cx="1100" cy="400" rx="264.0" ry="216.5"/>\n<ellipse cx="1100" cy="400" rx="276.0" ry="226.3"/>\n<ellipse cx="1100" cy="400" rx="288.0" ry="236.2"/>\n<ellipse cx="1100" cy="400" rx="300.0" ry="246.0"/>\n<ellipse cx="1100" cy="400" rx="312.0" ry="255.8"/>\n<ellipse cx="1100" cy="400" rx="324.0" ry="265.7"/>\n<ellipse cx="1100" cy="400" rx="336.0" ry="275.5"/>\n<ellipse cx="1100" cy="400" rx="348.0" ry="285.4"/>\n<ellipse cx="1100" cy="400" rx="360.0" ry="295.2"/>\n<ellipse cx="1100" cy="400" rx="372.0" ry="305.0"/>\n<ellipse cx="1100" cy="400" rx="384.0" ry="314.9"/>\n<ellipse cx="1100" cy="400" rx="396.0" ry="324.7"/>\n<ellipse cx="1100" cy="400" rx="408.0" ry="334.6"/>\n<ellipse cx="1100" cy="400" rx="420.0" ry="344.4"/>\n<ellipse cx="1100" cy="400" rx="432.0" ry="354.2"/>\n<ellipse cx="1100" cy="400" rx="444.0" ry="364.1"/>\n<ellipse cx="1100" cy="400" rx="456.0" ry="373.9"/>\n<ellipse cx="1100" cy="400" rx="468.0" ry="383.8"/>\n<ellipse cx="1100" cy="400" rx="480.0" ry="393.6"/>\n<ellipse cx="1100" cy="400" rx="492.0" ry="403.4"/>\n<ellipse cx="1100" cy="400" rx="504.0" ry="413.3"/>\n<ellipse cx="1100" cy="400" rx="516.0" ry="423.1"/>\n<ellipse cx="1100" cy="400" rx="528.0" ry="433.0"/>\n<ellipse cx="1100" cy="400" rx="540.0" ry="442.8"/>\n<ellipse cx="1100" cy="400" rx="552.0" ry="452.6"/>\n<ellipse cx="1100" cy="400" rx="564.0" ry="462.5"/>\n<ellipse cx="1100" cy="400" rx="576.0" ry="472.3"/>\n</g>
-<defs>
-  <radialGradient id="edgeFadeLeft" cx="0%" cy="50%" r="68%">
-    <stop offset="0" stop-color="#F3EFE0" stop-opacity=".0"/>
-    <stop offset=".48" stop-color="#F3EFE0" stop-opacity=".0"/>
-    <stop offset="1" stop-color="#F3EFE0" stop-opacity=".24"/>
-  </radialGradient>
-</defs>
+  <title id="title">Soft right-side dotted field</title>
+  <desc id="desc">A single field of fine dotted concentric curves fades softly into the dark background from the right edge.</desc>
+  <defs>
+    <linearGradient id="dotTone" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F3EFE0" stop-opacity="0.12"/>
+      <stop offset="0.42" stop-color="#E7DFCE" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#F3EFE0" stop-opacity="0.52"/>
+    </linearGradient>
+    <clipPath id="rightField">
+      <rect x="580" y="0" width="520" height="800"/>
+    </clipPath>
+    <radialGradient id="rightFieldFade" cx="1030" cy="400" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="white" stop-opacity="0.68"/>
+      <stop offset="0.48" stop-color="white" stop-opacity="0.43"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <mask id="rightFieldMask" maskUnits="userSpaceOnUse" x="580" y="0" width="520" height="800">
+      <rect x="580" y="0" width="520" height="800" fill="url(#rightFieldFade)"/>
+    </mask>
+  </defs>
+  <g stroke="url(#dotTone)" stroke-width="1.65" stroke-linecap="round"
+     stroke-dasharray="0.12 10.4" opacity="0.72"
+     clip-path="url(#rightField)" mask="url(#rightFieldMask)">
+    <ellipse cx="1100" cy="400" rx="48.0" ry="39.4"/>
+    <ellipse cx="1100" cy="400" rx="60.0" ry="49.2"/>
+    <ellipse cx="1100" cy="400" rx="72.0" ry="59.0"/>
+    <ellipse cx="1100" cy="400" rx="84.0" ry="68.9"/>
+    <ellipse cx="1100" cy="400" rx="96.0" ry="78.7"/>
+    <ellipse cx="1100" cy="400" rx="108.0" ry="88.6"/>
+    <ellipse cx="1100" cy="400" rx="120.0" ry="98.4"/>
+    <ellipse cx="1100" cy="400" rx="132.0" ry="108.2"/>
+    <ellipse cx="1100" cy="400" rx="144.0" ry="118.1"/>
+    <ellipse cx="1100" cy="400" rx="156.0" ry="127.9"/>
+    <ellipse cx="1100" cy="400" rx="168.0" ry="137.8"/>
+    <ellipse cx="1100" cy="400" rx="180.0" ry="147.6"/>
+    <ellipse cx="1100" cy="400" rx="192.0" ry="157.4"/>
+    <ellipse cx="1100" cy="400" rx="204.0" ry="167.3"/>
+    <ellipse cx="1100" cy="400" rx="216.0" ry="177.1"/>
+    <ellipse cx="1100" cy="400" rx="228.0" ry="187.0"/>
+    <ellipse cx="1100" cy="400" rx="240.0" ry="196.8"/>
+    <ellipse cx="1100" cy="400" rx="252.0" ry="206.6"/>
+    <ellipse cx="1100" cy="400" rx="264.0" ry="216.5"/>
+    <ellipse cx="1100" cy="400" rx="276.0" ry="226.3"/>
+    <ellipse cx="1100" cy="400" rx="288.0" ry="236.2"/>
+    <ellipse cx="1100" cy="400" rx="300.0" ry="246.0"/>
+    <ellipse cx="1100" cy="400" rx="312.0" ry="255.8"/>
+    <ellipse cx="1100" cy="400" rx="324.0" ry="265.7"/>
+    <ellipse cx="1100" cy="400" rx="336.0" ry="275.5"/>
+    <ellipse cx="1100" cy="400" rx="348.0" ry="285.4"/>
+    <ellipse cx="1100" cy="400" rx="360.0" ry="295.2"/>
+    <ellipse cx="1100" cy="400" rx="372.0" ry="305.0"/>
+    <ellipse cx="1100" cy="400" rx="384.0" ry="314.9"/>
+    <ellipse cx="1100" cy="400" rx="396.0" ry="324.7"/>
+    <ellipse cx="1100" cy="400" rx="408.0" ry="334.6"/>
+    <ellipse cx="1100" cy="400" rx="420.0" ry="344.4"/>
+    <ellipse cx="1100" cy="400" rx="432.0" ry="354.2"/>
+    <ellipse cx="1100" cy="400" rx="444.0" ry="364.1"/>
+    <ellipse cx="1100" cy="400" rx="456.0" ry="373.9"/>
+    <ellipse cx="1100" cy="400" rx="468.0" ry="383.8"/>
+    <ellipse cx="1100" cy="400" rx="480.0" ry="393.6"/>
+    <ellipse cx="1100" cy="400" rx="492.0" ry="403.4"/>
+    <ellipse cx="1100" cy="400" rx="504.0" ry="413.3"/>
+    <ellipse cx="1100" cy="400" rx="516.0" ry="423.1"/>
+    <ellipse cx="1100" cy="400" rx="528.0" ry="433.0"/>
+    <ellipse cx="1100" cy="400" rx="540.0" ry="442.8"/>
+    <ellipse cx="1100" cy="400" rx="552.0" ry="452.6"/>
+    <ellipse cx="1100" cy="400" rx="564.0" ry="462.5"/>
+    <ellipse cx="1100" cy="400" rx="576.0" ry="472.3"/>
+  </g>
 </svg>
