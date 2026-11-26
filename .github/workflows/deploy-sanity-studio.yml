@@ -47,8 +47,10 @@ jobs:
 
       - name: Install Studio dependencies
         run: npm install
+        working-directory: sanity
 
       - name: Deploy Studio and schema to Sanity
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_DEPLOY_TOKEN }}
         run: npx sanity deploy --url vevnit-content-studio --yes --schema-required
+        working-directory: sanity
