@@ -4,6 +4,8 @@ const MarkdownIt = require('markdown-it')
 const markdown = new MarkdownIt({html: false, linkify: true, typographer: true})
 
 module.exports = function (eleventyConfig) {
+  // The CMS workspace and its documentation are not public website pages.
+  eleventyConfig.ignores.add("sanity/**");
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("blog/leadbay-vs-leadloft/assets");
   eleventyConfig.addPassthroughCopy("favicon.svg");
