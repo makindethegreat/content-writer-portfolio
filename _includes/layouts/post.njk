@@ -18,10 +18,10 @@
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title }} | Vevnit</title>
-  <meta name="description" content="{{ excerpt }}">
-  <meta name="theme-color" content="#F3EFE0">
-  <link rel="canonical" href="https://vevnit.com{{ page.url }}">
+  <title>{{ seoTitle or title }} | Vevnit</title>
+  <meta name="description" content="{{ seoDescription or excerpt }}">
+  <meta name="theme-color" content="#F3EFE0">\n  <meta property="og:type" content="article">\n  <meta property="og:title" content="{{ seoTitle or title }}">\n  <meta property="og:description" content="{{ seoDescription or excerpt }}">\n  {% if featuredImage %}<meta property="og:image" content="{{ featuredImage }}">{% endif %}
+  <link rel="canonical" href="{{ canonicalUrl or ('https://vevnit.com' + page.url) }}">
   <link rel="icon" href="{{ '/favicon.svg' | url }}" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -69,7 +69,7 @@
       <div class="cms-article-meta"><span>{{ category or "Article" }}</span><time datetime="{{ page.date | date("%Y-%m-%d") }}">{{ page.date | date("%B %d, %Y") }}</time>{% if readTime %}<span>{{ readTime }}</span>{% endif %}<span>By {{ author or "Makinde" }}</span></div>
       <h1>{{ title }}</h1>
       <p class="cms-article-excerpt">{{ excerpt }}</p>
-      {% if featuredImage %}<img class="cms-featured-image" src="{{ featuredImage | url }}" alt="{{ title }} featured image">{% endif %}
+      {% if featuredImage %}<img class="cms-featured-image" src="{{ featuredImage }}" alt="{{ featuredImageAlt or (title + " featured image") }}" loading="lazy">{% endif %}
       <div class="cms-prose">{{ content | safe }}</div>
       <footer class="cms-article-footer"><a href="{{ '/blog/' | url }}">← Back to all articles</a></footer>
     </article>

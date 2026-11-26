@@ -1,0 +1,9 @@
+---
+pagination:
+  data: collections.sanityArticles
+  size: 1
+  alias: article
+layout: layouts/post.njk
+eleventyExcludeFromCollections: true
+---
+{% if article.markdownBody %}{{ article.markdownBody | renderMarkdown | safe }}{% else %}{{ article.body | portableText | safe }}{% endif %}
