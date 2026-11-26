@@ -63,6 +63,8 @@ jobs:
         run: npm install --prefix sanity
       - name: Build Sanity Studio
         run: npm run build --prefix sanity
+      - name: Validate legacy Markdown export
+        run: npm run export:markdown --prefix sanity
 
   deploy:
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || (github.event_name == 'repository_dispatch' && github.event.action == 'sanity-publish')
