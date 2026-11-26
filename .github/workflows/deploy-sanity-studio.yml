@@ -1,0 +1,54 @@
+name: Deploy Vevnit Sanity Studio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "sanity/**"
+      - ".github/workflows/deploy-sanity-studio.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Studio dependencies
+        run: npm install
+
+      - name: Validate Sanity Studio build
+        run: npm run build
+
+  deploy:
+    # Enable hosted deployment by setting the repository variable SANITY_STUDIO_DEPLOY_ENABLED to "true"
+    # and adding the SANITY_DEPLOY_TOKEN repository secret.
+    if: ${{ vars.SANITY_STUDIO_DEPLOY_ENABLED == 'true' }}
+    needs: validate
+    runs-on: ubuntu-latest
+    environment: sanity-studio
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Studio dependencies
+        run: npm install
+
+      - name: Deploy Studio and schema to Sanity
+        env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_DEPLOY_TOKEN }}
+        run: npx sanity deploy --url vevnit-content-studio --yes --schema-required
