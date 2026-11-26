@@ -1,13 +1,13 @@
 import {defineConfig} from 'sanity'
-import {structureTool} from 'sanity/structure'
+import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 
 export default defineConfig({
-  name: 'vevnit',
+  name: 'vevnit-studio',
   title: 'Vevnit Content Studio',
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'replace-me',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'ae69pj79',
   dataset: process.env.SANITY_STUDIO_DATASET || 'production',
-  plugins: [structureTool(), visionTool()],
-  schema: {types: schemaTypes}
+  plugins: [deskTool(), visionTool()],
+  schema: {types: schemaTypes},
 })
