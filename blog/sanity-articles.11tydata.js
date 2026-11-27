@@ -4,6 +4,7 @@ module.exports = {
     excerpt: data => data.article.excerpt || '',
     date: data => data.article.publishedAt || new Date(),
     category: data => data.article.category || 'Article',
+    funnelStage: data => data.article.funnelStage || 'tofu',
     author: data => data.article.author || 'Makinde',
     featuredImage: data => data.article.coverImageUrl || data.article.featuredImageUrl || '',
     featuredImageAlt: data => data.article.coverImageAlt || (data.article.title + ' featured image'),
