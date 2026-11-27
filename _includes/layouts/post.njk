@@ -71,7 +71,15 @@
     .cms-code{overflow-x:auto;background:#1F2224;color:#F3EFE0;padding:20px;margin:2em 0;font-size:15px;line-height:1.6}
     .cms-prose code{background:#E7DFCE;padding:2px 5px;border-radius:2px}
     .cms-code code{background:none;padding:0}
-    @media(max-width:600px){.cms-prose{font-size:16px}.cms-featured-image{margin-bottom:42px}}
+    .vevnit-sticky-cta{position:fixed;z-index:999;left:50%;bottom:22px;transform:translate(-50%,20px);width:min(1120px,calc(100% - 32px));display:flex;align-items:center;gap:24px;padding:18px 22px;background:#1F2224;color:#F3EFE0;border:1px solid rgba(243,239,224,.14);box-shadow:0 14px 42px rgba(0,0,0,.18);opacity:0;visibility:hidden;transition:opacity .25s ease,transform .25s ease,visibility .25s; font-family:'Jost',sans-serif}
+    .vevnit-sticky-cta.is-visible{opacity:1;visibility:visible;transform:translate(-50%,0)}
+    .vevnit-sticky-cta__copy{flex:1;min-width:0}
+    .vevnit-sticky-cta__headline{font-size:clamp(16px,2vw,21px);line-height:1.25;font-weight:500;margin:0 0 3px;color:#F3EFE0}
+    .vevnit-sticky-cta__description{font-size:14px;line-height:1.4;margin:0;color:#D5CEBF}
+    .vevnit-sticky-cta__button{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;background:#F3EFE0;color:#1F2224;text-decoration:none;padding:12px 18px;font-size:14px;font-weight:500;transition:background .2s ease}
+    .vevnit-sticky-cta__button:hover{background:#D5CEBF}
+    .vevnit-sticky-cta__close{appearance:none;border:0;background:transparent;color:#B9B5AA;font-size:23px;line-height:1;padding:3px 0 3px 5px;cursor:pointer}
+    @media(max-width:600px){.cms-prose{font-size:16px}.cms-featured-image{margin-bottom:42px}.vevnit-sticky-cta{bottom:12px;width:calc(100% - 24px);padding:13px 14px;gap:12px;align-items:center}.vevnit-sticky-cta__headline{font-size:15px}.vevnit-sticky-cta__description{font-size:12px}.vevnit-sticky-cta__button{font-size:12px;padding:10px 12px}.vevnit-sticky-cta__close{font-size:20px}}
   </style>
 </head>
 <body class="blog-archive-page">
@@ -99,6 +107,7 @@
       <footer class="cms-article-footer"><a href="{{ '/blog/' | url }}">← Back to all articles</a></footer>
     </article>
   </main>
-  <script src="/script.js?v=blog-archive-20261031"></script>
+  {% include "sticky-cta.njk" %}
+  <script src="/script.js?v=sticky-cta-20261127"></script>
 </body>
 </html>
