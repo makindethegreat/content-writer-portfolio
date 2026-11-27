@@ -40,6 +40,7 @@ export default defineType({
     defineField({name:'featuredImageUrl',type:'string',title:'Legacy featured image URL',group:'content'}),
     defineField({name:'markdownBody',type:'text',title:'Markdown body (legacy import)',group:'content',rows:20,description:'Used for migrated Markdown posts. Portable Text body takes precedence.'}),
     defineField({name:'category',type:'string',group:'content',options:{list:['Content Strategy','SEO','AI Search','B2B SaaS','Research','Opinion']},validation:r=>r.required()}),
+    defineField({name:'funnelStage',type:'string',title:'Buyer journey stage',group:'content',initialValue:'tofu',description:'Controls the sticky CTA displayed on this article.',options:{list:[{title:'TOFU — Awareness',value:'tofu'},{title:'MOFU — Consideration',value:'mofu'},{title:'BOFU — Decision',value:'bofu'}]},validation:r=>r.required()}),
     defineField({name:'tags',type:'array',group:'content',of:[{type:'string'}]}),
     defineField({name:'publishedAt',type:'datetime',group:'seo',validation:r=>r.required()}),
     defineField({name:'author',type:'string',group:'content',initialValue:'Makinde'}),
