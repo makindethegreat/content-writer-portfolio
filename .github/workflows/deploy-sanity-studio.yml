@@ -21,17 +21,17 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22.12.0
 
       - name: Install Studio dependencies
         run: npm install
+        working-directory: sanity
 
       - name: Validate Sanity Studio build
         run: npm run build
+        working-directory: sanity
 
   deploy:
-    # Enable hosted deployment by setting the repository variable SANITY_STUDIO_DEPLOY_ENABLED to "true"
-    # and adding the SANITY_DEPLOY_TOKEN repository secret.
     if: ${{ vars.SANITY_STUDIO_DEPLOY_ENABLED == 'true' }}
     needs: validate
     runs-on: ubuntu-latest
@@ -43,14 +43,27 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 22.12.0
 
       - name: Install Studio dependencies
         run: npm install
         working-directory: sanity
 
-      - name: Deploy Studio and schema to Sanity
+      - name: Deploy Studio and schema using current CLI
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_DEPLOY_TOKEN }}
-        run: npx sanity deploy --url vevnit-content-studio --yes --schema-required
+        run: npx sanity@latest deploy --url vevnit-content-studio --yes --schema-required
         working-directory: sanity
+
+      - name: Verify hosted Studio responds
+        run: |
+          for attempt in {1..12}; do
+            if curl --fail --silent --show-error --output /dev/null https://vevnit-content-studio.sanity.studio; then
+              echo "Hosted Studio is responding."
+              exit 0
+            fi
+            echo "Studio not responding yet (attempt $attempt/12); retrying in 10 seconds."
+            sleep 10
+          done
+          echo "Hosted Studio did not return a successful response."
+          exit 1
