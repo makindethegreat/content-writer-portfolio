@@ -6,4 +6,4 @@ pagination:
 layout: layouts/post.njk
 eleventyExcludeFromCollections: true
 ---
-{% if article.markdownBody %}{{ article.markdownBody | renderMarkdown | safe }}{% else %}{{ article.body | portableText | safe }}{% endif %}
+{% if article.body and article.body.length %}{{ article.body | portableText | safe }}{% elif article.markdownBody %}{{ article.markdownBody | renderMarkdown | safe }}{% endif %}
