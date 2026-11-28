@@ -15,7 +15,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
   }
 
-  // Vevnit sticky conversion CTA
+  // Vevnit article inline conversion CTA\n  // Article inline CTA: copy and destination are selected by editorial funnel stage.
+  const articleCta = document.querySelector("[data-article-cta]");
+  if (articleCta) {
+    const articleStage = (articleCta.dataset.stage || "tofu").toLowerCase();
+    const articleCopy = {
+      tofu: {headline:"Your content should be doing more.",description:"Let's find the gaps between what your product offers and what your buyers need to see before making a decision.",button:"Explore what we do",href:"/work-with-me/"},
+      mofu: {headline:"Turn your content into a growth system.",description:"Strategy, execution and discoverability built around your product, audience and commercial objectives.",button:"Discuss your content strategy",href:"mailto:makindegbenga00@gmail.com?subject=Vevnit%20content%20strategy%20enquiry"},
+      bofu: {headline:"Need a content partner who understands the product?",description:"Let's build the content engine behind your growth.",button:"Book a free call",href:"mailto:makindegbenga00@gmail.com?subject=Vevnit%20project%20enquiry"}
+    };
+    const selected = articleCopy[articleStage] || articleCopy.tofu;
+    articleCta.querySelector(".cms-article-cta__headline").textContent = selected.headline;
+    articleCta.querySelector(".cms-article-cta__description").textContent = selected.description;
+    const primary = articleCta.querySelector(".cms-article-cta__button");
+    primary.textContent = selected.button + " ↗";
+    primary.href = selected.href;
+    const secondary = articleCta.querySelector(".cms-article-cta__secondary");
+    const trackInline = eventName => {
+      const payload = {event:eventName,cta_stage:articleStage,cta_page:window.location.pathname};
+      if(window.dataLayer && Array.isArray(window.dataLayer)) window.dataLayer.push(payload);
+      window.dispatchEvent(new CustomEvent("vevnit:article-cta",{detail:payload}));
+    };
+    trackInline("article_cta_view");
+    primary.addEventListener("click",()=>trackInline("article_cta_click"));
+    secondary.addEventListener("click",()=>trackInline("article_cta_secondary_click"));
+  }
+\n  // Vevnit sticky conversion CTA
   const stickyCta = document.querySelector("[data-sticky-cta]");
   if (stickyCta) {
     const stage = document.body.classList.contains("vevnit-home") ? "home" : (stickyCta.dataset.stage || "tofu").toLowerCase();
