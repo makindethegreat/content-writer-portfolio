@@ -16,7 +16,7 @@ export default {
   async fetch(request, env) {
     if (request.method !== 'POST') return new Response('Method not allowed', {status:405})
     const body = await request.text()
-    const signature = request.headers.get('x-sanity-webhook-signature')
+    const signature = request.headers.get('sanity-webhook-signature') || request.headers.get('x-sanity-webhook-signature')
     if (!await verifySignature(body, signature, env.SANITY_WEBHOOK_SECRET)) return new Response('Unauthorized', {status:401})
     let payload
     try { payload = JSON.parse(body) } catch { return new Response('Invalid JSON', {status:400}) }
