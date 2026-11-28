@@ -13,7 +13,7 @@ module.exports = {
     canonicalUrl: data => data.article.canonicalUrl || '',
     permalink: data => `/blog/${data.article.slug}/index.html`,
     readTime: data => {
-      const text = data.article.markdownBody || (data.article.body || []).flatMap(block => block.children || []).map(child => child.text || '').join(' ')
+      const text = (data.article.body || []).flatMap(block => block.children || []).map(child => child.text || '').join(' ') || data.article.markdownBody || ''
       const words = text.trim().split(/\s+/).filter(Boolean).length
       return words ? `${Math.max(1, Math.ceil(words / 220))} min read` : ''
     }
