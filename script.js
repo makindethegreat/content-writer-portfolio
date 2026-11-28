@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
   }
 
-  // Vevnit article inline conversion CTA\n  // Article inline CTA: copy and destination are selected by editorial funnel stage.
+  // Vevnit article inline conversion CTA
+  // Article inline CTA: copy and destination are selected by editorial funnel stage.
   const articleCta = document.querySelector("[data-article-cta]");
   if (articleCta) {
     const articleStage = (articleCta.dataset.stage || "tofu").toLowerCase();
@@ -40,7 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
     primary.addEventListener("click",()=>trackInline("article_cta_click"));
     secondary.addEventListener("click",()=>trackInline("article_cta_secondary_click"));
   }
-\n  // Vevnit sticky conversion CTA
+
+  // Vevnit sticky conversion CTA
   const stickyCta = document.querySelector("[data-sticky-cta]");
   if (stickyCta) {
     const stage = document.body.classList.contains("vevnit-home") ? "home" : (stickyCta.dataset.stage || "tofu").toLowerCase();
